@@ -1,7 +1,12 @@
 {
-  "name": "nextjs",
+  "name": "next-tomheaton-dev",
   "version": "0.1.0",
   "private": true,
+  "author": "Tom Heaton",
+  "description": "Tom Heaton - Website",
+  "license": "MIT",
+  "repository": "https://www.github.com/tomheaton/next-tomheaton-dev",
+  "keywords": [],
   "scripts": {
     "dev": "next dev",
     "build": "next build",
