@@ -1,3 +1,4 @@
+import 'bootstrap/dist/css/bootstrap.css'
 import '../styles/globals.css';
 import { AppProps } from "next/app";
 import { useEffect } from "react";
@@ -9,7 +10,8 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
 
     useEffect(() => {
         const handleRouteChange = (url: URL) => {
-            window.gtag("config", process.env.GOOGLE_ANALYTICS_KEY, {
+            // @ts-ignore
+            window.gtag('config', process.env.GOOGLE_ANALYTICS_KEY, {
                 page_path: url
             });
         }
