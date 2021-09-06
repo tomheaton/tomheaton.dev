@@ -1,6 +1,6 @@
 import Head from 'next/head';
 
-const SEO = ({description, title, siteTitle}: any) => {
+const SEO = ({ title, siteTitle, description }: any) => {
     return (
         <Head>
             <title>{`${title} | ${siteTitle}`}</title>

@@ -1,8 +1,14 @@
-import Head from 'next/head';
 import Image from 'next/image';
+import Head from "next/head";
+import 'bootstrap/dist/css/bootstrap.css'
 import styles from '../styles/Home.module.css';
 
 const Home = () => {
+
+    const toggleTheme = () => {
+        console.log("toggle theme")
+    }
+
     return (
         <div className={styles.container}>
             <Head>
@@ -12,43 +18,42 @@ const Home = () => {
             </Head>
 
             <main className={styles.main}>
-                <h1 className={styles.title}>
-                    Welcome to <a href="https://nextjs.org">Next.js!</a>
-                </h1>
-
-                <p className={styles.description}>
-                    Get started by editing{' '}
-                    <code className={styles.code}>pages/index.js</code>
-                </p>
-
-                <div className={styles.grid}>
-                    <a href="https://nextjs.org/docs" className={styles.card}>
-                        <h2>Documentation &rarr;</h2>
-                        <p>Find in-depth information about Next.js features and API.</p>
-                    </a>
-
-                    <a href="https://nextjs.org/learn" className={styles.card}>
-                        <h2>Learn &rarr;</h2>
-                        <p>Learn about Next.js in an interactive course with quizzes!</p>
-                    </a>
-
-                    <a
-                        href="https://github.com/vercel/next.js/tree/master/examples"
-                        className={styles.card}
-                    >
-                        <h2>Examples &rarr;</h2>
-                        <p>Discover and deploy boilerplate example Next.js projects.</p>
-                    </a>
-
-                    <a
-                        href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-                        className={styles.card}
-                    >
-                        <h2>Deploy &rarr;</h2>
-                        <p>
-                            Instantly deploy your Next.js site to a public URL with Vercel.
+                <div className="wrapper" style={{height: "100vh", padding: "10px"}}>
+                    <div className="d-flex flex-row flex-wrap align-items-center justify-content-center">
+                        <img id="theme-toggle" className="avatar btn" src="/avatar.jpg" alt="Tom Heaton" onClick={toggleTheme} />
+                        <h1 className="m-2 name">Tom Heaton
+                            <small className="text-muted">developer</small>
+                        </h1>
+                    </div>
+                    <div>
+                        <p className="lead m-2">
+                            hey, I am an eighteen year old who likes to code things.
                         </p>
-                    </a>
+                    </div>
+                    <div className="d-flex flex-wrap justify-content-center cards">
+                        <div className="card m-2" style={{width: "18rem"}}>
+                            <div className="card-body btn">
+                                <br/>
+                                <p>Watch this space to see it fill up with all the projects I am working on!</p>
+                            </div>
+                        </div>
+                    </div>
+                    <footer className="d-flex fixed-bottom justify-content-center">
+                        <div className="wrapper-footer d-flex-col">
+                            <div className="socials">
+                                <a target="_blank" href="https://www.github.com/tomheaton" rel="noopener noreferrer">
+                                    <i className="bi-github" aria-label="Github"/>
+                                </a>
+                                <a target="_blank" href="https://www.discord.com/users/325306360004739072" rel="noopener noreferrer">
+                                    <i className="bi-discord" aria-label="Discord"/>
+                                </a>
+                                <a target="_blank" href="https://www.twitter.com/tomheaton_" rel="noopener noreferrer">
+                                    <i className="bi-twitter" aria-label="Twitter"/>
+                                </a>
+                            </div>
+                            <p className="copyright">&#169; Tom Heaton 2021</p>
+                        </div>
+                    </footer>
                 </div>
             </main>
 
@@ -65,7 +70,7 @@ const Home = () => {
                 </a>
             </footer>
         </div>
-    )
+)
 }
 
 export default Home;
