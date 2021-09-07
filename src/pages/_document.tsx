@@ -1,6 +1,12 @@
-import Document, { Head, Html, Main, NextScript } from 'next/document';
+import Document, { DocumentContext, Head, Html, Main, NextScript} from 'next/document';
 
 class MyDocument extends Document {
+
+    static async getInitialProps(ctx: DocumentContext) {
+        const initialProps = await Document.getInitialProps(ctx)
+        return initialProps
+    }
+
     render() {
         return (
             <Html lang={"en"}>
@@ -18,7 +24,7 @@ class MyDocument extends Document {
                     <meta name="author" content="Tom Heaton" />
                     <meta name="description" content="Tom Heaton - Website" />
                     <meta name="keywords" content="Software, Developer" />
-                    {/*<meta name="color-scheme" content="light dark" />*/}
+                    <meta name="color-scheme" content="dark light" />
                     {/*<link rel="icon" type="image/png" href="https://avatars.githubusercontent.com/u/50220137?v=4" />*/}
                     <link rel="icon" href="/favicon.ico" />
                     <title>Tom Heaton</title>

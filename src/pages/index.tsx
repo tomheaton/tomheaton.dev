@@ -2,14 +2,12 @@ import { toWords } from "number-to-words";
 import Head from "next/head";
 import Image from "next/image";
 import getAge from "../utils/age";
+import { toggleTheme } from "../utils/theme";
+import Cards from "../components/cards";
 
 const Home = () => {
 
     const age = getAge(new Date("09/30/2002"));
-
-    const toggleTheme = () => {
-        console.log("toggle theme");
-    }
 
     return (
         <div>
@@ -17,7 +15,8 @@ const Home = () => {
                 <meta name="description" content="Tom Heaton - Website" />
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
                 {/*<link rel="icon" type="image/png" href="https://avatars.githubusercontent.com/u/50220137?v=4" />*/}
-                <link rel="icon" href="/favicon.ico"/>
+                <meta name="color-scheme" content="dark light" />
+                <link rel="icon" href="/favicon.ico" />
                 <title>Tom Heaton</title>
             </Head>
 
@@ -29,14 +28,7 @@ const Home = () => {
                 <div>
                     <p className="lead m-2">hey, I am a{age === 18 && "n"} {toWords(age)} year old who likes to code things.</p>
                 </div>
-                <div className="d-flex flex-wrap justify-content-center cards">
-                    <div className="card m-2" style={{width: "18rem"}}>
-                        <div className="card-body btn">
-                            <br/>
-                            <p>Watch this space to see it fill up with all the projects I am working on!</p>
-                        </div>
-                    </div>
-                </div>
+                {/*<Cards/>*/}
                 <footer className="d-flex fixed-bottom justify-content-center">
                     <div className="wrapper-footer d-flex-col">
                         <div className="socials">
