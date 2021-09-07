@@ -1,11 +1,9 @@
 :root {
-    color-scheme: light dark;
-    prefers-color-scheme: dark;
     --green-color: #66b193;
     --purple-colour: #1b1325;
     --blue-color: #3e8497;
     --red-color: #ff4d4d;
-    --dark-gray-color:#212529;
+    --dark-gray-color: #212529;
     --gray-color: #343a40;
     --selection-color: var(--green-color);
 }
