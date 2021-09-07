@@ -25,7 +25,7 @@ class MyDocument extends Document {
                     <meta name="keywords" content="Software, Developer" />
                     <meta name="color-scheme" content="light dark" />
                     {/*<link rel="icon" type="image/png" href="https://avatars.githubusercontent.com/u/50220137?v=4" />*/}
-                    <link rel="icon" href="/favicon.ico" />
+                    <link rel="icon" href="/public/favicon.ico" />
                     <title>Tom Heaton</title>
                 </Head>
                 <body>
