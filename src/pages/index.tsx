@@ -1,9 +1,8 @@
-import { toWords } from "number-to-words";
+import {toWords} from "number-to-words";
 import Head from "next/head";
 import Image from "next/image";
 import getAge from "../utils/age";
-import { toggleTheme } from "../utils/theme";
-import Cards from "../components/cards";
+import {toggleTheme} from "../utils/theme";
 
 const Home = () => {
 
@@ -15,7 +14,7 @@ const Home = () => {
                 <meta name="description" content="Tom Heaton - Website" />
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
                 {/*<link rel="icon" type="image/png" href="https://avatars.githubusercontent.com/u/50220137?v=4" />*/}
-                <meta name="color-scheme" content="dark light" />
+                <meta name="color-scheme" content="light dark" />
                 <link rel="icon" href="/favicon.ico" />
                 <title>Tom Heaton</title>
             </Head>

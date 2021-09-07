@@ -1,9 +1,9 @@
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import 'bootstrap/dist/css/bootstrap.css';
 import '../styles/globals.css';
-import { AppProps } from "next/app";
-import { useEffect, useState } from "react";
-import { useRouter } from "next/router";
+import {AppProps} from "next/app";
+import {useEffect, useState} from "react";
+import {useRouter} from "next/router";
 
 const MyApp = ({ Component, pageProps }: AppProps) => {
 

@@ -1,12 +1,22 @@
-const setTheme = (theme_name: "light" | "dark") => {
-    localStorage.setItem("theme", theme_name);
+const setTheme = (theme: "light" | "dark"): void => {
+    document.body.dataset.theme = theme;
 }
 
-const toggleTheme = () => {
+const getTheme = (): string => {
+    return localStorage.getItem("theme") || "light";
+}
+
+const saveTheme = (theme: "light" | "dark"): void => {
+    localStorage.setItem("theme", theme);
+}
+
+const toggleTheme = (): void => {
     const current_theme = localStorage.getItem("theme") || "light";
-    setTheme(current_theme == "light" ? "dark" : "light");
-    document.body.dataset.theme = current_theme;
+    saveTheme(current_theme == "light" ? "dark" : "light");
+    // @ts-ignore
+    setTheme(getTheme());
+    return;
 }
 
-export { setTheme, toggleTheme };
+export { setTheme, getTheme, saveTheme, toggleTheme };
 

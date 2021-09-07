@@ -1,5 +1,5 @@
 :root {
-    color-scheme: dark light;
+    color-scheme: light dark;
     prefers-color-scheme: dark;
     --green-color: #66b193;
     --purple-colour: #1b1325;
@@ -46,11 +46,11 @@ body::-webkit-scrollbar {
     display: none;
 }
 
-::selection {
+*::selection {
     background: var(--selection-color);
 }
 
-::-moz-selection {
+*::-moz-selection {
     background: var(--selection-color);
 }
 
