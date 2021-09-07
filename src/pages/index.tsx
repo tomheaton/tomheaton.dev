@@ -16,7 +16,7 @@ const Home = () => {
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
                 {/*<link rel="icon" type="image/png" href="https://avatars.githubusercontent.com/u/50220137?v=4" />*/}
                 <meta name="color-scheme" content="light dark" />
-                <link rel="icon" href="/public/favicon.ico" />
+                <link rel="icon" href="/favicon.ico" />
                 <title>Tom Heaton</title>
             </Head>
 
