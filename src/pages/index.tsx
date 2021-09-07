@@ -3,6 +3,7 @@ import Head from "next/head";
 import Image from "next/image";
 import getAge from "../utils/age";
 import {toggleTheme} from "../utils/theme";
+import Cards from "../components/cards";
 
 const Home = () => {
 
@@ -27,7 +28,7 @@ const Home = () => {
                 <div>
                     <p className="lead m-2">hey, I am a{age === 18 && "n"} {toWords(age)} year old who likes to code things.</p>
                 </div>
-                {/*<Cards/>*/}
+                <Cards/>
                 <footer className="d-flex fixed-bottom justify-content-center">
                     <div className="wrapper-footer d-flex-col">
                         <div className="socials">
