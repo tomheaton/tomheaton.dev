@@ -63,6 +63,10 @@ a:hover {
     color: var(--selection-color);
 }
 
+small {
+    color: var(--color-text-secondary);
+}
+
 .avatar {
     max-height: 20px;
     border-radius: 50%;
