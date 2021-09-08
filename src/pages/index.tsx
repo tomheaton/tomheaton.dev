@@ -39,7 +39,7 @@ const Home = () => {
                         </div>
                         <p className="copyright">
                             &#169; Tom Heaton {new Date().getFullYear()}
-                            {" - "}
+                            {" "}
                             <a target="_blank" href="https://www.github.com/tomheaton/next-tomheaton-dev" rel="noopener noreferrer">
                                 <i className="bi bi-code-slash" aria-label="Source Code"/>
                             </a>
