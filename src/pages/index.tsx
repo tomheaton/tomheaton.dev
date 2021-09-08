@@ -12,7 +12,6 @@ const Home = () => {
     return (
         <div>
             <SEO/>
-
             <main className="wrapper" style={{height: "100vh", padding: "60px"}}>
                 <div className="d-flex flex-row flex-wrap align-items-center justify-content-center" style={{padding: "20px"}}>
                     <Image id="theme-toggle" className="avatar btn" src="/avatar.jpg" alt="Tom Heaton" width={100} height={100} onClick={toggleTheme} />
@@ -21,7 +20,7 @@ const Home = () => {
                 <div>
                     <p className="lead m-2">hey, I am a{age === 18 && "n"} {toWords(age)} year old who likes to code things.</p>
                 </div>
-                <Cards/>
+                {/*<Cards/>*/}
                 <footer className="d-flex fixed-bottom justify-content-center">
                     <div className="wrapper-footer d-flex-col">
                         <div className="socials">
