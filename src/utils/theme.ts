@@ -19,4 +19,3 @@ const toggleTheme = (): void => {
 }
 
 export { setTheme, getTheme, saveTheme, toggleTheme };
-

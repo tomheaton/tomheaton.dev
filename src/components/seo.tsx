@@ -4,38 +4,38 @@ const SEO = () => {
     return (
         <Head>
             {/*<link rel="icon" type="image/png" href="https://avatars.githubusercontent.com/u/50220137?v=4" />*/}
-            <link rel="icon" href="/favicon.ico"/>
-            <link rel="canonical" href="https://tomheaton.dev"/>
-            <link rel="apple-touch-icon" href="/apple-touch-icon.png"/>
-            <link rel="manifest" href="/manifest.json"/>
+            <link rel="icon" href="/favicon.ico" />
+            <link rel="canonical" href="https://tomheaton.dev" />
+            <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+            <link rel="manifest" href="/manifest.json" />
 
             <meta charSet="utf-8" />
-            <meta name="viewport" content="width=device-width, initial-scale=1"/>
-            <meta name="color-scheme" content="dark light"/>
-            <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#212529"/>
-            <meta name="theme-color" media="(prefers-color-scheme: light)" content="#fff"/>
-            <meta name="author" content="Tom Heaton"/>
-            <meta name="description" content="Tom Heaton - Website"/>
-            <meta name="keywords" content="Software, Developer, Code, Programming"/>
+            <meta name="viewport" content="width=device-width, initial-scale=1" />
+            <meta name="color-scheme" content="dark light" />
+            <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#212529" />
+            <meta name="theme-color" media="(prefers-color-scheme: light)" content="#fff" />
+            <meta name="author" content="Tom Heaton" />
+            <meta name="description" content="Tom Heaton - Website" />
+            <meta name="keywords" content="Software, Developer, Code, Programming" />
 
-            <meta property="og:title" content="Tom Heaton"/>
-            <meta property="og:description" content="Tom Heaton - Website"/>
-            <meta property="og:type" content="website"/>
-            <meta property="og:url" content="https://www.tomheaton.dev/"/>
-            <meta property="og:image" content="/avatar.jpg"/>
-            <meta property="og:locale" content="en_GB"/>
+            <meta property="og:title" content="Tom Heaton" />
+            <meta property="og:description" content="Tom Heaton - Website" />
+            <meta property="og:type" content="website" />
+            <meta property="og:url" content="https://www.tomheaton.dev/" />
+            <meta property="og:image" content="/avatar.jpg" />
+            <meta property="og:locale" content="en_GB" />
 
-            <meta name="twitter:card" content="summary_large_image"/>
-            <meta name="twitter:site" content="@tomheaton_"/>
-            <meta name="twitter:creator" content="@tomheaton_"/>
-            <meta name="twitter:title" content="Tom Heaton"/>
-            <meta name="twitter:description" content="Tom Heaton - Website"/>
-            <meta name="twitter:image" content="https://www.tomheaton.dev/avatar.jpg"/>
-            <meta name="twitter:image:alt" content="Tom Heaton Avatar"/>
+            <meta name="twitter:card" content="summary_large_image" />
+            <meta name="twitter:site" content="@tomheaton_" />
+            <meta name="twitter:creator" content="@tomheaton_" />
+            <meta name="twitter:title" content="Tom Heaton" />
+            <meta name="twitter:description" content="Tom Heaton - Website" />
+            <meta name="twitter:image" content="https://www.tomheaton.dev/avatar.jpg" />
+            <meta name="twitter:image:alt" content="Tom Heaton Avatar" />
 
-            <title> Tom Heaton</title>
+            <title>Tom Heaton</title>
         </Head>
-    )
+    );
 }
 
 export default SEO;

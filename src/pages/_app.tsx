@@ -1,11 +1,11 @@
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import 'bootstrap/dist/css/bootstrap.css';
 import '../styles/globals.css';
-import {AppProps} from "next/app";
+import type {AppProps} from "next/app";
 import {useEffect, useState} from "react";
 import {useRouter} from "next/router";
 
-const MyApp = ({ Component, pageProps }: AppProps) => {
+const App = ({ Component, pageProps }: AppProps) => {
 
     const router = useRouter()
     const [loading, setLoading] = useState<boolean>(false);
@@ -34,10 +34,13 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
         }
     }, [router.events]);
 
-    //return (<Component {...pageProps} />);
     return (
-        loading ? (<div>loading</div>) : (<Component {...pageProps} />)
+        loading ? (
+            <div>loading</div>
+        ) : (
+            <Component {...pageProps} />
+        )
     );
 }
 
- export default MyApp;
+export default App;
