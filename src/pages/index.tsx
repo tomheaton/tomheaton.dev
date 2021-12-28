@@ -2,12 +2,13 @@ import Image from "next/image";
 import {toWords} from "number-to-words";
 import getAge from "../utils/age";
 import SEO from "../components/seo";
-import {useState} from "react";
+import {useEffect, useState} from "react";
 
 const Index = () => {
 
     const age = getAge(new Date("09/30/2002"));
 
+    // TODO: move theme things to `_app.tsx`?
     const [currentTheme, setCurrentTheme] = useState<"light" | "dark">("light");
 
     const handleThemeToggle = async (e: any) => {
@@ -17,9 +18,23 @@ const Index = () => {
         localStorage.setItem("theme", theme);
     }
 
+    useEffect(() => {
+        let b = (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches))
+        setCurrentTheme(b ? "dark" : "light");
+    }, []);
+
+    useEffect(() => {
+        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark')
+        } else {
+            document.documentElement.classList.remove('dark')
+        }
+    }, [currentTheme]);
+
     return (
-        <div>
+        <div className={"bg-white dark:bg-[#212529] dark:text-white"}>
             <SEO/>
+            <p>{currentTheme}</p>
             <main className="wrapper" style={{height: "100vh", padding: "60px"}}>
                 <div className="d-flex flex-row flex-wrap align-items-center justify-content-center"
                      style={{padding: "20px"}}>

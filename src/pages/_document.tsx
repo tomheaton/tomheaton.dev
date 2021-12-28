@@ -26,9 +26,9 @@ class MyDocument extends Document {
 
                     <meta charSet="utf-8" />
                     {/*<meta name="viewport" content="width=device-width, initial-scale=1" />*/}
-                    <meta name="color-scheme" content="dark light" />
-                    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#212529" />
-                    <meta name="theme-color" media="(prefers-color-scheme: light)" content="#fff" />
+                    {/*<meta name="color-scheme" content="dark light" />*/}
+                    {/*<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#212529" />*/}
+                    {/*<meta name="theme-color" media="(prefers-color-scheme: light)" content="#fff" />*/}
                     <meta name="author" content="Tom Heaton" />
                     <meta name="description" content="Tom Heaton - Website" />
                     <meta name="keywords" content="Software, Developer, Code, Programming" />
@@ -51,7 +51,6 @@ class MyDocument extends Document {
                     {/*<title>Tom Heaton</title>*/}
                 </Head>
                 <body>
-                    <script dangerouslySetInnerHTML={{ __html: `document.body.dataset.theme = window.localStorage.getItem('theme') || "light"`}} />
                     <Main/>
                     <NextScript/>
                 </body>
