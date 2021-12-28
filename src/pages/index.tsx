@@ -32,29 +32,27 @@ const Index = () => {
     }, [currentTheme]);
 
     return (
-        <div className={"bg-white dark:bg-[#212529] dark:text-white"}>
+        <div className={"bg-white text-[#212529] dark:bg-[#212529] dark:text-[#e3e3e3]"}>
             <SEO/>
-            <p>{currentTheme}</p>
-            <main className="wrapper" style={{height: "100vh", padding: "60px"}}>
-                <div className="d-flex flex-row flex-wrap align-items-center justify-content-center"
-                     style={{padding: "20px"}}>
-                    <Image id="theme-toggle" className="avatar btn" src="/avatar.jpg" alt="Tom Heaton"
-                           width={100} height={100} onClick={handleThemeToggle} />
-                    <h1 className="m-2 name">
+            <main className="h-screen p-60">
+                <div className="flex flex-row flex-wrap items-center justify-center">
+                    <Image className="max-h-[20px] mx-[20px] rounded-full cursor-pointer"
+                           src="/avatar.jpg" alt="Tom Heaton" width={100} height={100} onClick={handleThemeToggle} />
+                    <h1 className="m-2 text-4xl font-medium">
                         Tom Heaton
                         {" "}
-                        <small>developer</small>
+                        <span className={"font-normal text-[#66b193]"}>developer</span>
                     </h1>
                 </div>
                 <div>
-                    <p className="lead m-2">
+                    <p className="m-2">
                         hey, I am a{age === 18 && "n"} {toWords(age)} year old who likes to code things.
                     </p>
                 </div>
                 {/*<Cards/>*/}
-                <footer className="d-flex fixed-bottom justify-content-center">
-                    <div className="wrapper-footer d-flex-col">
-                        <div className="socials">
+                <footer className="flex justify-center fixed bottom-0 left-0 right-0">
+                    <div className="flex flex-col">
+                        <div className="text-[24px] space-x-4">
                             <a target="_blank" href="https://www.github.com/tomheaton" rel="noopener noreferrer">
                                 <i className="bi bi-github" aria-label="Github" />
                             </a>
@@ -71,7 +69,7 @@ const Index = () => {
                                 <i className="bi bi-envelope-fill" aria-label="Email" />
                             </a>
                         </div>
-                        <p className="copyright">
+                        <p className="p-2">
                             &#169; Tom Heaton {new Date().getFullYear()}
                             {" "}
                             <a target="_blank" rel="noopener noreferrer"

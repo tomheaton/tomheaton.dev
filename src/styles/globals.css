@@ -21,26 +21,10 @@ html, body {
     margin: 0;
     font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-    background: var(--color-bg-primary);
-    color: var(--color-text-primary);
     transition: background 0.25s ease-in-out;
     -ms-overflow-style: none;
     scrollbar-width: none;
     text-align: center;
-}
-
-body, body[data-theme="light"] {
-    --color-text-primary: var(--dark-gray-color);
-    --color-text-secondary: var(--green-color);
-    --color-bg-primary: #fff;
-    --color-bg-secondary: #fff;
-}
-
-body[data-theme="dark"] {
-    --color-text-primary: #e3e3e3;
-    --color-text-secondary: var(--green-color);
-    --color-bg-primary: var(--dark-gray-color);
-    --color-bg-secondary: var(--gray-color);
 }
 
 body::-webkit-scrollbar {
@@ -62,22 +46,6 @@ a {
 
 a:hover {
     color: var(--selection-color);
-}
-
-small {
-    color: var(--color-text-secondary);
-}
-
-.avatar {
-    max-height: 20px;
-    border-radius: 50%;
-    margin: 0 20px 0 20px;
-    cursor: pointer;
-}
-
-.socials {
-    font-size: 24px;
-    letter-spacing: .4em;
 }
 
 .card {

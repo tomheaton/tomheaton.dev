@@ -8,7 +8,8 @@ module.exports = {
         extend: {},
         // colors: {
         //     transparent: 'transparent',
-        //     current: 'currentColor'
+        //     current: 'currentColor',
+        //     "mygreen": "#66b193"
         // }
     },
     plugins: [],
