@@ -47,12 +47,3 @@ a {
 a:hover {
     color: var(--selection-color);
 }
-
-.card {
-    background-color: var(--color-bg-secondary);
-    transition: background 0.25s ease-in-out;
-}
-
-.card p {
-    color: var(--color-text-primary);
-}

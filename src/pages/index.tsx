@@ -3,6 +3,7 @@ import {toWords} from "number-to-words";
 import getAge from "../utils/age";
 import SEO from "../components/seo";
 import {useEffect, useState} from "react";
+import Cards from "../components/cards";
 
 const Index = () => {
 
