@@ -3,7 +3,6 @@ import {toWords} from "number-to-words";
 import getAge from "../utils/age";
 import SEO from "../components/seo";
 import {useEffect, useState} from "react";
-import Cards from "../components/cards";
 
 const Index = () => {
 
@@ -35,18 +34,18 @@ const Index = () => {
     return (
         <div className={"bg-white text-[#212529] dark:bg-[#212529] dark:text-[#e3e3e3]"}>
             <SEO/>
-            <main className="h-screen p-60">
+            <main className="h-screen pt-20 w-full">
                 <div className="flex flex-row flex-wrap items-center justify-center">
-                    <Image className="max-h-[20px] mx-[20px] rounded-full cursor-pointer"
+                    <Image className="max-h-[20px] px-[210px] rounded-full cursor-pointer"
                            src="/avatar.jpg" alt="Tom Heaton" width={100} height={100} onClick={handleThemeToggle} />
                     <h1 className="m-2 text-4xl font-medium">
                         Tom Heaton
                         {" "}
-                        <span className={"font-normal text-[#66b193]"}>developer</span>
+                        <span className={"text-3xl text-[#66b193]"}>developer</span>
                     </h1>
                 </div>
                 <div>
-                    <p className="m-2">
+                    <p className="m-2 text-xl pt-4 font-light">
                         hey, I am a{age === 18 && "n"} {toWords(age)} year old who likes to code things.
                     </p>
                 </div>
@@ -68,6 +67,10 @@ const Index = () => {
                             <a target="_blank" rel="noopener noreferrer"
                                href="mailto:tom@tomheaton.dev">
                                 <i className="bi bi-envelope-fill" aria-label="Email" />
+                            </a>
+                            <a target="_blank" rel="noopener noreferrer"
+                               href="https://www.linkedin.com/in/tom-heaton-39b107220/">
+                                <i className="bi bi-linkedin" aria-label="LinkedIn" />
                             </a>
                         </div>
                         <p className="p-2">
