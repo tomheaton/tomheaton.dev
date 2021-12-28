@@ -35,7 +35,7 @@ const App = ({ Component, pageProps }: AppProps) => {
 
     return (
         loading ? (
-            <div>loading</div>
+            <div className={"animate-spin"}>loading</div>
         ) : (
             <Component {...pageProps} />
         )
