@@ -32,7 +32,7 @@ const Index = () => {
     }, [currentTheme]);
 
     return (
-        <div className={"bg-white text-[#212529] dark:bg-[#212529] dark:text-[#e3e3e3]"}>
+        <div className={"transition ease-in-out duration-500 bg-white text-[#212529] dark:bg-[#212529] dark:text-[#e3e3e3]"}>
             <SEO/>
             <main className="h-screen pt-20 w-full">
                 <div className="flex flex-row flex-wrap items-center justify-center">
