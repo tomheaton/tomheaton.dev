@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 :root {
     --green-color: #66b193;
     --purple-colour: #1b1325;
