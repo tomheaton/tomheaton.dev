@@ -48,6 +48,9 @@ const Index = () => {
                     <p className="m-2 text-xl pt-4 font-light">
                         hey, I am a{age === 18 && "n"} {toWords(age)} year old who likes to code things.
                     </p>
+                    <p className="animate-pulse m-2 text-xl pt-12">
+                        🚧 new things are on their way... 🚧
+                    </p>
                 </div>
                 {/*<Cards/>*/}
                 <footer className="flex justify-center fixed bottom-0 left-0 right-0">
@@ -74,7 +77,7 @@ const Index = () => {
                             </a>
                         </div>
                         <p className="p-2">
-                            &#169; Tom Heaton {new Date().getFullYear()}
+                            &copy; Tom Heaton {new Date().getFullYear()}
                             {" "}
                             <a target="_blank" rel="noopener noreferrer"
                                href="https://www.github.com/tomheaton/next-tomheaton-dev">
