@@ -48,9 +48,9 @@ const Index = () => {
                     <p className="m-2 text-xl pt-4 font-light">
                         hey, I am a{age === 18 && "n"} {toWords(age)} year old who likes to code things.
                     </p>
-                    <p className="animate-pulse m-2 text-xl pt-12">
+                    {/*<p className="animate-pulse m-2 text-xl pt-12">
                         🚧 new things are on their way... 🚧
-                    </p>
+                    </p>*/}
                 </div>
                 {/*<Cards/>*/}
                 <footer className="flex justify-center fixed bottom-0 left-0 right-0">
