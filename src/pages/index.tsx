@@ -1,10 +1,9 @@
-import Image from "next/image";
-import {toWords} from "number-to-words";
 import getAge from "../utils/age";
 import SEO from "../components/seo";
 import {useEffect, useState} from "react";
+import type {NextPage} from "next";
 
-const Index = () => {
+const Index: NextPage = () => {
 
     const age = getAge(new Date("09/30/2002"));
 

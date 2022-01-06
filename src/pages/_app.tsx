@@ -7,6 +7,7 @@ import {useRouter} from "next/router";
 const App = ({ Component, pageProps }: AppProps) => {
 
     const router = useRouter()
+
     const [loading, setLoading] = useState<boolean>(false);
 
     useEffect(() => {
@@ -35,7 +36,9 @@ const App = ({ Component, pageProps }: AppProps) => {
 
     return (
         loading ? (
-            <div className={"animate-spin"}>loading</div>
+            <div className={"animate-spin"}>
+                loading...
+            </div>
         ) : (
             <Component {...pageProps} />
         )
