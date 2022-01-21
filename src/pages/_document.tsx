@@ -2,23 +2,22 @@ import Document, {Head, Html, Main, NextScript} from 'next/document';
 
 class MyDocument extends Document {
 
-/*    static async getInitialProps(ctx: DocumentContext) {
-        return await Document.getInitialProps(ctx)
-    }*/
 
     render() {
         return (
-            <Html lang={"en"}>
+            <Html lang="en">
                 <Head>
-                    <script async src={`https://www.googletagmanager.com/gtag/js?id=${process.env.GOOGLE_ANALYTICS_KEY}`} />
+                    <script async src={
+                        `https://www.googletagmanager.com/gtag/js?id=${process.env.GOOGLE_ANALYTICS_KEY}`
+                    } />
                     <script dangerouslySetInnerHTML={{ __html: `
                         window.dataLayer = window.dataLayer || [];
-                        function gtag(){ dataLayer.push(arguments); }
+                        function gtag() { dataLayer.push(arguments); }
                         gtag('js', new Date());
-                        gtag('config', '${process.env.GOOGLE_ANALYTICS_KEY}', { page_path: window.location.pathname });`,
+                        gtag('config', '${process.env.GOOGLE_ANALYTICS_KEY}', {page_path: window.location.pathname});`,
                     }} />
 
-                    {/*<link rel="icon" type="image/png" href="https://avatars.githubusercontent.com/u/50220137?v=4" />*/}
+                    {/*<link rel="icon" type="image/png" href="https://github.com/tomheaton.png" />*/}
                     <link rel="icon" href="/favicon.ico" />
                     <link rel="canonical" href="https://tomheaton.dev" />
                     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
