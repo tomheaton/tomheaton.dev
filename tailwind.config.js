@@ -14,6 +14,7 @@ module.exports = {
                 'myred': '#ff4d4d',
                 'mydarkgray': '#212529',
                 'mygray': '#343a40',
+                'myblue': '#3e8497',
             }
         },
     },
