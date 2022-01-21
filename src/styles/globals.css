@@ -2,29 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-    --green-color: #66b193;
-    --purple-colour: #1b1325;
-    --blue-color: #3e8497;
-    --red-color: #ff4d4d;
-    --dark-gray-color: #212529;
-    --gray-color: #343a40;
-    --selection-color: var(--green-color);
+.dev {
+    border: red solid 1px;
 }
 
-.dev * {
-    border: solid red 1px;
-}
-
-html, body {
+html,
+body {
     padding: 0;
     margin: 0;
     font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
     transition: background 0.25s ease-in-out;
-    -ms-overflow-style: none;
     scrollbar-width: none;
-    text-align: center;
+    -ms-overflow-style: none;
 }
 
 body::-webkit-scrollbar {
@@ -32,18 +22,13 @@ body::-webkit-scrollbar {
 }
 
 *::selection {
-    background: var(--selection-color);
+    @apply bg-mygreen
 }
 
 *::-moz-selection {
-    background: var(--selection-color);
-}
-
-a {
-    color: inherit;
-    text-decoration: none;
+    @apply bg-mygreen
 }
 
 a:hover {
-    color: var(--selection-color);
+    @apply text-mygreen
 }
