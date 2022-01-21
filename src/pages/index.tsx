@@ -32,16 +32,16 @@ const Index: NextPage = () => {
     }, [currentTheme]);*/
 
     return (
-        <div className={"h-screen bg-white text-black dark:bg-zinc-900 dark:text-white"}>
+        <div className={"min-h-screen bg-white text-zinc-900 dark:bg-zinc-900 dark:text-white flex flex-col justify-between"}>
             <SEO />
-            <main className={"w-full flex flex-col content-center items-center"}>
-                <div className={"w-1/2 mt-20 h-96 p-10 flex flex-col border-2 border-mygreen rounded-md"}>
-                    <div className={"flex items-center"}>
-                        <div className={"max-h-[100px] max-w-[100px] rounded-full cursor-pointer"}>
+            <main className={"h-full w-full flex flex-col content-center items-center"}>
+                <div className={"w-4/5 md:w-2/5 mt-20 min-h-96 p-10 flex flex-col border-2 border-mygreen rounded-md"}>
+                    <div className={"flex flex-col md:flex-row items-center text-center w-full"}>
+                        <div className={"min-h-[100px] min-w-[100px] rounded-full cursor-pointer"}>
                             <Image src={"/avatar.jpg"} width={100} height={100} alt={"Tom Heaton Avatar"}
                                    className={"rounded-full"} />
                         </div>
-                        <h1 className={"ml-5 text-5xl font-bold"}>
+                        <h1 className={"w-full mx-5 text-4xl md:text-5xl font-bold"}>
                             Tom Heaton
                             {" "}
                             <span className={"text-3xl text-mygreen font-medium"}>
@@ -55,7 +55,7 @@ const Index: NextPage = () => {
                     </p>
                 </div>
             </main>
-            <footer className={"flex justify-center fixed bottom-0 left-0 right-0  text-center"}>
+            <footer className={"flex justify-center text-center font-medium mt-10"}>
                 <div className={"flex flex-col"}>
                     <div className={"text-[24px] space-x-4"}>
                         <a target={"_blank"} href={"https://www.github.com/tomheaton"} rel={"noopener noreferrer"}>
