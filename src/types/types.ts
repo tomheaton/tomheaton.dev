@@ -1,10 +1,10 @@
 type Repo = {
     owner: string
     repo: string
-    link: URL
+    link: string
     description: string
-    image: URL
-    website: URL
+    image: string
+    website: string
     language: string
     languageColor: string
     stars: string
