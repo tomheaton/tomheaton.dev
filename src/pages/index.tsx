@@ -1,12 +1,12 @@
-import getAge from "../utils/age";
-import SEO from "../components/seo";
-import type {NextPage} from "next";
+import getAge from "@utils/age";
+import SEO from "@components/seo";
+import {NextPage} from "next";
 import Image from "next/image";
 import {toWords} from "number-to-words";
 
 const Index: NextPage = () => {
 
-    const age = getAge(new Date("09/30/2002"));
+    const age: number = getAge(new Date("09/30/2002"));
 
 /*    // TODO: move theme things to `_app.tsx`?
     const [currentTheme, setCurrentTheme] = useState<"light" | "dark">("light");
@@ -37,11 +37,11 @@ const Index: NextPage = () => {
             <main className={"h-full w-full flex flex-col content-center items-center"}>
                 <div className={"w-4/5 md:w-2/5 mt-20 min-h-96 p-10 flex flex-col border-2 border-mygreen rounded-md"}>
                     <div className={"flex flex-col md:flex-row items-center text-center w-full"}>
-                        <div className={"min-h-[100px] min-w-[100px] rounded-full cursor-pointer"}>
+                        <div className={"w-1/3 rounded-full cursor-pointer"}>
                             <Image src={"/avatar.jpg"} width={100} height={100} alt={"Tom Heaton Avatar"}
                                    className={"rounded-full"} />
                         </div>
-                        <h1 className={"w-full mx-5 text-4xl md:text-5xl font-bold"}>
+                        <h1 className={"w-2/3 mx-5 text-4xl md:text-5xl font-bold"}>
                             Tom Heaton
                             {" "}
                             <span className={"text-3xl text-mygreen font-medium"}>
@@ -51,7 +51,7 @@ const Index: NextPage = () => {
                     </div>
                     <div className={"border-t-4 my-4 border-mygreen"} />
                     <p className={"text-xl"}>
-                        hey, I am a{age === 18 && "n"} {toWords(age)} year old who likes to code things.
+                        Hey, I am a{age === 18 && "n"} {toWords(age)} year old software developer from the United Kingdom.
                     </p>
                 </div>
             </main>
