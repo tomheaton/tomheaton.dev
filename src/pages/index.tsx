@@ -1,12 +1,47 @@
 import getAge from "@utils/age";
 import SEO from "@components/seo";
-import {NextPage} from "next";
+import {GetServerSideProps, NextPage} from "next";
 import Image from "next/image";
 import {toWords} from "number-to-words";
+// import getProjects from "@utils/projects";
+import {useEffect, useState} from "react";
+// @ts-ignore
+import {Repo} from "@types/types"; // TODO: fix this.
 
-const Index: NextPage = () => {
+type Props = {
+    data?: Repo[]
+}
+
+export const getServerSideProps: GetServerSideProps = async ({ params }) => {
+
+    const response = await fetch("https://gh-pinned-repos.egoist.sh/?username=tomheaton")
+    console.log(response)
+    const data = await response.json()
+
+    return {
+        props: {
+            data
+        }
+    };
+}
+
+const Index: NextPage<Props> = (props) => {
 
     const age: number = getAge(new Date("09/30/2002"));
+
+    const [data, setData] = useState<object[] | null>(null);
+
+    useEffect(() => {
+
+        const getProjects = async () => {
+            const response = await fetch("https://gh-pinned-repos.egoist.sh/?username=tomheaton")
+            console.log(response)
+            return await response.json()
+        }
+
+        getProjects()
+
+    }, []);
 
 /*    // TODO: move theme things to `_app.tsx`?
     const [currentTheme, setCurrentTheme] = useState<"light" | "dark">("light");
@@ -53,6 +88,16 @@ const Index: NextPage = () => {
                     <p className={"text-xl"}>
                         Hey, I am a{age === 18 && "n"} {toWords(age)} year old software developer from the United Kingdom.
                     </p>
+                    <div className={"border-t-4 my-4 border-mygreen"} />
+                    <div>
+                        <p>
+                            {JSON.stringify(data)}
+                        </p>
+                        <br/>
+                        <p>
+                            {JSON.stringify(props.data)}
+                        </p>
+                    </div>
                 </div>
             </main>
             <footer className={"flex justify-center text-center font-medium mt-10"}>
