@@ -4,8 +4,10 @@ import {GetServerSideProps, NextPage} from "next";
 import Image from "next/image";
 import {toWords} from "number-to-words";
 // @ts-ignore
-import {Repo, IndexProps} from "@types/types";
-import RepoCard from "@components/RepoCard"; // TODO: fix this.
+import {Repo, IndexProps} from "@types/types";  // TODO: fix this.
+import RepoCard from "@components/RepoCard";
+import {useEffect} from "react";
+import {getTheme, setTheme, toggleTheme} from "@utils/theme";
 
 /*export const getServerSideProps: GetServerSideProps = async ({ params }) => {
 
@@ -47,6 +49,20 @@ const Index: NextPage = (props) => {
         }
     }, [currentTheme]);*/
 
+    useEffect(() => {
+        if (typeof window !== "undefined") {
+            window.matchMedia("(prefers-color-scheme: light)").addEventListener("change", (e) => {
+                setTheme(e.matches ? "light" : "dark");
+            });
+        }
+        setTheme(getTheme())
+    }, []);
+
+    const handleToggleTheme = (e: any) => {
+        e.preventDefault();
+        toggleTheme();
+    }
+
     return (
         <div className={"min-h-screen bg-white text-zinc-900 dark:bg-zinc-900 dark:text-white flex flex-col justify-between"}>
             <SEO />
@@ -55,6 +71,7 @@ const Index: NextPage = (props) => {
                     <div className={"flex flex-col md:flex-row items-center text-center w-full"}>
                         <div className={"w-1/3 rounded-full cursor-pointer"}>
                             <Image src={"/avatar.jpg"} width={100} height={100} alt={"Tom Heaton Avatar"}
+                                   onClick={handleToggleTheme}
                                    className={"rounded-full"} />
                         </div>
                         <h1 className={"w-2/3 mx-5 text-4xl md:text-5xl font-bold"}>
