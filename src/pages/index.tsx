@@ -4,16 +4,12 @@ import {GetServerSideProps, NextPage} from "next";
 import Image from "next/image";
 import {toWords} from "number-to-words";
 // @ts-ignore
-import {Repo} from "@types/types";
+import {Repo, IndexProps} from "@types/types";
 import RepoCard from "@components/RepoCard"; // TODO: fix this.
 
-type Props = {
-    data?: Repo[]
-}
+/*export const getServerSideProps: GetServerSideProps = async ({ params }) => {
 
-export const getServerSideProps: GetServerSideProps = async ({ params }) => {
-
-    const response = await fetch("http://localhost:3000/api/repos")
+    const response = await fetch(`${process.env.NEXT_PUBLIC_URL}/api/repos`)
     const data = await response.json()
 
     return {
@@ -21,9 +17,10 @@ export const getServerSideProps: GetServerSideProps = async ({ params }) => {
             data
         }
     };
-}
+}*/
 
-const Index: NextPage<Props> = (props) => {
+// const Index: NextPage<IndexProps> = () => {
+const Index: NextPage = (props) => {
 
     const age: number = getAge(new Date("09/30/2002"));
 
@@ -72,13 +69,13 @@ const Index: NextPage<Props> = (props) => {
                     <p className={"text-xl"}>
                         Hey, I am a{age === 18 && "n"} {toWords(age)} year old software developer from the United Kingdom.
                     </p>
-                    <div className={"border-t-4 my-4 border-mygreen"} />
-                    <ul>
+                    {/*<div className={"border-t-4 my-4 border-mygreen"} />*/}
+                    {/*<ul>
                         {props.data && props.data.map((repo: Repo, index: number) => {
                             // return (<li key={index} id={`${index}`}>{JSON.stringify(repo, null, 4)}</li>);
                             return (<li key={index} id={`${index}`}><RepoCard repository={repo}/></li>);
                         })}
-                    </ul>
+                    </ul>*/}
                 </div>
             </main>
             <footer className={"flex justify-center text-center font-medium mt-10"}>

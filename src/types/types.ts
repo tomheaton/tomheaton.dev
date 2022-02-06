@@ -11,4 +11,8 @@ type Repo = {
     forks: string
 }
 
-export type {Repo};
+type IndexProps = {
+    data?: Repo[]
+}
+
+export type { Repo, IndexProps };
