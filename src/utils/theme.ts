@@ -24,7 +24,7 @@ const saveTheme = (theme: string): void => {
 
 const toggleTheme = (): void => {
     if (typeof window !== "undefined") {
-        const current_theme = localStorage.getItem("theme") || "light";
+        const current_theme = localStorage.getItem("theme") || "dark";
         saveTheme(current_theme == "light" ? "dark" : "light");
         setTheme(getTheme());
     }
