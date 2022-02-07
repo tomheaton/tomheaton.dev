@@ -5,7 +5,7 @@ import Image from "next/image";
 import {toWords} from "number-to-words";
 // @ts-ignore
 import {IndexProps, Repo} from "@types/types"; // TODO: fix this.
-import {useEffect} from "react";
+import {SyntheticEvent, useEffect} from "react";
 import {getTheme, setTheme, toggleTheme} from "@utils/theme";
 
 /*export const getServerSideProps: GetServerSideProps = async ({ params }) => {
@@ -25,29 +25,6 @@ const Index: NextPage = (props) => {
 
     const age: number = getAge(new Date("09/30/2002"));
 
-/*    // TODO: move theme things to `_app.tsx`?
-    const [currentTheme, setCurrentTheme] = useState<"light" | "dark">("light");
-
-    const handleThemeToggle = async (e: any) => {
-        e.preventDefault();
-        let theme: "light" | "dark" = currentTheme === "light" ? "dark" : "light"
-        setCurrentTheme(theme);
-        localStorage.setItem("theme", theme);
-    }
-
-    useEffect(() => {
-        let b = (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches))
-        setCurrentTheme(b ? "dark" : "light");
-    }, []);
-
-    useEffect(() => {
-        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-            document.documentElement.classList.add('dark')
-        } else {
-            document.documentElement.classList.remove('dark')
-        }
-    }, [currentTheme]);*/
-
     useEffect(() => {
         if (typeof window !== "undefined") {
             window.matchMedia("(prefers-color-scheme: light)").addEventListener("change", (e) => {
@@ -57,7 +34,7 @@ const Index: NextPage = (props) => {
         setTheme(getTheme())
     }, []);
 
-    const handleToggleTheme = (e: any) => {
+    const handleToggleTheme = (e: SyntheticEvent) => {
         e.preventDefault();
         toggleTheme();
     }
