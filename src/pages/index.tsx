@@ -20,17 +20,17 @@ import {getTheme, setTheme, toggleTheme} from "@utils/theme";
     };
 }*/
 
-// const Index: NextPage<IndexProps> = () => {
-const Index: NextPage = (props) => {
+// const Index: NextPage<IndexProps> = (props) => {
+const Index: NextPage = () => {
 
     const age: number = getAge(new Date("09/30/2002"));
 
     useEffect(() => {
-        if (typeof window !== "undefined") {
+/*        if (typeof window !== "undefined") {
             window.matchMedia("(prefers-color-scheme: light)").addEventListener("change", (e) => {
                 setTheme(e.matches ? "light" : "dark");
             });
-        }
+        }*/
         setTheme(getTheme())
     }, []);
 
