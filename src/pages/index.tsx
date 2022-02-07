@@ -1,11 +1,10 @@
 import getAge from "@utils/age";
 import SEO from "@components/seo";
-import {GetServerSideProps, NextPage} from "next";
+import {NextPage} from "next";
 import Image from "next/image";
 import {toWords} from "number-to-words";
 // @ts-ignore
-import {Repo, IndexProps} from "@types/types";  // TODO: fix this.
-import RepoCard from "@components/RepoCard";
+import {IndexProps, Repo} from "@types/types"; // TODO: fix this.
 import {useEffect} from "react";
 import {getTheme, setTheme, toggleTheme} from "@utils/theme";
 
