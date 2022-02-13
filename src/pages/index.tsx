@@ -3,33 +3,41 @@ import SEO from "@components/seo";
 import {NextPage} from "next";
 import Image from "next/image";
 import {toWords} from "number-to-words";
+// @ts-ignore
+import {IndexProps, Repo} from "@types/types"; // TODO: fix this.
+import {SyntheticEvent, useEffect} from "react";
+import {getTheme, setTheme, toggleTheme} from "@utils/theme";
 
+/*export const getServerSideProps: GetServerSideProps = async ({ params }) => {
+
+    const response = await fetch(`${process.env.NEXT_PUBLIC_URL}/api/repos`)
+    const data = await response.json()
+
+    return {
+        props: {
+            data
+        }
+    };
+}*/
+
+// const Index: NextPage<IndexProps> = (props) => {
 const Index: NextPage = () => {
 
     const age: number = getAge(new Date("09/30/2002"));
 
-/*    // TODO: move theme things to `_app.tsx`?
-    const [currentTheme, setCurrentTheme] = useState<"light" | "dark">("light");
-
-    const handleThemeToggle = async (e: any) => {
-        e.preventDefault();
-        let theme: "light" | "dark" = currentTheme === "light" ? "dark" : "light"
-        setCurrentTheme(theme);
-        localStorage.setItem("theme", theme);
-    }
-
     useEffect(() => {
-        let b = (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches))
-        setCurrentTheme(b ? "dark" : "light");
+/*        if (typeof window !== "undefined") {
+            window.matchMedia("(prefers-color-scheme: light)").addEventListener("change", (e) => {
+                setTheme(e.matches ? "light" : "dark");
+            });
+        }*/
+        setTheme(getTheme())
     }, []);
 
-    useEffect(() => {
-        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-            document.documentElement.classList.add('dark')
-        } else {
-            document.documentElement.classList.remove('dark')
-        }
-    }, [currentTheme]);*/
+    const handleToggleTheme = (e: SyntheticEvent) => {
+        e.preventDefault();
+        toggleTheme();
+    }
 
     return (
         <div className={"min-h-screen bg-white text-zinc-900 dark:bg-zinc-900 dark:text-white flex flex-col justify-between"}>
@@ -39,6 +47,7 @@ const Index: NextPage = () => {
                     <div className={"flex flex-col md:flex-row items-center text-center w-full"}>
                         <div className={"w-1/3 rounded-full cursor-pointer"}>
                             <Image src={"/avatar.jpg"} width={100} height={100} alt={"Tom Heaton Avatar"}
+                                   onClick={handleToggleTheme}
                                    className={"rounded-full"} />
                         </div>
                         <h1 className={"w-2/3 mx-5 text-4xl md:text-5xl font-bold"}>
@@ -53,6 +62,13 @@ const Index: NextPage = () => {
                     <p className={"text-xl"}>
                         Hey, I am a{age === 18 && "n"} {toWords(age)} year old software developer from the United Kingdom.
                     </p>
+                    {/*<div className={"border-t-4 my-4 border-mygreen"} />*/}
+                    {/*<ul>
+                        {props.data && props.data.map((repo: Repo, index: number) => {
+                            // return (<li key={index} id={`${index}`}>{JSON.stringify(repo, null, 4)}</li>);
+                            return (<li key={index} id={`${index}`}><RepoCard repository={repo}/></li>);
+                        })}
+                    </ul>*/}
                 </div>
             </main>
             <footer className={"flex justify-center text-center font-medium mt-10"}>

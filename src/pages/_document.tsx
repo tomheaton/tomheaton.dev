@@ -24,6 +24,7 @@ class MyDocument extends Document {
                     <link rel="manifest" href="/manifest.json" />
 
                     <meta charSet="utf-8" />
+
                     {/*<meta name="viewport" content="width=device-width, initial-scale=1" />*/}
                     {/*<meta name="color-scheme" content="dark light" />*/}
                     {/*<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#212529" />*/}

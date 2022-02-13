@@ -36,9 +36,12 @@ const App = ({ Component, pageProps }: AppProps) => {
 
     return (
         loading ? (
-            <div className={"animate-spin"}>
-                loading...
-            </div>
+            <>
+                <h1>Tom Heaton</h1>
+                <div className={"animate-spin"}>
+                    <p>loading...</p>
+                </div>
+            </>
         ) : (
             <Component {...pageProps} />
         )
