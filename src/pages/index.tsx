@@ -3,8 +3,6 @@ import SEO from "@components/seo";
 import {NextPage} from "next";
 import Image from "next/image";
 import {toWords} from "number-to-words";
-// @ts-ignore
-import {IndexProps, Repo} from "@types/types"; // TODO: fix this.
 import {SyntheticEvent, useEffect} from "react";
 import {getTheme, setTheme, toggleTheme} from "@utils/theme";
 
@@ -47,8 +45,8 @@ const Index: NextPage = () => {
                     <div className={"flex flex-col md:flex-row items-center text-center w-full"}>
                         <div className={"w-1/3 rounded-full cursor-pointer"}>
                             <Image src={"/avatar.jpg"} width={100} height={100} alt={"Tom Heaton Avatar"}
-                                   onClick={handleToggleTheme}
-                                   className={"rounded-full"} />
+                                   onClick={handleToggleTheme} className={"rounded-full"}
+                            />
                         </div>
                         <h1 className={"w-2/3 mx-5 text-4xl md:text-5xl font-bold"}>
                             Tom Heaton
@@ -74,23 +72,29 @@ const Index: NextPage = () => {
             <footer className={"flex justify-center text-center font-medium mt-10"}>
                 <div className={"flex flex-col"}>
                     <div className={"text-[24px] space-x-4"}>
-                        <a target={"_blank"} href={"https://www.github.com/tomheaton"} rel={"noopener noreferrer"}>
+                        <a target={"_blank"} rel={"noopener noreferrer"}
+                           href={"https://www.github.com/tomheaton"}
+                        >
                             <i className={"bi bi-github"} aria-label={"Github"} />
                         </a>
                         <a target={"_blank"} rel={"noopener noreferrer"}
-                           href={"https://www.discord.com/users/325306360004739072"}>
+                           href={"https://www.discord.com/users/325306360004739072"}
+                        >
                             <i className={"bi bi-discord"} aria-label={"Discord"} />
                         </a>
                         <a target={"_blank"} rel={"noopener noreferrer"}
-                           href={"https://www.twitter.com/tomheaton_"}>
+                           href={"https://www.twitter.com/tomheaton_"}
+                        >
                             <i className={"bi bi-twitter"} aria-label={"Twitter"} />
                         </a>
                         <a target={"_blank"} rel={"noopener noreferrer"}
-                           href={"mailto:tom@tomheaton.dev"}>
+                           href={"mailto:tom@tomheaton.dev"}
+                        >
                             <i className={"bi bi-envelope-fill"} aria-label={"Email"} />
                         </a>
                         <a target={"_blank"} rel={"noopener noreferrer"}
-                           href={"https://www.linkedin.com/in/tom-heaton-39b107220/"}>
+                           href={"https://www.linkedin.com/in/tom-heaton-39b107220/"}
+                        >
                             <i className={"bi bi-linkedin"} aria-label={"LinkedIn"} />
                         </a>
                     </div>
@@ -98,7 +102,8 @@ const Index: NextPage = () => {
                         &copy; Tom Heaton {new Date().getFullYear()}
                         {" "}
                         <a target={"_blank"} rel={"noopener noreferrer"}
-                           href={"https://www.github.com/tomheaton/next-tomheaton-dev"}>
+                           href={"https://www.github.com/tomheaton/next-tomheaton-dev"}
+                        >
                             <i className={"bi bi-code-slash"} aria-label={"Source Code"} />
                         </a>
                     </p>
