@@ -75,7 +75,7 @@ const Index: NextPage = () => {
                         <a target={"_blank"} rel={"noopener noreferrer"}
                            href={"https://www.github.com/tomheaton"}
                         >
-                            <i className={"bi bi-github"} aria-label={"Github"} />
+                            <i className={"bi bi-github"} aria-label={"GitHub"} />
                         </a>
                         <a target={"_blank"} rel={"noopener noreferrer"}
                            href={"https://www.discord.com/users/325306360004739072"}
@@ -93,7 +93,7 @@ const Index: NextPage = () => {
                             <i className={"bi bi-envelope-fill"} aria-label={"Email"} />
                         </a>
                         <a target={"_blank"} rel={"noopener noreferrer"}
-                           href={"https://www.linkedin.com/in/tom-heaton-39b107220/"}
+                           href={"https://www.linkedin.com/in/tomheaton7/"}
                         >
                             <i className={"bi bi-linkedin"} aria-label={"LinkedIn"} />
                         </a>
