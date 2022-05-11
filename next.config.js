@@ -10,7 +10,7 @@ const nextConfig = {
         return [
             {
                 source: '/linkedin',
-                destination: 'https://www.linkedin.com/in/tom-heaton-39b107220/',
+                destination: 'https://www.linkedin.com/in/tomheaton7/',
                 permanent: true
             },
             {
