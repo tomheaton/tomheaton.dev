@@ -68,6 +68,30 @@ const Index: NextPage = () => {
                         })}
                     </ul>*/}
                 </div>
+                <div className={"w-4/5 md:w-2/5 mt-8 min-h-96 p-10 flex flex-col border-2 border-mygreen rounded-md"}>
+                    <div className={"grid grid-cols-1 xl:grid-cols-2"}>
+                        <div className={"p-4 m-4 border-2 border-red-500"}>
+                            <h3>
+                                item
+                            </h3>
+                        </div>
+                        <div className={"p-4 m-4 border-2 border-red-500"}>
+                            <h3>
+                                item
+                            </h3>
+                        </div>
+                        <div className={"p-4 m-4 border-2 border-red-500"}>
+                            <h3>
+                                item
+                            </h3>
+                        </div>
+                        <div className={"p-4 m-4 border-2 border-red-500"}>
+                            <h3>
+                                item
+                            </h3>
+                        </div>
+                    </div>
+                </div>
             </main>
             <footer className={"flex justify-center text-center font-medium mt-10"}>
                 <div className={"flex flex-col"}>
