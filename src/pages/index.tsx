@@ -57,8 +57,13 @@ const Index: NextPage = () => {
                 <div className={"w-4/5 md:w-2/5 mt-8 p-4 flex flex-col border-2 border-mygreen rounded-md"}>
                     <div className={"grid grid-cols-1 xl:grid-cols-2"}>
                         {data && data.data.map((repo: Repo, index: number) => {
-                            return (<RepoCard key={index} repository={repo}/>);
+                            return (<RepoCard key={index} repository={repo} />);
                         })}
+                        {!data && (
+                            <p className={"col-span-2"}>
+                                loading
+                            </p>
+                        )}
                     </div>
                 </div>
             </main>
