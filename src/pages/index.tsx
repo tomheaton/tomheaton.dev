@@ -5,21 +5,13 @@ import Image from "next/image";
 import {toWords} from "number-to-words";
 import {SyntheticEvent, useEffect} from "react";
 import {getTheme, setTheme, toggleTheme} from "@utils/theme";
+import {useRepos} from "@utils/hooks";
+import {Repo} from "@utils/types";
+import RepoCard from "@components/RepoCard";
 
-/*export const getServerSideProps: GetServerSideProps = async ({ params }) => {
-
-    const response = await fetch(`${process.env.NEXT_PUBLIC_URL}/api/repos`)
-    const data = await response.json()
-
-    return {
-        props: {
-            data
-        }
-    };
-}*/
-
-// const Index: NextPage<IndexProps> = (props) => {
 const Index: NextPage = () => {
+
+    const {data, error, mutate} = useRepos();
 
     const age: number = getAge(new Date("09/30/2002"));
 
@@ -58,15 +50,19 @@ const Index: NextPage = () => {
                     </div>
                     <div className={"border-t-4 my-4 border-mygreen"} />
                     <p className={"text-xl"}>
-                        Hey, I am a{age === 18 && "n"} {toWords(age)} year old software developer from the United Kingdom.
+                        Hey, I am a {toWords(age)} year old software developer from the United Kingdom.
                     </p>
                     {/*<div className={"border-t-4 my-4 border-mygreen"} />*/}
-                    {/*<ul>
-                        {props.data && props.data.map((repo: Repo, index: number) => {
-                            // return (<li key={index} id={`${index}`}>{JSON.stringify(repo, null, 4)}</li>);
-                            return (<li key={index} id={`${index}`}><RepoCard repository={repo}/></li>);
+                    <ul>
+                        {data && data.data.map((repo: Repo, index: number) => {
+                            return (
+                                <li key={index} id={`${index}`}>
+                                    {JSON.stringify(repo, null, 4)}
+                                    {/*<RepoCard repository={repo}/>*/}
+                                </li>
+                            );
                         })}
-                    </ul>*/}
+                    </ul>
                 </div>
                 <div className={"w-4/5 md:w-2/5 mt-8 min-h-96 p-10 flex flex-col border-2 border-mygreen rounded-md"}>
                     <div className={"grid grid-cols-1 xl:grid-cols-2"}>
