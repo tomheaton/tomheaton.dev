@@ -6,8 +6,6 @@ import {toWords} from "number-to-words";
 import React, {SyntheticEvent, useEffect} from "react";
 import {getTheme, setTheme, toggleTheme} from "@utils/theme";
 import {useRepos} from "@utils/hooks";
-import {Repo} from "@utils/types";
-import RepoCard from "@components/RepoCard";
 
 const Index: NextPage = () => {
 
@@ -54,7 +52,7 @@ const Index: NextPage = () => {
                         Hey, I am a {toWords(age)} year old software developer from the United Kingdom.
                     </p>
                 </div>
-                <div className={"w-4/5 md:w-2/5 mt-8 p-4 flex flex-col border-2 border-mygreen rounded-md"}>
+                {/*<div className={"w-4/5 md:w-2/5 mt-8 p-4 flex flex-col border-2 border-mygreen rounded-md"}>
                     <div className={"grid grid-cols-1 xl:grid-cols-2"}>
                         {data && data.data.map((repo: Repo, index: number) => {
                             return (<RepoCard key={index} repository={repo} />);
@@ -65,7 +63,7 @@ const Index: NextPage = () => {
                             </p>
                         )}
                     </div>
-                </div>
+                </div>*/}
             </main>
             <footer className={"flex justify-center text-center font-medium mt-10"}>
                 <div className={"flex flex-col"}>
