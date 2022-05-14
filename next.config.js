@@ -18,6 +18,9 @@ const nextConfig = {
                 permanent: true
             }
         ]
+    },
+    images: {
+        domains: ['opengraph.githubassets.com']
     }
 }
 
