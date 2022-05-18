@@ -1,10 +1,10 @@
 import {getAge} from "@utils/utils";
-import SEO from "@components/seo";
 import {NextPage} from "next";
 import Image from "next/image";
 import {toWords} from "number-to-words";
 import React, {SyntheticEvent, useEffect} from "react";
 import {getTheme, setTheme, toggleTheme} from "@utils/theme";
+import Head from "next/head";
 
 const Index: NextPage = () => {
 
@@ -27,9 +27,40 @@ const Index: NextPage = () => {
     }
 
     return (
-        <div
-            className={"min-h-screen bg-white text-zinc-900 dark:bg-zinc-900 dark:text-white flex flex-col justify-between"}>
-            <SEO/>
+        <div className={"min-h-screen bg-white text-zinc-900 dark:bg-zinc-900 dark:text-white flex flex-col justify-between"}>
+            <Head>
+                <link rel="icon" href="/favicon.ico"/>
+                <link rel="canonical" href="https://tomheaton.dev"/>
+                <link rel="apple-touch-icon" href="/apple-touch-icon.png"/>
+                <link rel="manifest" href="/manifest.json"/>
+
+                <meta charSet="utf-8"/>
+
+                <meta name="viewport" content="width=device-width, initial-scale=1"/>
+                {/*<meta name="color-scheme" content="dark light" />*/}
+                {/*<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#212529" />*/}
+                {/*<meta name="theme-color" media="(prefers-color-scheme: light)" content="#fff" />*/}
+                <meta name="author" content="Tom Heaton"/>
+                <meta name="description" content="Tom Heaton - Software Developer"/>
+                <meta name="keywords" content="software developer, software, developer, code, coding, programmer, software programmer, webapp developer, web development, programming, technology, apps, software development, software engineer, programming software, application development, software design"/>
+
+                <meta property="og:title" content="Tom Heaton"/>
+                <meta property="og:description" content="Tom Heaton - Software Developer"/>
+                <meta property="og:type" content="website"/>
+                <meta property="og:url" content="https://tomheaton.dev/"/>
+                <meta property="og:image" content="/avatar.jpg"/>
+                <meta property="og:locale" content="en_GB"/>
+
+                <meta name="twitter:card" content="summary_large_image"/>
+                <meta name="twitter:site" content="@tomheaton_"/>
+                <meta name="twitter:creator" content="@tomheaton_"/>
+                <meta name="twitter:title" content="Tom Heaton"/>
+                <meta name="twitter:description" content="Tom Heaton - Software Developer"/>
+                <meta name="twitter:image" content="https://tomheaton.dev/avatar.jpg"/>
+                <meta name="twitter:image:alt" content="Tom Heaton Avatar"/>
+
+                <title>Tom Heaton</title>
+            </Head>
             <main className={"h-full w-full flex flex-col content-center items-center"}>
                 <div className={"w-4/5 md:w-2/5 mt-20 min-h-96 p-10 flex flex-col border-2 border-mygreen rounded-md"}>
                     <div className={"flex flex-col md:flex-row items-center text-center w-full"}>
@@ -86,7 +117,7 @@ const Index: NextPage = () => {
                     <p className={"p-2 text-lg"}>
                         &copy; Tom Heaton {new Date().getFullYear()}
                         {" "}
-                        <a target={"_blank"} rel={"me external noopener noreferrer"} href={"https://www.github.com/tomheaton/next-tomheaton-dev"}>
+                        <a target={"_blank"} rel={"external noopener noreferrer"} href={"https://www.github.com/tomheaton/next-tomheaton-dev"}>
                             <i className={"bi bi-code-slash"} aria-label={"Source Code"}/>
                         </a>
                     </p>
