@@ -5,11 +5,10 @@ import Image from "next/image";
 import {toWords} from "number-to-words";
 import React, {SyntheticEvent, useEffect} from "react";
 import {getTheme, setTheme, toggleTheme} from "@utils/theme";
-import {useRepos} from "@utils/hooks";
 
 const Index: NextPage = () => {
 
-    const {data, error, mutate} = useRepos();
+    // const {data, error, mutate} = useRepos();
 
     const age: number = getAge(new Date("09/30/2002"));
 

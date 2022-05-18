@@ -37,7 +37,10 @@ const App = ({ Component, pageProps }: AppProps) => {
     return (
         loading ? (
             <>
-                <h1>Tom Heaton</h1>
+                <h1 className={"font-bold text-6xl"}>
+                    Tom Heaton - Software Developer
+                </h1>
+                <br/>
                 <div className={"animate-spin"}>
                     <p>loading...</p>
                 </div>
