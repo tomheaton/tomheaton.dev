@@ -3,6 +3,7 @@ import '@styles/globals.css';
 import {AppProps} from "next/app";
 import {useEffect, useState} from "react";
 import {useRouter} from "next/router";
+import {Toaster} from "react-hot-toast";
 
 const App = ({ Component, pageProps }: AppProps) => {
 
@@ -46,7 +47,10 @@ const App = ({ Component, pageProps }: AppProps) => {
                 </div>
             </>
         ) : (
-            <Component {...pageProps} />
+            <>
+                <Toaster toastOptions={{position: "top-center"}} />
+                <Component {...pageProps} />
+            </>
         )
     );
 }
