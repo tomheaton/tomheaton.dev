@@ -1,19 +1,21 @@
-import {getAge, handleToggleTheme} from "@utils/utils";
 import {NextPage} from "next";
 import Image from "next/image";
-import {toWords} from "number-to-words";
 import React from "react";
 import Head from "next/head";
 import Footer from "@components/Footer";
+import {useMusic} from "@utils/hooks";
+import {MusicType} from "@utils/types";
+import MusicCard from "@components/MusicCard";
+import {handleToggleTheme} from "@utils/utils";
 
-const Index: NextPage = () => {
+const Music: NextPage = () => {
 
-    const age: number = getAge(new Date("09/30/2002"));
+    const {data, error, mutate} = useMusic();
 
     return (
         <div className={"min-h-screen bg-white text-zinc-900 dark:bg-zinc-900 dark:text-white flex flex-col justify-between"}>
             <Head>
-                <title>Tom Heaton</title>
+                <title>Music | Tom Heaton</title>
             </Head>
 
             <main className={"h-full w-full flex flex-col content-center items-center"}>
@@ -34,8 +36,20 @@ const Index: NextPage = () => {
                     </div>
                     <div className={"border-t-4 my-4 border-mygreen"}/>
                     <p className={"text-xl"}>
-                        Hey, I am a {toWords(age)} year old software developer from the United Kingdom.
+                        Music
                     </p>
+                </div>
+                <div className={"w-4/5 md:w-2/5 mt-8 p-4 flex flex-col border-2 border-mygreen rounded-md"}>
+                    <div className={"grid grid-cols-1 xl:grid-cols-2"}>
+                        {data && data.data.map((music: MusicType, index: number) => (
+                            <MusicCard key={index} music={music}/>
+                        ))}
+                        {!data && (
+                            <p className={"col-span-2"}>
+                                loading
+                            </p>
+                        )}
+                    </div>
                 </div>
             </main>
 
@@ -44,4 +58,4 @@ const Index: NextPage = () => {
     );
 }
 
-export default Index;
+export default Music;

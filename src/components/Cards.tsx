@@ -1,6 +1,6 @@
-import {Card} from "@utils/types";
+import {CardType} from "@utils/types";
 
-const cardData: Card[] = [
+const cardData: CardType[] = [
     {
         title: "Simply Jetpacks 2",
         description: "A Minecraft mod that adds Jetpacks and Fluxpacks",
@@ -15,7 +15,7 @@ const cardData: Card[] = [
 
 const Cards = () => {
     return (
-        <div className={"d-flex flex-wrap justify-content-center cards"} style={{paddingTop: "20px"}}>
+        <div className={"flex flex-wrap justify-content-center cards"} style={{paddingTop: "20px"}}>
             {
                 cardData.map((element, index) => {
                     return (
