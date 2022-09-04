@@ -1,4 +1,4 @@
-export type Repo = {
+export type RepoType = {
     owner: string
     repo: string
     link: string
@@ -11,11 +11,7 @@ export type Repo = {
     forks: string
 }
 
-export type IndexProps = {
-    data?: Repo[]
-}
-
-export type Card = {
+export type CardType = {
     title: string
     description: string
     link: string

@@ -23,7 +23,7 @@ class MyDocument extends Document {
 
                     <meta charSet="utf-8" />
 
-                    <meta name="viewport" content="width=device-width, initial-scale=1" />
+                    {/*<meta name="viewport" content="width=device-width, initial-scale=1" />*/}
                     {/*<meta name="color-scheme" content="dark light" />*/}
                     {/*<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#212529" />*/}
                     {/*<meta name="theme-color" media="(prefers-color-scheme: light)" content="#fff" />*/}
@@ -46,7 +46,7 @@ class MyDocument extends Document {
                     <meta name="twitter:image" content="https://tomheaton.dev/avatar.jpg" />
                     <meta name="twitter:image:alt" content="Tom Heaton Avatar" />
 
-                    <title>Tom Heaton</title>
+                    {/*<title>Tom Heaton</title>*/}
                 </Head>
                 <body>
                     <Main/>

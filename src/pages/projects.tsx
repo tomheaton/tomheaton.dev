@@ -1,23 +1,18 @@
-import {getAge} from "@utils/utils";
 import {NextPage} from "next";
 import Image from "next/image";
-import {toWords} from "number-to-words";
 import React, {SyntheticEvent, useEffect} from "react";
 import {getTheme, setTheme, toggleTheme} from "@utils/theme";
 import Head from "next/head";
 import Footer from "@components/Footer";
+import {useRepos} from "@utils/hooks";
+import RepoCard from "@components/RepoCard";
+import {RepoType} from "@utils/types";
 
-const Index: NextPage = () => {
+const Projects: NextPage = () => {
 
-    const age: number = getAge(new Date("09/30/2002"));
+    const {data, error, mutate} = useRepos();
 
     useEffect(() => {
-        // TODO: remove this?
-        /*if (typeof window !== "undefined") {
-            window.matchMedia("(prefers-color-scheme: light)").addEventListener("change", (e) => {
-                setTheme(e.matches ? "light" : "dark");
-            });
-        }*/
         setTheme(getTheme())
     }, []);
 
@@ -29,7 +24,7 @@ const Index: NextPage = () => {
     return (
         <div className={"min-h-screen bg-white text-zinc-900 dark:bg-zinc-900 dark:text-white flex flex-col justify-between"}>
             <Head>
-                <title>Tom Heaton</title>
+                <title>Projects | Tom Heaton</title>
             </Head>
 
             <main className={"h-full w-full flex flex-col content-center items-center"}>
@@ -50,8 +45,20 @@ const Index: NextPage = () => {
                     </div>
                     <div className={"border-t-4 my-4 border-mygreen"}/>
                     <p className={"text-xl"}>
-                        Hey, I am a {toWords(age)} year old software developer from the United Kingdom.
+                        Projects (currently pinned GitHub repos)
                     </p>
+                </div>
+                <div className={"w-4/5 md:w-2/5 mt-8 p-4 flex flex-col border-2 border-mygreen rounded-md"}>
+                    <div className={"grid grid-cols-1 xl:grid-cols-2"}>
+                        {data && data.data.map((repo: RepoType, index: number) => (
+                            <RepoCard key={index} repository={repo}/>
+                        ))}
+                        {!data && (
+                            <p className={"col-span-2"}>
+                                loading
+                            </p>
+                        )}
+                    </div>
                 </div>
             </main>
 
@@ -60,4 +67,4 @@ const Index: NextPage = () => {
     );
 }
 
-export default Index;
+export default Projects;

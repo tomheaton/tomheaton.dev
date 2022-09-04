@@ -1,8 +1,8 @@
 import {NextApiHandler, NextApiRequest, NextApiResponse} from "next";
-import {Repo} from "@utils/types";
+import {RepoType} from "@utils/types";
 
 type Data = {
-    data: Repo[]
+    data: RepoType[]
 }
 
 const handler: NextApiHandler = async (req: NextApiRequest, res: NextApiResponse<Data>) => {
