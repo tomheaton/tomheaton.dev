@@ -1,30 +1,14 @@
-import {getAge} from "@utils/utils";
+import {getAge, handleToggleTheme} from "@utils/utils";
 import {NextPage} from "next";
 import Image from "next/image";
 import {toWords} from "number-to-words";
-import React, {SyntheticEvent, useEffect} from "react";
-import {getTheme, setTheme, toggleTheme} from "@utils/theme";
+import React from "react";
 import Head from "next/head";
 import Footer from "@components/Footer";
 
 const Index: NextPage = () => {
 
     const age: number = getAge(new Date("09/30/2002"));
-
-    useEffect(() => {
-        // TODO: remove this?
-        /*if (typeof window !== "undefined") {
-            window.matchMedia("(prefers-color-scheme: light)").addEventListener("change", (e) => {
-                setTheme(e.matches ? "light" : "dark");
-            });
-        }*/
-        setTheme(getTheme())
-    }, []);
-
-    const handleToggleTheme = (e: SyntheticEvent) => {
-        e.preventDefault();
-        toggleTheme();
-    }
 
     return (
         <div className={"min-h-screen bg-white text-zinc-900 dark:bg-zinc-900 dark:text-white flex flex-col justify-between"}>

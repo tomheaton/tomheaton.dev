@@ -4,20 +4,32 @@ import {AppProps} from "next/app";
 import {useEffect, useState} from "react";
 import {useRouter} from "next/router";
 import {Toaster} from "react-hot-toast";
+import {getTheme, setTheme} from "@utils/theme";
 
-const App = ({ Component, pageProps }: AppProps) => {
+const App = ({Component, pageProps}: AppProps) => {
 
-    const router = useRouter()
+    const router = useRouter();
 
     const [loading, setLoading] = useState<boolean>(false);
 
     useEffect(() => {
+        // TODO: remove this?
+        /*if (typeof window !== "undefined") {
+            window.matchMedia("(prefers-color-scheme: light)").addEventListener("change", (e) => {
+                setTheme(e.matches ? "light" : "dark");
+            });
+        }*/
+        setTheme(getTheme());
         console.log("follow the white rabbit...");
     }, []);
 
     useEffect(() => {
-        const handleStart = () => { setLoading(true); };
-        const handleComplete = () => { setLoading(false); };
+        const handleStart = () => {
+            setLoading(true);
+        };
+        const handleComplete = () => {
+            setLoading(false);
+        };
 
         router.events.on('routeChangeStart', handleStart);
         router.events.on('routeChangeComplete', handleComplete);
@@ -48,7 +60,7 @@ const App = ({ Component, pageProps }: AppProps) => {
             </>
         ) : (
             <>
-                <Toaster toastOptions={{position: "top-center"}} />
+                <Toaster toastOptions={{position: "top-center"}}/>
                 <Component {...pageProps} />
             </>
         )

@@ -1,25 +1,16 @@
 import {NextPage} from "next";
 import Image from "next/image";
-import React, {SyntheticEvent, useEffect} from "react";
-import {getTheme, setTheme, toggleTheme} from "@utils/theme";
+import React from "react";
 import Head from "next/head";
 import Footer from "@components/Footer";
 import {useRepos} from "@utils/hooks";
 import RepoCard from "@components/RepoCard";
 import {RepoType} from "@utils/types";
+import {handleToggleTheme} from "@utils/utils";
 
 const Projects: NextPage = () => {
 
     const {data, error, mutate} = useRepos();
-
-    useEffect(() => {
-        setTheme(getTheme())
-    }, []);
-
-    const handleToggleTheme = (e: SyntheticEvent) => {
-        e.preventDefault();
-        toggleTheme();
-    }
 
     return (
         <div className={"min-h-screen bg-white text-zinc-900 dark:bg-zinc-900 dark:text-white flex flex-col justify-between"}>

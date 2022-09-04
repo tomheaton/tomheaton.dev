@@ -1,25 +1,16 @@
 import {NextPage} from "next";
 import Image from "next/image";
-import React, {SyntheticEvent, useEffect} from "react";
-import {getTheme, setTheme, toggleTheme} from "@utils/theme";
+import React from "react";
 import Head from "next/head";
 import Footer from "@components/Footer";
 import {useMusic} from "@utils/hooks";
 import {MusicType} from "@utils/types";
 import MusicCard from "@components/MusicCard";
+import {handleToggleTheme} from "@utils/utils";
 
 const Music: NextPage = () => {
 
     const {data, error, mutate} = useMusic();
-
-    useEffect(() => {
-        setTheme(getTheme())
-    }, []);
-
-    const handleToggleTheme = (e: SyntheticEvent) => {
-        e.preventDefault();
-        toggleTheme();
-    }
 
     return (
         <div className={"min-h-screen bg-white text-zinc-900 dark:bg-zinc-900 dark:text-white flex flex-col justify-between"}>
