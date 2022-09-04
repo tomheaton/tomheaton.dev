@@ -20,7 +20,10 @@ const nextConfig = {
         ]
     },
     images: {
-        domains: ['opengraph.githubassets.com']
+        domains: [
+            'opengraph.githubassets.com',
+            'e-cdns-images.dzcdn.net'
+        ]
     }
 }
 

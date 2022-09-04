@@ -15,7 +15,7 @@ const cardData: CardType[] = [
 
 const Cards = () => {
     return (
-        <div className={"d-flex flex-wrap justify-content-center cards"} style={{paddingTop: "20px"}}>
+        <div className={"flex flex-wrap justify-content-center cards"} style={{paddingTop: "20px"}}>
             {
                 cardData.map((element, index) => {
                     return (

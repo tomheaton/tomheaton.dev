@@ -4,13 +4,13 @@ import React, {SyntheticEvent, useEffect} from "react";
 import {getTheme, setTheme, toggleTheme} from "@utils/theme";
 import Head from "next/head";
 import Footer from "@components/Footer";
-import {useRepos} from "@utils/hooks";
-import RepoCard from "@components/RepoCard";
-import {RepoType} from "@utils/types";
+import {useMusic} from "@utils/hooks";
+import {MusicType} from "@utils/types";
+import MusicCard from "@components/MusicCard";
 
-const Projects: NextPage = () => {
+const Music: NextPage = () => {
 
-    const {data, error, mutate} = useRepos();
+    const {data, error, mutate} = useMusic();
 
     useEffect(() => {
         setTheme(getTheme())
@@ -24,7 +24,7 @@ const Projects: NextPage = () => {
     return (
         <div className={"min-h-screen bg-white text-zinc-900 dark:bg-zinc-900 dark:text-white flex flex-col justify-between"}>
             <Head>
-                <title>Projects | Tom Heaton</title>
+                <title>Music | Tom Heaton</title>
             </Head>
 
             <main className={"h-full w-full flex flex-col content-center items-center"}>
@@ -45,13 +45,13 @@ const Projects: NextPage = () => {
                     </div>
                     <div className={"border-t-4 my-4 border-mygreen"}/>
                     <p className={"text-xl"}>
-                        Projects (currently pinned GitHub repos)
+                        Music
                     </p>
                 </div>
                 <div className={"w-4/5 md:w-2/5 mt-8 p-4 flex flex-col border-2 border-mygreen rounded-md"}>
                     <div className={"grid grid-cols-1 xl:grid-cols-2"}>
-                        {data && data.data.map((repo: RepoType, index: number) => (
-                            <RepoCard key={index} repo={repo}/>
+                        {data && data.data.map((music: MusicType, index: number) => (
+                            <MusicCard key={index} music={music}/>
                         ))}
                         {!data && (
                             <p className={"col-span-2"}>
@@ -67,4 +67,4 @@ const Projects: NextPage = () => {
     );
 }
 
-export default Projects;
+export default Music;
