@@ -10,6 +10,7 @@ const MusicCard: React.FC<Props> = ({music}) => {
 
     return (
         <a href={music.link} target={"_blank"} rel={"external noopener noreferrer"}>
+            {/*TODO: fix card grow*/}
             <div className={"cursor-pointer p-4 m-4 border-2 border-mygreen rounded-lg"}>
                 <h2 className={"font-semibold text-xl"}>
                     {music.title}
