@@ -1,4 +1,4 @@
-import {getAge, handleToggleTheme} from "@utils/utils";
+import {getAge, handleToggleTheme} from "@utils/index";
 import {NextPage} from "next";
 import Image from "next/image";
 import {toWords} from "number-to-words";

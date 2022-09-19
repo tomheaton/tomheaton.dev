@@ -6,7 +6,7 @@ import Footer from "@components/Footer";
 import {useRepos} from "@utils/hooks";
 import RepoCard from "@components/RepoCard";
 import {RepoType} from "@utils/types";
-import {handleToggleTheme} from "@utils/utils";
+import {handleToggleTheme} from "@utils/index";
 
 const Projects: NextPage = () => {
 

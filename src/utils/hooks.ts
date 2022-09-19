@@ -9,5 +9,9 @@ export const useRepos = () => {
 }
 
 export const useMusic = () => {
-    return useSWR<{data: MusicType[]}>("/api/music", fetcher);
+    return useSWR<{data: MusicType[]}>("/api/music", fetcher, {
+        revalidateIfStale: false,
+        revalidateOnFocus: false,
+        revalidateOnReconnect: false,
+    });
 }

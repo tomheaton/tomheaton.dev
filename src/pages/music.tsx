@@ -6,7 +6,7 @@ import Footer from "@components/Footer";
 import {useMusic} from "@utils/hooks";
 import {MusicType} from "@utils/types";
 import MusicCard from "@components/MusicCard";
-import {handleToggleTheme} from "@utils/utils";
+import {handleToggleTheme} from "@utils/index";
 
 const Music: NextPage = () => {
 
