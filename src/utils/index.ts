@@ -1,4 +1,4 @@
-import {SyntheticEvent} from "react";
+import type {SyntheticEvent} from "react";
 import {toggleTheme} from "@utils/theme";
 
 export const getAge = (birthdate: Date): number => {

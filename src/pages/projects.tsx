@@ -1,19 +1,19 @@
-import {NextPage} from "next";
+import type {NextPage} from "next";
 import Image from "next/image";
 import React from "react";
 import Head from "next/head";
 import Footer from "@components/Footer";
 import {useRepos} from "@utils/hooks";
 import RepoCard from "@components/RepoCard";
-import {RepoType} from "@utils/types";
+import type {RepoType} from "@utils/types";
 import {handleToggleTheme} from "@utils/index";
 
 const Projects: NextPage = () => {
-
     const {data, error, mutate} = useRepos();
 
     return (
-        <div className={"min-h-screen bg-white text-zinc-900 dark:bg-zinc-900 dark:text-white flex flex-col justify-between"}>
+        <div
+            className={"min-h-screen bg-white text-zinc-900 dark:bg-zinc-900 dark:text-white flex flex-col justify-between"}>
             <Head>
                 <title>Projects | Tom Heaton</title>
             </Head>

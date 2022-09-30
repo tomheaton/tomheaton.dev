@@ -1,13 +1,12 @@
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import '@styles/globals.css';
-import {AppProps} from "next/app";
+import type {AppType} from "next/app";
 import {useEffect, useState} from "react";
 import {useRouter} from "next/router";
 import {Toaster} from "react-hot-toast";
 import {getTheme, setTheme} from "@utils/theme";
 
-const App = ({Component, pageProps}: AppProps) => {
-
+const App: AppType = ({Component, pageProps}) => {
     const router = useRouter();
 
     const [loading, setLoading] = useState<boolean>(false);

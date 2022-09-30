@@ -1,4 +1,4 @@
-import {RepoType} from "@utils/types";
+import type {RepoType} from "@utils/types";
 import React from "react";
 
 type Props = {
@@ -18,7 +18,7 @@ const RepoCard: React.FC<Props> = ({repo}) => {
                 </p>
                 {/*<Image src={repository.image} height={600} width={1200} alt={repository.repo}/>*/}
                 {/*TODO: fix colour*/}
-                {/*<div className={`border-t-4 my-4 border-[${repository.languageColor}]`} />*/}
+                {/*<div className={`border-t-4 my-4 border-[${repository.languageColor}]`}/>*/}
             </div>
         </a>
     );

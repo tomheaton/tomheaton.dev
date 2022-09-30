@@ -1,19 +1,19 @@
-import {NextPage} from "next";
+import type {NextPage} from "next";
 import Image from "next/image";
 import React from "react";
 import Head from "next/head";
 import Footer from "@components/Footer";
 import {useMusic} from "@utils/hooks";
-import {MusicType} from "@utils/types";
+import type {MusicType} from "@utils/types";
 import MusicCard from "@components/MusicCard";
 import {handleToggleTheme} from "@utils/index";
 
 const Music: NextPage = () => {
-
     const {data, error, mutate} = useMusic();
 
     return (
-        <div className={"min-h-screen bg-white text-zinc-900 dark:bg-zinc-900 dark:text-white flex flex-col justify-between"}>
+        <div
+            className={"min-h-screen bg-white text-zinc-900 dark:bg-zinc-900 dark:text-white flex flex-col justify-between"}>
             <Head>
                 <title>Music | Tom Heaton</title>
             </Head>

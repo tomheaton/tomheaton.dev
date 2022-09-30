@@ -1,5 +1,5 @@
 import {getAge, handleToggleTheme} from "@utils/index";
-import {NextPage} from "next";
+import type {NextPage} from "next";
 import Image from "next/image";
 import {toWords} from "number-to-words";
 import React from "react";
@@ -7,11 +7,11 @@ import Head from "next/head";
 import Footer from "@components/Footer";
 
 const Index: NextPage = () => {
-
     const age: number = getAge(new Date("09/30/2002"));
 
     return (
-        <div className={"min-h-screen bg-white text-zinc-900 dark:bg-zinc-900 dark:text-white flex flex-col justify-between"}>
+        <div
+            className={"min-h-screen bg-white text-zinc-900 dark:bg-zinc-900 dark:text-white flex flex-col justify-between"}>
             <Head>
                 <title>Tom Heaton</title>
             </Head>

@@ -1,4 +1,5 @@
-import {CardType} from "@utils/types";
+import type {CardType} from "@utils/types";
+import React from "react";
 
 const cardData: CardType[] = [
     {
@@ -13,7 +14,7 @@ const cardData: CardType[] = [
     }
 ];
 
-const Cards = () => {
+const Cards: React.FC = () => {
     return (
         <div className={"flex flex-wrap justify-content-center cards"} style={{paddingTop: "20px"}}>
             {
@@ -21,7 +22,7 @@ const Cards = () => {
                     return (
                         <div key={index} className={"m-2 w-[18rem] transition ease-in-out duration-[25ms]"}>
                             <a target={"_blank"} rel={"noopener noreferrer"} href={element.link}>
-                                <img src={"/avatar.jpg"} alt={`${element.title} Logo`} width={"100px"} />
+                                <img src={"/avatar.jpg"} alt={`${element.title} Logo`} width={"100px"}/>
                                 <p>
                                     {element.description}
                                 </p>
@@ -32,8 +33,10 @@ const Cards = () => {
             }
             <div className={"m-2 w-[18rem] transition ease-in-out duration-[25ms]"}>
                 <div>
-                    <br />
-                    <p>Watch this space to see it fill up with all the projects I am working on!</p>
+                    <br/>
+                    <p>
+                        Watch this space to see it fill up with all the projects I am working on!
+                    </p>
                 </div>
             </div>
         </div>
