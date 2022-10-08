@@ -7,7 +7,6 @@ type Props = {
 }
 
 const MusicCard: React.FC<Props> = ({music}) => {
-
     return (
         <a href={music.link} target={"_blank"} rel={"external noopener noreferrer"}>
             {/*TODO: fix card grow*/}

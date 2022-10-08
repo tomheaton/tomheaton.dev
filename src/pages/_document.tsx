@@ -50,8 +50,8 @@ class MyDocument extends Document {
                     {/*<title>Tom Heaton</title>*/}
                 </Head>
                 <body>
-                <Main/>
-                <NextScript/>
+                    <Main/>
+                    <NextScript/>
                 </body>
             </Html>
         );
