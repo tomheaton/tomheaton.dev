@@ -1,6 +1,20 @@
-import React from "react";
+import React, {SyntheticEvent} from "react";
+import {copyToClipboard} from "@utils/index";
+import toast from "react-hot-toast";
 
 const Footer: React.FC = () => {
+
+    const handleCopyDiscord = async (e: SyntheticEvent) => {
+        e.preventDefault();
+        copyToClipboard("tomheaton#9999")
+            .then(() => {
+                toast.success("Copy Success!");
+            })
+            .catch(() => {
+                toast.error("Copy Failed!");
+            });
+    }
+
     return (
         <footer className={"flex justify-center text-center font-medium mt-10"}>
             <div className={"flex flex-col"}>
@@ -13,9 +27,11 @@ const Footer: React.FC = () => {
                         <i className={"bi bi-github"} aria-label={"GitHub"}/>
                     </a>
                     <a
-                        target={"_blank"}
-                        rel={"me external noopener noreferrer"}
-                        href={"https://www.discord.com/users/325306360004739072"}
+                        onClick={handleCopyDiscord}
+                        className={"cursor-pointer"}
+                        // target={"_blank"}
+                        // rel={"me external noopener noreferrer"}
+                        // href={"https://www.discord.com/users/325306360004739072"}
                     >
                         <i className={"bi bi-discord"} aria-label={"Discord"}/>
                     </a>
