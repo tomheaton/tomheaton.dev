@@ -8,10 +8,10 @@ const Footer: React.FC = () => {
         e.preventDefault();
         copyToClipboard("tomheaton#9999")
             .then(() => {
-                toast.success("Copy Success!");
+                toast.success("Copied to clipboard!");
             })
             .catch(() => {
-                toast.error("Copy Failed!");
+                toast.error("Copy failed!");
             });
     }
 
