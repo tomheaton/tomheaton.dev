@@ -1,5 +1,6 @@
 "use client";
 
+import 'bootstrap-icons/font/bootstrap-icons.css';
 import "@styles/globals.css";
 import React, {useEffect} from "react";
 import {Toaster} from "react-hot-toast";

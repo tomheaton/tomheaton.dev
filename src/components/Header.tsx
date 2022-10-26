@@ -12,7 +12,7 @@ const Header: React.FC = () => {
                     height={100}
                     alt={"Tom Heaton Avatar"}
                     onClick={handleToggleTheme}
-                    className={"rounded-full"}
+                    className={"rounded-full m-auto"}
                 />
             </div>
             <h1 className={"w-2/3 mx-5 text-4xl md:text-5xl font-bold"}>

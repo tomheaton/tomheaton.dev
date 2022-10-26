@@ -2,13 +2,12 @@
 
 import React from "react";
 import Footer from "@components/Footer";
-import {useMusic} from "@utils/hooks";
 import type {MusicType} from "@utils/types";
 import MusicCard from "@components/MusicCard";
 import Header from "@components/Header";
 
 const Music = () => {
-    const {data} = useMusic();
+    // const {data} = useMusic();
 
     return (
         <div className={"min-h-screen bg-white text-zinc-900 dark:bg-zinc-900 dark:text-white flex flex-col justify-between"}>
@@ -25,7 +24,7 @@ const Music = () => {
                     </p>
                 </div>
                 <div className={"w-4/5 md:w-2/5 mt-8 p-4 flex flex-col border-2 border-mygreen rounded-md"}>
-                    <div className={"grid grid-cols-1 xl:grid-cols-2"}>
+                    {/*<div className={"grid grid-cols-1 xl:grid-cols-2"}>
                         {data && data.data.map((music: MusicType, index: number) => (
                             <MusicCard key={index} music={music}/>
                         ))}
@@ -34,7 +33,7 @@ const Music = () => {
                                 loading
                             </p>
                         )}
-                    </div>
+                    </div>*/}
                 </div>
             </main>
 

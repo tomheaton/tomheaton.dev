@@ -2,13 +2,12 @@
 
 import React from "react";
 import Footer from "@components/Footer";
-import {useRepos} from "@utils/hooks";
 import RepoCard from "@components/RepoCard";
 import type {RepoType} from "@utils/types";
 import Header from "@components/Header";
 
 const Projects = () => {
-    const {data} = useRepos();
+    // const {data} = useRepos();
 
     return (
         <div className={"min-h-screen bg-white text-zinc-900 dark:bg-zinc-900 dark:text-white flex flex-col justify-between"}>
@@ -26,14 +25,14 @@ const Projects = () => {
                 </div>
                 <div className={"w-4/5 md:w-2/5 mt-8 p-4 flex flex-col border-2 border-mygreen rounded-md"}>
                     <div className={"grid grid-cols-1 xl:grid-cols-2"}>
-                        {data && data.data.map((repo: RepoType, index: number) => (
+                        {/*{data && data.data.map((repo: RepoType, index: number) => (
                             <RepoCard key={index} repo={repo}/>
                         ))}
                         {!data && (
                             <p className={"col-span-2"}>
                                 loading
                             </p>
-                        )}
+                        )}*/}
                     </div>
                 </div>
             </main>
