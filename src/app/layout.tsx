@@ -51,8 +51,6 @@ const RootLayout = ({children}: RootLayoutProps) => {
                 <meta name="twitter:description" content="Tom Heaton - Software Developer"/>
                 <meta name="twitter:image" content="https://tomheaton.dev/avatar.jpg"/>
                 <meta name="twitter:image:alt" content="Tom Heaton Avatar"/>
-
-                <title>Tom Heaton</title>
             </head>
             <body>
                 {children}
