@@ -6,10 +6,10 @@ import React, {useEffect} from "react";
 import {Toaster} from "react-hot-toast";
 import {getTheme, setTheme} from "@utils/theme";
 
-const RootLayout: React.FC<{
-    children: React.ReactNode
-}> = ({
+const RootLayout = ({
     children
+}: {
+    children: React.ReactNode;
 }) => {
     useEffect(() => {
         // TODO: remove this?

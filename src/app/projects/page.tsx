@@ -1,13 +1,17 @@
-"use client";
-
 import React from "react";
 import Footer from "@components/Footer";
-import RepoCard from "@components/RepoCard";
-import type {RepoType} from "@utils/types";
 import Header from "@components/Header";
 
+// async function getProjects() {
+//     // const response = await fetch("https://gh-pinned-repos.egoist.sh/?username=tomheaton");
+//     const response = await fetch("https://tomheaton.dev/api/repos");
+//     return response.json();
+// }
+
 const Projects = () => {
-    // const {data} = useRepos();
+    // const data = use(getProjects());
+
+    // console.log(JSON.stringify(data, null, 4));
 
     return (
         <div className={"min-h-screen bg-white text-zinc-900 dark:bg-zinc-900 dark:text-white flex flex-col justify-between"}>

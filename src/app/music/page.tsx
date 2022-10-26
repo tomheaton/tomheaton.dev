@@ -2,11 +2,9 @@
 
 import React from "react";
 import Footer from "@components/Footer";
-import type {MusicType} from "@utils/types";
-import MusicCard from "@components/MusicCard";
 import Header from "@components/Header";
 
-const Music = () => {
+const Music = async () => {
     // const {data} = useMusic();
 
     return (
