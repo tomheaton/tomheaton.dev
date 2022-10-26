@@ -1,9 +1,10 @@
+"use client";
+
 import React, {SyntheticEvent} from "react";
 import {copyToClipboard} from "@utils/index";
-import toast from "react-hot-toast";
+import toast, {Toaster} from "react-hot-toast";
 
 const Footer: React.FC = () => {
-
     const handleCopyDiscord = async (e: SyntheticEvent) => {
         e.preventDefault();
         copyToClipboard("tomheaton#9999")
@@ -17,6 +18,7 @@ const Footer: React.FC = () => {
 
     return (
         <footer className={"flex justify-center text-center font-medium mt-10"}>
+            <Toaster toastOptions={{position: "top-center"}}/>
             <div className={"flex flex-col"}>
                 <div className={"text-[24px] space-x-4"}>
                     <a

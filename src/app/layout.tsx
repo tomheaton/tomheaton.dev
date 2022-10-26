@@ -1,27 +1,12 @@
-"use client";
-
-import 'bootstrap-icons/font/bootstrap-icons.css';
+import "bootstrap-icons/font/bootstrap-icons.css";
 import "@styles/globals.css";
-import React, {useEffect} from "react";
-import {Toaster} from "react-hot-toast";
-import {getTheme, setTheme} from "@utils/theme";
+import React from "react";
 
-const RootLayout = ({
-    children
-}: {
+type RootLayoutProps = {
     children: React.ReactNode;
-}) => {
-    useEffect(() => {
-        // TODO: remove this?
-        /*if (typeof window !== "undefined") {
-            window.matchMedia("(prefers-color-scheme: light)").addEventListener("change", (e) => {
-                setTheme(e.matches ? "light" : "dark");
-            });
-        }*/
-        setTheme(getTheme());
-        console.log("follow the white rabbit...");
-    }, []);
+}
 
+const RootLayout = ({children}: RootLayoutProps) => {
     return (
         <html lang={"en"}>
             <head>
@@ -70,7 +55,6 @@ const RootLayout = ({
                 <title>Tom Heaton</title>
             </head>
             <body>
-                <Toaster toastOptions={{position: "top-center"}}/>
                 {children}
             </body>
         </html>

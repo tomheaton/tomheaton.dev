@@ -1,5 +1,3 @@
-"use client";
-
 import {getAge} from "@utils/index";
 import {toWords} from "number-to-words";
 import React from "react";
