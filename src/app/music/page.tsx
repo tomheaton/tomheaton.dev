@@ -1,6 +1,5 @@
 "use client";
 
-import type {NextPage} from "next";
 import React from "react";
 import Footer from "@components/Footer";
 import {useMusic} from "@utils/hooks";
@@ -8,8 +7,8 @@ import type {MusicType} from "@utils/types";
 import MusicCard from "@components/MusicCard";
 import Header from "@components/Header";
 
-const Music: NextPage = () => {
-    const {data, error, mutate} = useMusic();
+const Music = () => {
+    const {data} = useMusic();
 
     return (
         <div className={"min-h-screen bg-white text-zinc-900 dark:bg-zinc-900 dark:text-white flex flex-col justify-between"}>

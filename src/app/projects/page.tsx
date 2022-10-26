@@ -1,6 +1,5 @@
 "use client";
 
-import type {NextPage} from "next";
 import React from "react";
 import Footer from "@components/Footer";
 import {useRepos} from "@utils/hooks";
@@ -8,8 +7,8 @@ import RepoCard from "@components/RepoCard";
 import type {RepoType} from "@utils/types";
 import Header from "@components/Header";
 
-const Projects: NextPage = () => {
-    const {data, error, mutate} = useRepos();
+const Projects = () => {
+    const {data} = useRepos();
 
     return (
         <div className={"min-h-screen bg-white text-zinc-900 dark:bg-zinc-900 dark:text-white flex flex-col justify-between"}>
