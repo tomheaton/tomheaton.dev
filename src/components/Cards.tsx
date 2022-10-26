@@ -16,7 +16,7 @@ const cardData: CardType[] = [
 
 const Cards: React.FC = () => {
     return (
-        <div className={"flex flex-wrap justify-content-center cards"} style={{paddingTop: "20px"}}>
+        <div className={"flex flex-wrap justify-content-center cards pt-20"}>
             {
                 cardData.map((element, index) => {
                     return (

@@ -8,6 +8,8 @@ const getMusic = async () => {
     const response = await fetch("https://api.deezer.com/user/844148065/flow")
     const data = await response.json()
 
+    return [];
+
     if (!data || !data.data) {
         return [];
     }
@@ -36,10 +38,6 @@ const Music = async () => {
 
     return (
         <div className={"min-h-screen bg-white text-zinc-900 dark:bg-zinc-900 dark:text-white flex flex-col justify-between"}>
-            {/*<Head>
-                <title>Music | Tom Heaton</title>
-            </Head>*/}
-
             <main className={"h-full w-full flex flex-col content-center items-center"}>
                 <div className={"w-4/5 md:w-2/5 mt-20 min-h-96 p-10 flex flex-col border-2 border-mygreen rounded-md"}>
                     <Header/>
