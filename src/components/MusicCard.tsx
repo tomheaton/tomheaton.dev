@@ -1,6 +1,5 @@
 import type {MusicType} from "@utils/types";
 import React from "react";
-import Image from "next/image";
 
 type Props = {
     music: MusicType
