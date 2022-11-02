@@ -16,8 +16,7 @@ const RepoCard: React.FC<Props> = ({repo}) => {
                     Stars: {repo.stars}, Forks: {repo.forks}
                 </p>
                 {/*<Image src={repository.image} height={600} width={1200} alt={repository.repo}/>*/}
-                {/*TODO: fix colour*/}
-                {/*<div className={`border-t-4 my-4 border-[${repository.languageColor}]`}/>*/}
+                <div className={`border-t-4 my-4`} style={{borderColor: repo.languageColor}}/>
             </div>
         </a>
     );
