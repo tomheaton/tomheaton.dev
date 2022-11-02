@@ -1,6 +1,5 @@
 import type {MusicType} from "@utils/types";
 import React from "react";
-import Image from "next/image";
 
 type Props = {
     music: MusicType
@@ -23,7 +22,8 @@ const MusicCard: React.FC<Props> = ({music}) => {
                 <p>
                     Duration: {new Date(music.duration * 1000).toISOString().substring(14, 19)}
                 </p>
-                <Image src={music.image} height={600} width={600} alt={music.title}/>
+                {/*TODO: fix image*/}
+                {/*<Image src={music.image} height={600} width={600} alt={music.title}/>*/}
             </div>
         </a>
     );
