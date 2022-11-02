@@ -5,10 +5,10 @@ import type {MusicType} from "@utils/types";
 import MusicCard from "@components/MusicCard";
 
 const getMusic = async () => {
-    const response = await fetch("https://api.deezer.com/user/844148065/flow")
-    const data = await response.json()
+    const response = await fetch("https://api.deezer.com/user/844148065/flow");
+    const data = await response.json();
 
-    return [];
+    // return [];
 
     if (!data || !data.data) {
         return [];

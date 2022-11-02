@@ -6,8 +6,7 @@ import type {RepoType} from "@utils/types";
 
 const getProjects = async () => {
     const response = await fetch("https://gh-pinned-repos.egoist.dev/?username=tomheaton");
-
-    const data = response.json();
+    const data = await response.json();
 
     if (!data) {
         return [];
