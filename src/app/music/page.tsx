@@ -8,8 +8,6 @@ const getMusic = async () => {
     const response = await fetch("https://api.deezer.com/user/844148065/flow");
     const data = await response.json();
 
-    // return [];
-
     if (!data || !data.data) {
         return [];
     }
@@ -56,6 +54,13 @@ const Music = async () => {
                                 loading
                             </p>
                         )}
+                        {/*<pre>
+                            {JSON.stringify({test: data})}
+                        </pre>*/}
+                        {data && data.map((music: MusicType, index: number) => (
+                            // <MusicCard key={index} music={music}/>
+                            <p key={index}>{JSON.stringify(music)}</p>
+                        ))}
                     </div>
                 </div>
             </main>
