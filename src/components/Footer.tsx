@@ -18,7 +18,9 @@ const Footer: React.FC = () => {
 
     return (
         <footer className={"flex justify-center text-center font-medium mt-10"}>
+            {/*TODO: is toaster best here?*/}
             <Toaster toastOptions={{position: "top-center"}}/>
+            {/*TODO: fix bootstrap icons*/}
             <div className={"flex flex-col"}>
                 <div className={"text-[24px] space-x-4"}>
                     <a

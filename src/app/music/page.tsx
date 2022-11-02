@@ -54,13 +54,6 @@ const Music = async () => {
                                 loading
                             </p>
                         )}
-                        {/*<pre>
-                            {JSON.stringify({test: data})}
-                        </pre>*/}
-                        {data && data.map((music: MusicType, index: number) => (
-                            // <MusicCard key={index} music={music}/>
-                            <p key={index}>{JSON.stringify(music)}</p>
-                        ))}
                     </div>
                 </div>
             </main>
