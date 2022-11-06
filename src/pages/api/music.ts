@@ -15,6 +15,7 @@ const handler: NextApiHandler = async (req: NextApiRequest, res: NextApiResponse
 
     let musicData: MusicType[] = [];
 
+    // TODO: add zod?
     data.data.forEach((music: any) => {
         if (music.type === "track") {
             musicData.push({
