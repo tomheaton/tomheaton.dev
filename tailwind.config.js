@@ -8,14 +8,12 @@ module.exports = {
     theme: {
         extend: {
             colors: {
-                transparent: 'transparent',
-                current: 'currentColor',
-                'mygreen': '#66b193',
-                'mypurple': '#1b1325',
-                'myred': '#ff4d4d',
-                'mydarkgray': '#212529',
-                'mygray': '#343a40',
-                'myblue': '#3e8497',
+                'myGreen': '#66b193',
+                'myPurple': '#1b1325',
+                'myRed': '#ff4d4d',
+                'myDarkGray': '#212529',
+                'myGray': '#343a40',
+                'myBlue': '#3e8497',
             }
         },
     },

@@ -1,6 +1,6 @@
 import "bootstrap-icons/font/bootstrap-icons.css";
 import "@styles/globals.css";
-import React, {PropsWithChildren} from "react";
+import type {PropsWithChildren} from "react";
 
 const RootLayout = ({children}: PropsWithChildren) => {
     return (

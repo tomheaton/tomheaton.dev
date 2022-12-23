@@ -22,13 +22,13 @@ body::-webkit-scrollbar {
 }
 
 *::selection {
-    @apply bg-mygreen
+    @apply bg-myGreen
 }
 
 *::-moz-selection {
-    @apply bg-mygreen
+    @apply bg-myGreen
 }
 
 a:hover {
-    @apply text-mygreen
+    @apply text-myGreen
 }

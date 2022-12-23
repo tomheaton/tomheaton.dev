@@ -8,7 +8,7 @@ type Props = {
 const RepoCard: React.FC<Props> = ({repo}) => {
     return (
         <a href={repo.link} target={"_blank"} rel={"external noopener noreferrer"}>
-            <div className={"cursor-pointer p-4 m-4 border-2 border-mygreen rounded-lg"}>
+            <div className={"cursor-pointer p-4 m-4 border-2 border-myGreen rounded-lg"}>
                 <h2 className={"font-semibold text-xl"}>
                     {repo.repo}
                 </h2>

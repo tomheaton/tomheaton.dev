@@ -33,7 +33,7 @@ const Header: React.FC = () => {
             <h1 className={"w-2/3 mx-5 text-4xl md:text-5xl font-bold"}>
                 Tom Heaton
                 {" "}
-                <span className={"text-3xl text-mygreen font-medium"}>
+                <span className={"text-3xl text-myGreen font-medium"}>
                     developer
                 </span>
             </h1>
