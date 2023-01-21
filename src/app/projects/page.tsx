@@ -1,7 +1,7 @@
-import Footer from "@components/Footer";
-import Header from "@components/Header";
-import RepoCard from "@components/RepoCard";
-import type {RepoType} from "@utils/types";
+import Footer from "@/components/Footer";
+import Header from "@/components/Header";
+import RepoCard from "@/components/RepoCard";
+import type {RepoType} from "@/utils/types";
 
 const getProjects = async () => {
     const response = await fetch("https://gh-pinned-repos.egoist.dev/?username=tomheaton");

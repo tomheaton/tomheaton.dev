@@ -1,4 +1,4 @@
-import type {RepoType} from "@utils/types";
+import type {RepoType} from "@/utils/types";
 import React from "react";
 
 type Props = {

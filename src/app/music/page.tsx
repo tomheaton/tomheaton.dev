@@ -1,7 +1,7 @@
-import Footer from "@components/Footer";
-import Header from "@components/Header";
-import type {MusicType} from "@utils/types";
-import MusicCard from "@components/MusicCard";
+import Footer from "@/components/Footer";
+import Header from "@/components/Header";
+import type {MusicType} from "@/utils/types";
+import MusicCard from "@/components/MusicCard";
 
 const getMusic = async () => {
     const response = await fetch("https://api.deezer.com/user/844148065/flow");

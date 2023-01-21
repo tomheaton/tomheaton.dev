@@ -1,7 +1,7 @@
 "use client";
 
 import React, {SyntheticEvent} from "react";
-import {copyToClipboard} from "@utils/index";
+import {copyToClipboard} from "@/utils";
 import toast, {Toaster} from "react-hot-toast";
 
 const Footer: React.FC = () => {

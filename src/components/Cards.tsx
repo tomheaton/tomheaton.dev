@@ -1,4 +1,4 @@
-import type {CardType} from "@utils/types";
+import type {CardType} from "@/utils/types";
 import React from "react";
 
 const cardData: CardType[] = [

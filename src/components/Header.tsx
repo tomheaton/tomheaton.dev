@@ -2,9 +2,9 @@
 
 import React, {useEffect} from "react";
 import Image from "next/image";
-import {handleToggleTheme} from "@utils/index";
+import {handleToggleTheme} from "@/utils";
 import avatar from "../../public/avatar.jpg";
-import {getTheme, setTheme} from "@utils/theme";
+import {getTheme, setTheme} from "@/utils/theme";
 
 const Header: React.FC = () => {
     useEffect(() => {

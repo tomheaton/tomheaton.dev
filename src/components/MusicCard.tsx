@@ -1,4 +1,4 @@
-import type {MusicType} from "@utils/types";
+import type {MusicType} from "@/utils/types";
 import React from "react";
 
 type Props = {
