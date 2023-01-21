@@ -2,7 +2,7 @@ import type {RepoType} from "@/utils/types";
 import React from "react";
 
 type Props = {
-    repo: RepoType
+    repo: RepoType;
 }
 
 const RepoCard: React.FC<Props> = ({repo}) => {
@@ -13,7 +13,7 @@ const RepoCard: React.FC<Props> = ({repo}) => {
                     {repo.repo}
                 </h2>
                 <p>
-                    Stars: {repo.stars}, Forks: {repo.forks}
+                    Stars: {repo.stars.toLocaleString()}, Forks: {repo.forks.toLocaleString()}
                 </p>
                 <div className={`border-t-4 my-4`} style={{borderColor: repo.languageColor}}/>
                 {/*TODO: fix image*/}

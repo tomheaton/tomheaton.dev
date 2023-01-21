@@ -2,12 +2,12 @@ import type {MusicType} from "@/utils/types";
 import React from "react";
 
 type Props = {
-    music: MusicType
+    music: MusicType;
 }
 
 const MusicCard: React.FC<Props> = ({music}) => {
     return (
-        <a href={music.link} target={"_blank"} rel={"external noopener noreferrer"}>
+        <a href={`https://deezer.com/en/track/${music.id}`} target={"_blank"} rel={"external noopener noreferrer"}>
             {/*TODO: fix card grow*/}
             <div className={"cursor-pointer p-4 m-4 border-2 border-myGreen rounded-lg"}>
                 <h2 className={"font-semibold text-xl"}>
