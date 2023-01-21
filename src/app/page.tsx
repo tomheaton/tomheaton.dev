@@ -1,7 +1,7 @@
-import {getAge} from "@utils/index";
+import {getAge} from "@/utils";
 import {toWords} from "number-to-words";
-import Footer from "@components/Footer";
-import Header from "@components/Header";
+import Footer from "@/components/Footer";
+import Header from "@/components/Header";
 
 const Index = () => {
     const age: number = getAge(new Date("09/30/2002"));
@@ -17,7 +17,6 @@ const Index = () => {
                     </p>
                 </div>
             </main>
-
             <Footer/>
         </div>
     );

@@ -1,5 +1,5 @@
 import type {NextApiHandler, NextApiRequest, NextApiResponse} from "next";
-import type {MusicType} from "@utils/types";
+import type {MusicType} from "@/utils/types";
 
 type Data = {
     data: MusicType[]

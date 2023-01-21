@@ -40,7 +40,6 @@ const Projects = async () => {
                     </div>
                 </div>
             </main>
-
             <Footer/>
         </div>
     );

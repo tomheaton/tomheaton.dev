@@ -2,10 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-.dev {
-    border: red solid 1px;
-}
-
 html,
 body {
     padding: 0;
@@ -31,4 +27,8 @@ body::-webkit-scrollbar {
 
 a:hover {
     @apply text-myGreen
+}
+
+.dev {
+    @apply border-2 border-red-500;
 }

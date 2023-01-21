@@ -56,7 +56,6 @@ const Music = async () => {
                     </div>
                 </div>
             </main>
-
             <Footer/>
         </div>
     );

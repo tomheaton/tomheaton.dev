@@ -1,5 +1,5 @@
 import type {NextApiHandler, NextApiRequest, NextApiResponse} from "next";
-import type {RepoType} from "@utils/types";
+import type {RepoType} from "@/utils/types";
 
 type Data = {
     data: RepoType[]

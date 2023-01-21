@@ -17,20 +17,16 @@ const cardData: CardType[] = [
 const Cards: React.FC = () => {
     return (
         <div className={"flex flex-wrap justify-content-center cards pt-20"}>
-            {
-                cardData.map((element, index) => {
-                    return (
-                        <div key={index} className={"m-2 w-[18rem] transition ease-in-out duration-[25ms]"}>
-                            <a target={"_blank"} rel={"noopener noreferrer"} href={element.link}>
-                                <img src={"/avatar.jpg"} alt={`${element.title} Logo`} width={"100px"}/>
-                                <p>
-                                    {element.description}
-                                </p>
-                            </a>
-                        </div>
-                    );
-                })
-            }
+            {cardData.map((element, index) => (
+                <div key={index} className={"m-2 w-[18rem] transition ease-in-out duration-[25ms]"}>
+                    <a target={"_blank"} rel={"noopener noreferrer"} href={element.link}>
+                        <img src={"/avatar.jpg"} alt={`${element.title} Logo`} width={"100px"}/>
+                        <p>
+                            {element.description}
+                        </p>
+                    </a>
+                </div>
+            ))}
             <div className={"m-2 w-[18rem] transition ease-in-out duration-[25ms]"}>
                 <div>
                     <br/>

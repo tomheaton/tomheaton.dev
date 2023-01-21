@@ -1,4 +1,4 @@
-const setTheme = (theme: string): void => {
+const setTheme = (theme: string) => {
     if (theme === "light") {
         document.body.classList.remove("dark");
         return;
@@ -6,7 +6,7 @@ const setTheme = (theme: string): void => {
     document.body.classList.add("dark");
 }
 
-const getTheme = (): string => {
+const getTheme = () => {
     if (typeof window !== "undefined") {
         const theme = localStorage.getItem("theme")
         if (theme) return theme;
@@ -14,13 +14,13 @@ const getTheme = (): string => {
     return "dark";
 }
 
-const saveTheme = (theme: string): void => {
+const saveTheme = (theme: string) => {
     if (typeof window !== "undefined") {
         localStorage.setItem("theme", theme);
     }
 }
 
-const toggleTheme = (): void => {
+const toggleTheme = () => {
     if (typeof window !== "undefined") {
         const current_theme = localStorage.getItem("theme") || "dark";
         saveTheme(current_theme == "light" ? "dark" : "light");
