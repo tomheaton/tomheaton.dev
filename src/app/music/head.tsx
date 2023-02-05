@@ -1,9 +1,7 @@
 export default function Head() {
     return (
         <>
-            <title>
-                Music | Tom Heaton
-            </title>
+            <title>Music | Tom Heaton</title>
         </>
     );
 }

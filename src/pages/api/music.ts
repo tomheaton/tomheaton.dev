@@ -1,16 +1,16 @@
-import type {NextApiHandler, NextApiRequest, NextApiResponse} from "next";
-import {musicSchema, type MusicType} from "@/utils/types";
+import type { NextApiHandler, NextApiRequest, NextApiResponse } from "next";
+import { musicSchema, type MusicType } from "@/utils/types";
 
 type Data = {
     data: MusicType[];
-}
+};
 
 const handler: NextApiHandler = async (req: NextApiRequest, res: NextApiResponse<Data>) => {
     const response = await fetch("https://api.deezer.com/user/844148065/flow");
     const data = await response.json();
 
     if (!data.data) {
-        return res.status(200).json({data: []});
+        return res.status(200).json({ data: [] });
     }
 
     let musicData = data.data.flatMap((m: any) => {
@@ -21,7 +21,7 @@ const handler: NextApiHandler = async (req: NextApiRequest, res: NextApiResponse
         return music.data;
     });
 
-    return res.status(200).json({data: musicData});
-}
+    return res.status(200).json({ data: musicData });
+};
 
 export default handler;

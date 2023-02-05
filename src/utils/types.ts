@@ -1,25 +1,24 @@
-import {z} from "zod";
+import { z } from "zod";
 
 export type CardType = {
     title: string;
     description: string;
     link: string;
-}
+};
 
-export const repoSchema = z
-    .object({
-        owner: z.string(),
-        repo: z.string(),
-        link: z.string().url(),
-        description: z.string().optional(),
-        image: z.string().url(),
-        website: z.string().url().optional(),
-        language: z.string(),
-        languageColor: z.string(),
-        // TODO: is this good?
-        stars: z.union([z.string(), z.number()]),
-        forks: z.union([z.string(), z.number()]),
-    });
+export const repoSchema = z.object({
+    owner: z.string(),
+    repo: z.string(),
+    link: z.string().url(),
+    description: z.string().optional(),
+    image: z.string().url(),
+    website: z.string().url().optional(),
+    language: z.string(),
+    languageColor: z.string(),
+    // TODO: is this good?
+    stars: z.union([z.string(), z.number()]),
+    forks: z.union([z.string(), z.number()]),
+});
 
 export type RepoType = z.infer<typeof repoSchema>;
 
@@ -36,7 +35,7 @@ export const musicSchema = z
         // https://cdns-preview-6.dzcdn.net/stream/c-6430575d1f202af381f403b4752438af-6.mp3
         // preview: z.string().url(),
         artist: z.object({
-            name: z.string()
+            name: z.string(),
         }),
         album: z.object({
             cover_xl: z.string().url(),
@@ -56,7 +55,7 @@ export const musicSchema = z
             image: m.album.cover_xl,
             album: m.album.title,
             // link: `https://deezer.com/en/track/${m.id}`
-        }
+        };
     });
 
 export type MusicType = z.infer<typeof musicSchema>;

@@ -1,10 +1,10 @@
 "use client";
 
-import React, {useEffect} from "react";
+import React, { useEffect } from "react";
 import Image from "next/image";
-import {handleToggleTheme} from "@/utils";
+import { handleToggleTheme } from "@/utils";
 import avatar from "../../public/avatar.jpg";
-import {getTheme, setTheme} from "@/utils/theme";
+import { getTheme, setTheme } from "@/utils/theme";
 
 const Header: React.FC = () => {
     useEffect(() => {
@@ -19,26 +19,22 @@ const Header: React.FC = () => {
     }, []);
 
     return (
-        <header className={"flex flex-col md:flex-row items-center text-center w-full"}>
-            <div className={"w-1/3 rounded-full cursor-pointer"}>
+        <header className={"flex w-full flex-col items-center text-center md:flex-row"}>
+            <div className={"w-1/3 cursor-pointer rounded-full"}>
                 <Image
                     src={avatar}
                     width={100}
                     height={100}
                     alt={"Tom Heaton Avatar"}
                     onClick={handleToggleTheme}
-                    className={"rounded-full m-auto"}
+                    className={"m-auto rounded-full"}
                 />
             </div>
-            <h1 className={"w-2/3 mx-5 text-4xl md:text-5xl font-bold"}>
-                Tom Heaton
-                {" "}
-                <span className={"text-3xl text-myGreen font-medium"}>
-                    developer
-                </span>
+            <h1 className={"mx-5 w-2/3 text-4xl font-bold md:text-5xl"}>
+                Tom Heaton <span className={"text-3xl font-medium text-myGreen"}>developer</span>
             </h1>
         </header>
     );
-}
+};
 
 export default Header;

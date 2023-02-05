@@ -3,27 +3,28 @@ const nextConfig = {
     reactStrictMode: true,
     experimental: {
         appDir: true,
-      },
+    },
     async redirects() {
         return [
             {
-                source: '/linkedin',
-                destination: 'https://www.linkedin.com/in/tomheaton7/',
-                permanent: true
+                source: "/linkedin",
+                destination: "https://www.linkedin.com/in/tomheaton7/",
+                permanent: true,
             },
             {
-                source: '/discord',
-                destination: 'https://discord.com/users/325306360004739072/',
-                permanent: true
-            }
-        ]
+                source: "/discord",
+                destination: "https://discord.com/users/325306360004739072/",
+                permanent: true,
+            },
+        ];
     },
     images: {
         domains: [
-            'opengraph.githubassets.com',
-            'e-cdns-images.dzcdn.net'
-        ]
-    }
-}
+            "opengraph.githubassets.com",
+            // TODO: check me
+            "e-cdns-images.dzcdn.net",
+        ],
+    },
+};
 
 module.exports = nextConfig;

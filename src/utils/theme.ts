@@ -4,21 +4,21 @@ const setTheme = (theme: string) => {
         return;
     }
     document.body.classList.add("dark");
-}
+};
 
 const getTheme = () => {
     if (typeof window !== "undefined") {
-        const theme = localStorage.getItem("theme")
+        const theme = localStorage.getItem("theme");
         if (theme) return theme;
     }
     return "dark";
-}
+};
 
 const saveTheme = (theme: string) => {
     if (typeof window !== "undefined") {
         localStorage.setItem("theme", theme);
     }
-}
+};
 
 const toggleTheme = () => {
     if (typeof window !== "undefined") {
@@ -27,6 +27,6 @@ const toggleTheme = () => {
         setTheme(getTheme());
     }
     return;
-}
+};
 
-export {setTheme, getTheme, saveTheme, toggleTheme};
+export { setTheme, getTheme, saveTheme, toggleTheme };
