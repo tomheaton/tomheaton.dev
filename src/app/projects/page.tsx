@@ -2,6 +2,12 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import RepoCard from "@/components/RepoCard";
 import { repoSchema, type RepoType } from "@/utils/types";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+    title: "Projects | Tom Heaton",
+    description: "Tom Heaton's projects",
+};
 
 const getProjects = async () => {
     const response = await fetch("https://gh-pinned-repos.egoist.dev/?username=tomheaton");

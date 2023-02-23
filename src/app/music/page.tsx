@@ -2,6 +2,12 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import MusicCard from "@/components/MusicCard";
 import { musicSchema, type MusicType } from "@/utils/types";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+    title: "Music | Tom Heaton",
+    description: "Tom Heaton's music",
+};
 
 const getMusic = async () => {
     const response = await fetch("https://api.deezer.com/user/844148065/flow");

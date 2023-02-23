@@ -2,6 +2,12 @@ import { getAge } from "@/utils";
 import { toWords } from "number-to-words";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+    title: "Tom Heaton",
+    // description: "Tom Heaton - Software Developer",
+};
 
 const Index = () => {
     const age: number = getAge(new Date("09/30/2002"));
