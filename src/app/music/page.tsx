@@ -6,7 +6,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
     title: "Music | Tom Heaton",
-    description: "Tom Heaton's music",
+    // description: "Tom Heaton's music",
 };
 
 const getMusic = async () => {

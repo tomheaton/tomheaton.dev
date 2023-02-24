@@ -6,7 +6,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
     title: "Projects | Tom Heaton",
-    description: "Tom Heaton's projects",
+    // description: "Tom Heaton's projects",
 };
 
 const getProjects = async () => {
