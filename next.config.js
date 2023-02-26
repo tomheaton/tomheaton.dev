@@ -17,6 +17,16 @@ const nextConfig = {
                 destination: "https://discord.com/users/325306360004739072/",
                 permanent: true,
             },
+            {
+                source: "/github",
+                destination: "https://github.com/tomheaton/",
+                permanent: true,
+            },
+            {
+                source: "/twitter",
+                destination: "https://twitter.com/tomheaton_/",
+                permanent: true,
+            },
         ];
     },
     images: {
