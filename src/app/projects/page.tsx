@@ -13,16 +13,11 @@ const getProjects = async () => {
     const response = await fetch("https://gh-pinned-repos.egoist.dev/?username=tomheaton");
     const data = await response.json();
 
-    if (!data || !data.length) {
-        return [];
-    }
+    if (!data || !data.length) return [];
 
-    return data.flatMap((r: any) => {
+    return data.flatMap((r: unknown) => {
         const repo = repoSchema.safeParse(r);
-        if (!repo.success) {
-            return [];
-        }
-        return repo.data;
+        return repo.success ? repo.data : [];
     });
 };
 

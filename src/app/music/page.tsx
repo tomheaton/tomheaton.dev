@@ -13,16 +13,11 @@ const getMusic = async () => {
     const response = await fetch("https://api.deezer.com/user/844148065/flow");
     const data = await response.json();
 
-    if (!data || !data.data || !data.data.length) {
-        return [];
-    }
+    if (!data || !data.data || !data.data.length) return [];
 
-    return data.data.flatMap((m: any) => {
+    return data.data.flatMap((m: unknown) => {
         const music = musicSchema.safeParse(m);
-        if (!music.success) {
-            return [];
-        }
-        return music.data;
+        return music.success ? music.data : [];
     });
 };
 
