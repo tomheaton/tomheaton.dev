@@ -1,32 +1,16 @@
-"use client";
-
-import React, { useEffect } from "react";
+import React from "react";
 import Image from "next/image";
-import { handleToggleTheme } from "@/utils";
 import avatar from "../../public/avatar.jpg";
-import { getTheme, setTheme } from "@/utils/theme";
 
 const Header: React.FC = () => {
-    useEffect(() => {
-        // TODO: remove this?
-        /*if (typeof window !== "undefined") {
-            window.matchMedia("(prefers-color-scheme: light)").addEventListener("change", (e) => {
-                setTheme(e.matches ? "light" : "dark");
-            });
-        }*/
-        setTheme(getTheme());
-        console.log("follow the white rabbit...");
-    }, []);
-
     return (
         <header className={"flex w-full flex-col items-center text-center md:flex-row"}>
-            <div className={"w-1/3 cursor-pointer rounded-full"}>
+            <div className={"w-1/3 rounded-full"}>
                 <Image
                     src={avatar}
                     width={100}
                     height={100}
                     alt={"Tom Heaton Avatar"}
-                    onClick={handleToggleTheme}
                     className={"m-auto rounded-full"}
                 />
             </div>
