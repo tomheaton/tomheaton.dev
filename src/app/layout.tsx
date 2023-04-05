@@ -1,6 +1,12 @@
 import "bootstrap-icons/font/bootstrap-icons.css";
 import "@/styles/globals.css";
 import type { PropsWithChildren } from "react";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+    title: "Tom Heaton",
+    // description: "Tom Heaton's website",
+};
 
 const RootLayout = ({ children }: PropsWithChildren) => {
     return (
