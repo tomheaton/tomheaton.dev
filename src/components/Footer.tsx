@@ -30,15 +30,12 @@ const Footer: React.FC = () => {
           >
             <FaGithub />
           </a>
-          <a
+          <p
             onClick={handleCopyDiscord}
-            className={"cursor-pointer"}
-            // target={"_blank"}
-            // rel={"me external noopener noreferrer"}
-            // href={"https://www.discord.com/users/325306360004739072"}
+            className={"cursor-pointer transition-colors hover:text-myGreen"}
           >
             <FaDiscord />
-          </a>
+          </p>
           <a
             target={"_blank"}
             rel={"me external noopener noreferrer"}

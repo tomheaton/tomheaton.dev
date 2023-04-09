@@ -3,18 +3,13 @@ const nextConfig = {
   reactStrictMode: true,
   experimental: {
     appDir: true,
-    // typedRoutes: true,
+    typedRoutes: true,
   },
   async redirects() {
     return [
       {
         source: "/linkedin",
         destination: "https://linkedin.com/in/tomheaton7/",
-        permanent: true,
-      },
-      {
-        source: "/discord",
-        destination: "https://discord.com/users/325306360004739072/",
         permanent: true,
       },
       {
@@ -25,6 +20,11 @@ const nextConfig = {
       {
         source: "/twitter",
         destination: "https://twitter.com/tomheaton_/",
+        permanent: true,
+      },
+      {
+        source: "/email",
+        destination: "mailto:tom@tomheaton.dev",
         permanent: true,
       },
     ];
