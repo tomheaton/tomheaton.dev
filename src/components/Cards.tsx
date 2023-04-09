@@ -1,4 +1,5 @@
 import type { CardType } from "@/utils/types";
+import Image from "next/image";
 import React from "react";
 
 const cardData: CardType[] = [
@@ -9,7 +10,7 @@ const cardData: CardType[] = [
   },
   {
     title: "Clear Cut Salon",
-    description: "A website for a Hair Salon built with React",
+    description: "A website for a hair salon built with Next.js and TailwindCSS",
     link: "https://www.clearcutsalon.co.uk",
   },
 ];
@@ -18,16 +19,9 @@ const Cards: React.FC = () => {
   return (
     <div className={"justify-content-center cards flex flex-wrap pt-20"}>
       {cardData.map((element, index) => (
-        <div
-          key={index}
-          className={"m-2 w-[18rem] transition duration-[25ms] ease-in-out"}
-        >
-          <a target={"_blank"} rel={"noopener noreferrer"} href={element.link}>
-            <img
-              src={"/avatar.jpg"}
-              alt={`${element.title} Logo`}
-              width={"100px"}
-            />
+        <div key={index} className={"m-2 w-[18rem] transition duration-[25ms] ease-in-out"}>
+          <a target={"_blank"} rel={"external noopener noreferrer"} href={element.link}>
+            <Image height={100} width={100} src={"/avatar.jpg"} alt={`${element.title} Logo`} />
             <p>{element.description}</p>
           </a>
         </div>
@@ -35,10 +29,7 @@ const Cards: React.FC = () => {
       <div className={"m-2 w-[18rem] transition duration-[25ms] ease-in-out"}>
         <div>
           <br />
-          <p>
-            Watch this space to see it fill up with all the projects I am
-            working on!
-          </p>
+          <p>Watch this space to see it fill up with all the projects I am working on!</p>
         </div>
       </div>
     </div>

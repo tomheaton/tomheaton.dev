@@ -5,10 +5,7 @@ type Data = {
   message: string;
 };
 
-const handler: NextApiHandler = (
-  req: NextApiRequest,
-  res: NextApiResponse<Data>,
-) => {
+const handler: NextApiHandler = (req: NextApiRequest, res: NextApiResponse<Data>) => {
   return res.status(200).json({ success: true, message: "Tom Heaton" });
 };
 

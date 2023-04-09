@@ -5,7 +5,7 @@
   "author": "Tom Heaton",
   "description": "Tom Heaton - Website",
   "license": "MIT",
-  "repository": "https://www.github.com/tomheaton/next-tomheaton-dev",
+  "repository": "https://github.com/tomheaton/next-tomheaton-dev",
   "keywords": [],
   "scripts": {
     "dev": "next dev",
@@ -24,7 +24,6 @@
     "zod": "^3.21.4"
   },
   "devDependencies": {
-    "@types/gtag.js": "^0.0.12",
     "@types/node": "^18.15.11",
     "@types/number-to-words": "^1.2.1",
     "@types/react": "^18.0.33",

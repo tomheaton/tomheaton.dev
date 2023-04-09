@@ -5,10 +5,7 @@ type Data = {
   data: MusicType[];
 };
 
-const handler: NextApiHandler = async (
-  req: NextApiRequest,
-  res: NextApiResponse<Data>,
-) => {
+const handler: NextApiHandler = async (req: NextApiRequest, res: NextApiResponse<Data>) => {
   const response = await fetch("https://api.deezer.com/user/844148065/flow");
   const data = await response.json();
 

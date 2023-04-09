@@ -29,4 +29,4 @@ const toggleTheme = () => {
   return;
 };
 
-export { setTheme, getTheme, saveTheme, toggleTheme };
+export { getTheme, saveTheme, setTheme, toggleTheme };

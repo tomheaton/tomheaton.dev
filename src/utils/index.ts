@@ -1,10 +1,8 @@
-import type { SyntheticEvent } from "react";
 import { toggleTheme } from "@/utils/theme";
+import type { SyntheticEvent } from "react";
 
 export const getAge = (birthdate: Date) => {
-  return Math.abs(
-    new Date(Date.now() - birthdate.getTime()).getUTCFullYear() - 1970,
-  );
+  return Math.abs(new Date(Date.now() - birthdate.getTime()).getUTCFullYear() - 1970);
 };
 
 export const handleToggleTheme = (e: SyntheticEvent) => {

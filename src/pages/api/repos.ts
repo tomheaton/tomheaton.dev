@@ -5,13 +5,8 @@ type Data = {
   data: RepoType[];
 };
 
-const handler: NextApiHandler = async (
-  req: NextApiRequest,
-  res: NextApiResponse<Data>,
-) => {
-  const response = await fetch(
-    "https://gh-pinned-repos.egoist.dev/?username=tomheaton",
-  );
+const handler: NextApiHandler = async (req: NextApiRequest, res: NextApiResponse<Data>) => {
+  const response = await fetch("https://gh-pinned-repos.egoist.dev/?username=tomheaton");
   const data = await response.json();
 
   if (!data.length) {
