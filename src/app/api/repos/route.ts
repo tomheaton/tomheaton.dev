@@ -1,16 +1,16 @@
-import type { NextApiHandler, NextApiRequest, NextApiResponse } from "next";
 import { repoSchema, type RepoType } from "@/utils/types";
+import { NextResponse } from "next/server";
 
 type Data = {
   data: RepoType[];
 };
 
-const handler: NextApiHandler = async (req: NextApiRequest, res: NextApiResponse<Data>) => {
+export async function GET() {
   const response = await fetch("https://gh-pinned-repos.egoist.dev/?username=tomheaton");
   const data = await response.json();
 
   if (!data.length) {
-    return res.status(200).json({ data: [] });
+    return NextResponse.json({ data: [] });
   }
 
   let repoData = data.flatMap((r: any) => {
@@ -21,7 +21,5 @@ const handler: NextApiHandler = async (req: NextApiRequest, res: NextApiResponse
     return repo.data;
   });
 
-  return res.status(200).json({ data: repoData });
-};
-
-export default handler;
+  return NextResponse.json({ data: repoData });
+}
