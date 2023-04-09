@@ -11,6 +11,7 @@ const Header: React.FC = () => {
           height={100}
           alt={"Tom Heaton Avatar"}
           className={"m-auto rounded-full"}
+          priority
         />
       </div>
       <h1 className={"mx-5 w-2/3 text-4xl font-bold md:text-5xl"}>

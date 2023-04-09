@@ -27,19 +27,22 @@ const Footer: React.FC = () => {
             target={"_blank"}
             rel={"me external noopener noreferrer"}
             href={"https://github.com/tomheaton/"}
+            aria-label="GitHub"
           >
             <FaGithub />
           </a>
-          <p
+          <button
             onClick={handleCopyDiscord}
             className={"cursor-pointer transition-colors hover:text-myGreen"}
+            aria-label="Discord"
           >
             <FaDiscord />
-          </p>
+          </button>
           <a
             target={"_blank"}
             rel={"me external noopener noreferrer"}
             href={"https://twitter.com/tomheaton_/"}
+            aria-label="Twitter"
           >
             <FaTwitter />
           </a>
@@ -47,6 +50,7 @@ const Footer: React.FC = () => {
             target={"_blank"}
             rel={"me external noopener noreferrer"}
             href={"mailto:tom@tomheaton.dev"}
+            aria-label="Email"
           >
             <FaEnvelope />
           </a>
@@ -54,6 +58,7 @@ const Footer: React.FC = () => {
             target={"_blank"}
             rel={"me external noopener noreferrer"}
             href={"https://linkedin.com/in/tomheaton7/"}
+            aria-label="LinkedIn"
           >
             <FaLinkedin />
           </a>
@@ -64,6 +69,7 @@ const Footer: React.FC = () => {
             target={"_blank"}
             rel={"external noopener noreferrer"}
             href={"https://github.com/tomheaton/next-tomheaton-dev/"}
+            aria-label="Source Code"
           >
             <FaCode />
           </a>
