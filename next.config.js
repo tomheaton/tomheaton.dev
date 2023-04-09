@@ -1,9 +1,17 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
+  swcMinify: true,
   experimental: {
     appDir: true,
     typedRoutes: true,
+  },
+  images: {
+    domains: [
+      "opengraph.githubassets.com",
+      // TODO: check me
+      "e-cdns-images.dzcdn.net",
+    ],
   },
   async redirects() {
     return [
@@ -28,13 +36,6 @@ const nextConfig = {
         permanent: true,
       },
     ];
-  },
-  images: {
-    domains: [
-      "opengraph.githubassets.com",
-      // TODO: check me
-      "e-cdns-images.dzcdn.net",
-    ],
   },
 };
 
