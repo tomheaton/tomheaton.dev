@@ -9,7 +9,7 @@ const nextConfig = {
     return [
       {
         source: "/linkedin",
-        destination: "https://www.linkedin.com/in/tomheaton7/",
+        destination: "https://linkedin.com/in/tomheaton7/",
         permanent: true,
       },
       {

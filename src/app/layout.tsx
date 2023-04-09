@@ -1,9 +1,9 @@
 import "@/styles/globals.css";
-import "bootstrap-icons/font/bootstrap-icons.css";
 import type { Metadata } from "next";
 import type { PropsWithChildren } from "react";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://tomheaton.dev"),
   title: "Tom Heaton",
   description: "Tom Heaton - Software Developer",
   authors: {
@@ -58,11 +58,6 @@ const RootLayout = ({ children }: PropsWithChildren) => {
         <link rel="canonical" href="https://tomheaton.dev" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         <link rel="manifest" href="/manifest.json" />
-
-        {/*<link
-                rel="stylesheet"
-                href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"
-            />*/}
 
         <meta charSet="utf-8" />
 
