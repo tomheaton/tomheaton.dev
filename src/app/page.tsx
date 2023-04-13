@@ -1,15 +1,9 @@
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import { getAge } from "@/utils";
-import type { Metadata } from "next";
 import { toWords } from "number-to-words";
 
-export const metadata: Metadata = {
-  title: "Tom Heaton",
-  // description: "Tom Heaton - Software Developer",
-};
-
-const Index = () => {
+export default function Page() {
   const age: number = getAge(new Date("09/30/2002"));
 
   return (
@@ -34,6 +28,4 @@ const Index = () => {
       <Footer />
     </div>
   );
-};
-
-export default Index;
+}

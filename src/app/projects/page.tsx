@@ -20,7 +20,7 @@ const getProjects = async () => {
   });
 };
 
-const Projects = async () => {
+export default async function Page() {
   const data = await getProjects();
 
   return (
@@ -51,6 +51,4 @@ const Projects = async () => {
       <Footer />
     </div>
   );
-};
-
-export default Projects;
+}

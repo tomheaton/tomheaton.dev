@@ -1,5 +1,5 @@
-import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import Header from "@/components/Header";
 import MusicCard from "@/components/MusicCard";
 import { musicSchema, type MusicType } from "@/utils/types";
 import type { Metadata } from "next";
@@ -20,7 +20,7 @@ const getMusic = async () => {
   });
 };
 
-const Music = async () => {
+export default async function Page() {
   const data = await getMusic();
 
   return (
@@ -53,6 +53,4 @@ const Music = async () => {
       <Footer />
     </div>
   );
-};
-
-export default Music;
+}

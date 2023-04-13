@@ -37,7 +37,7 @@ export const metadata: Metadata = {
   },
 };
 
-const RootLayout = ({ children }: PropsWithChildren) => {
+export default function RootLayout({ children }: PropsWithChildren) {
   return (
     <html lang={"en"}>
       <head>
@@ -67,6 +67,4 @@ const RootLayout = ({ children }: PropsWithChildren) => {
       <body>{children}</body>
     </html>
   );
-};
-
-export default RootLayout;
+}
