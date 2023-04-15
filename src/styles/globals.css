@@ -24,6 +24,6 @@ body::-webkit-scrollbar {
   @apply bg-myGreen;
 }
 
-a:hover {
-  @apply text-myGreen transition-colors;
+a {
+  @apply transition-colors hover:text-myGreen;
 }
