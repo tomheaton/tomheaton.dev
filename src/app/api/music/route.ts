@@ -1,8 +1,8 @@
-import { musicSchema, type MusicType } from "@/utils/types";
+import { trackSchema, type Track } from "@/utils/types";
 import { NextResponse } from "next/server";
 
 type Data = {
-  data: MusicType[];
+  data: Track[];
 };
 
 export async function GET() {
@@ -13,13 +13,13 @@ export async function GET() {
     return NextResponse.json({ data: [] });
   }
 
-  let musicData = data.data.flatMap((m: any) => {
-    const music = musicSchema.safeParse(m);
-    if (!music.success) {
+  let trackData = data.data.flatMap((t: any) => {
+    const track = trackSchema.safeParse(t);
+    if (!track.success) {
       return [];
     }
-    return music.data;
+    return track.data;
   });
 
-  return NextResponse.json({ data: musicData });
+  return NextResponse.json({ data: trackData });
 }

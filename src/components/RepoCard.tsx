@@ -1,15 +1,14 @@
-import type { RepoType } from "@/utils/types";
-import React from "react";
+import type { Repo } from "@/utils/types";
 
 type Props = {
-  repo: RepoType;
+  repo: Repo;
 };
 
-const RepoCard: React.FC<Props> = ({ repo }) => {
+export default function RepoCard({ repo }: Props) {
   return (
-    <a href={repo.link} target={"_blank"} rel={"external noopener noreferrer"}>
-      <div className={"m-4 cursor-pointer rounded-lg border-2 border-myGreen p-4"}>
-        <h2 className={"text-xl font-semibold"}>{repo.repo}</h2>
+    <a href={repo.link} target="_blank" rel="external noopener noreferrer">
+      <div className="m-4 cursor-pointer rounded-lg border-2 border-myGreen p-4">
+        <h2 className="text-xl font-semibold">{repo.repo}</h2>
         <p>
           Stars: {repo.stars.toLocaleString()}, Forks: {repo.forks.toLocaleString()}
         </p>
@@ -19,6 +18,4 @@ const RepoCard: React.FC<Props> = ({ repo }) => {
       </div>
     </a>
   );
-};
-
-export default RepoCard;
+}

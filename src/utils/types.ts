@@ -20,13 +20,14 @@ export const repoSchema = z.object({
   forks: z.union([z.string(), z.number()]),
 });
 
-export type RepoType = z.infer<typeof repoSchema>;
+export type Repo = z.infer<typeof repoSchema>;
 
-export const musicSchema = z
+export const trackSchema = z
   .object({
     id: z.number(),
     type: z.string(),
     title: z.string(),
+    link: z.string(),
     // title: z.number(),
     title_short: z.string(),
     // title_version: z.string(),
@@ -42,20 +43,21 @@ export const musicSchema = z
       title: z.string(),
     }),
   })
-  .transform((m) => {
+  .transform((t) => {
     return {
-      id: m.id,
-      title: m.title,
-      title_short: m.title_short,
+      id: t.id,
+      link: t.link,
+      title: t.title,
+      title_short: t.title_short,
       // title_version: m.title_version,
-      duration: m.duration,
+      duration: t.duration,
       // rank: m.rank,
       // preview: m.preview,
-      artist: m.artist.name,
-      image: m.album.cover_xl,
-      album: m.album.title,
+      artist: t.artist.name,
+      image: t.album.cover_xl,
+      album: t.album.title,
       // link: `https://deezer.com/en/track/${m.id}`
     };
   });
 
-export type MusicType = z.infer<typeof musicSchema>;
+export type Track = z.infer<typeof trackSchema>;

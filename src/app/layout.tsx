@@ -1,3 +1,4 @@
+import Footer from "@/components/Footer";
 import "@/styles/globals.css";
 import type { Metadata } from "next";
 import type { PropsWithChildren } from "react";
@@ -36,11 +37,18 @@ export const metadata: Metadata = {
     },
   },
   viewport: "width=device-width, initial-scale=1",
+  manifest: "/manifest.json",
+  appleWebApp: {
+    title: "Tom Heaton",
+  },
+  icons: {
+    apple: "/apple-touch-icon.png",
+  },
 };
 
 export default function RootLayout({ children }: PropsWithChildren) {
   return (
-    <html lang={"en"}>
+    <html lang="en">
       <head>
         <script
           async
@@ -57,14 +65,15 @@ export default function RootLayout({ children }: PropsWithChildren) {
           }}
         />
 
-        <meta charSet="utf-8" />
-
         <link rel="icon" href="/favicon.ico" />
         <link rel="canonical" href="https://tomheaton.dev" />
-        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-        <link rel="manifest" href="/manifest.json" />
       </head>
-      <body>{children}</body>
+      <body>
+        <div className="flex min-h-screen flex-col justify-between bg-white text-zinc-900 dark:bg-zinc-900 dark:text-white">
+          {children}
+          <Footer />
+        </div>
+      </body>
     </html>
   );
 }

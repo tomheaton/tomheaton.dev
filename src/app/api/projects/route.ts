@@ -1,8 +1,8 @@
-import { repoSchema, type RepoType } from "@/utils/types";
+import { repoSchema, type Repo } from "@/utils/types";
 import { NextResponse } from "next/server";
 
 type Data = {
-  data: RepoType[];
+  data: Repo[];
 };
 
 export async function GET() {
