@@ -68,7 +68,7 @@ export default function Footer() {
           <a
             target="_blank"
             rel="external noopener noreferrer"
-            href="https://github.com/tomheaton/next-tomheaton-dev/"
+            href="https://github.com/tomheaton/tomheaton.dev/"
             aria-label="Source Code"
           >
             <FaCode />
