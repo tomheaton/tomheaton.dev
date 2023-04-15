@@ -1,3 +1,3 @@
-# next-tomheaton-dev
+# tomheaton.dev
 
-next-tomheaton-dev
+my personal site
