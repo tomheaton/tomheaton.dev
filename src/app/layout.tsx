@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     url: "https://tomheaton.dev",
   },
   keywords:
-    "software developer, software, developer, code, coding, programmer, software programmer, webapp developer, web development, programming, technology, apps, software development, software engineer, programming software, application development, software design, swe, open source",
+    "tom heaton, tomheaton, stormedpanda, software developer, software, developer, code, coding, programmer, software programmer, webapp developer, web development, programming, technology, apps, software development, software engineer, programming software, application development, software design, swe, open source, react, typescript, next.js, tailwindcss, react native, expo, git, github, github campus expert, gce, england, united kingdom",
   themeColor: "#66b193",
   openGraph: {
     title: "Tom Heaton",
