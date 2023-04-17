@@ -11,7 +11,7 @@ export default function Header() {
             width={100}
             height={100}
             alt="Tom Heaton Avatar"
-            className="m-auto rounded-full transition-transform hover:scale-105"
+            className="m-auto rounded-full transition-transform hover:scale-105 active:scale-95"
             priority
           />
         </Link>
