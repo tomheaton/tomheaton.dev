@@ -5,7 +5,9 @@ import type { SyntheticEvent } from "react";
 import toast, { Toaster } from "react-hot-toast";
 import { FaCode, FaDiscord, FaEnvelope, FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
 
-export default function Footer() {
+// TODO: wait for update
+// export default function Footer() {
+const Footer = () => {
   const handleCopyDiscord = async (e: SyntheticEvent) => {
     e.preventDefault();
     copyToClipboard("tomheaton#7440")
@@ -78,3 +80,5 @@ export default function Footer() {
     </footer>
   );
 }
+
+export default Footer;
