@@ -1,7 +1,7 @@
-import type { CardType } from "@/utils/types";
+import type { CardData } from "@/utils/types";
 import Image from "next/image";
 
-const CARD_DATA: CardType[] = [
+const CARD_DATA: CardData[] = [
   {
     title: "Simply Jetpacks 2",
     description: "A Minecraft mod that adds Jetpacks and Fluxpacks",

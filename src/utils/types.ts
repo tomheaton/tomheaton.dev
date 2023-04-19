@@ -1,6 +1,6 @@
 import { z } from "zod";
 
-export type CardType = {
+export type CardData = {
   title: string;
   description: string;
   link: string;
@@ -11,7 +11,7 @@ export const repoSchema = z.object({
   repo: z.string(),
   link: z.string().url(),
   description: z.string().optional(),
-  image: z.string().url(),
+  // image: z.string().url(),
   website: z.string().url().optional(),
   language: z.string(),
   languageColor: z.string(),
@@ -26,23 +26,23 @@ export const trackSchema = z
     id: z.number(),
     type: z.string(),
     title: z.string(),
-    duration: z.number(),
+    // duration: z.number(),
     artist: z.object({
       name: z.string(),
     }),
     album: z.object({
       cover_xl: z.string().url(),
-      title: z.string(),
+      // title: z.string(),
     }),
   })
   .transform((t) => {
     return {
       id: t.id,
       title: t.title,
-      duration: t.duration,
+      // duration: t.duration,
       artist: t.artist.name,
       image: t.album.cover_xl,
-      album: t.album.title,
+      // album: t.album.title,
       link: `https://deezer.com/en/track/${t.id}`,
     };
   });

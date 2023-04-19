@@ -29,7 +29,7 @@ export default async function Page() {
       <div className="min-h-96 mt-20 flex w-4/5 flex-col rounded-md border-2 border-myGreen p-10 md:w-2/5">
         <Header />
         <div className="my-4 border-t-4 border-myGreen" />
-        <p className="text-xl">Projects</p>
+        <h2 className="text-3xl font-bold tracking-tight">Projects</h2>
       </div>
       <div className="mt-8 flex w-4/5 flex-col rounded-md border-2 border-myGreen p-4 md:w-2/5">
         <div className="grid grid-cols-1 xl:grid-cols-2">
