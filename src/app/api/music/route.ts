@@ -15,10 +15,7 @@ export async function GET() {
 
   let trackData = data.data.flatMap((t: any) => {
     const track = trackSchema.safeParse(t);
-    if (!track.success) {
-      return [];
-    }
-    return track.data;
+    return track.success ? track.data : [];
   });
 
   return NextResponse.json({ data: trackData });

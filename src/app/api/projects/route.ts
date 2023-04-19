@@ -15,10 +15,7 @@ export async function GET() {
 
   let repoData = data.flatMap((r: any) => {
     const repo = repoSchema.safeParse(r);
-    if (!repo.success) {
-      return [];
-    }
-    return repo.data;
+    return repo.success ? repo.data : [];
   });
 
   return NextResponse.json({ data: repoData });
