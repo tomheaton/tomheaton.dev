@@ -8,7 +8,7 @@ import { FaCode, FaDiscord, FaEnvelope, FaGithub, FaLinkedin, FaTwitter } from "
 export default function Footer() {
   const handleCopyDiscord = async (e: SyntheticEvent) => {
     e.preventDefault();
-    copyToClipboard("tomheaton#7440")
+    copyToClipboard("tomheaton#9999")
       .then(() => {
         // toast.success("Discord copied to clipboard!");
         toast.success("Copied to clipboard!");
