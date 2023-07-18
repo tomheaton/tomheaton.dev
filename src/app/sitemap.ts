@@ -5,11 +5,11 @@ export default function Sitemap(): MetadataRoute.Sitemap {
     {
       url: "https://tomheaton.dev",
     },
-    // {
-    //   url: "https://tomheaton.dev/music",
-    // },
-    // {
-    //   url: "https://tomheaton.dev/projects",
-    // },
+    {
+      url: "https://tomheaton.dev/music",
+    },
+    {
+      url: "https://tomheaton.dev/projects",
+    },
   ];
 }
