@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     url: "https://tomheaton.dev",
     images: {
       url: "/tomheaton.png",
-      alt: "Tom Heaton Avatar",
+      alt: "Tom Heaton - Software Engineer",
     },
     locale: "en_GB",
   },
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     description: "Tom Heaton - Software Engineer",
     images: {
       url: "/tomheaton.png",
-      alt: "Tom Heaton Avatar",
+      alt: "Tom Heaton - Software Engineer",
     },
   },
   viewport: "width=device-width, initial-scale=1",
