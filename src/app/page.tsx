@@ -11,7 +11,7 @@ export default function Page() {
         <Header />
         <div className="my-4 border-t-4 border-myGreen" />
         <p className="text-xl">
-          Hey! I am a {toWords(age)} year old software developer from the United Kingdom.
+          Hey! I am a {toWords(age)} year old software engineer from the United Kingdom.
         </p>
       </div>
     </main>

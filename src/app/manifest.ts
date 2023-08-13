@@ -2,7 +2,7 @@ import type { MetadataRoute } from "next";
 
 export default function Manifest(): MetadataRoute.Manifest {
   return {
-    name: "Tom Heaton - Software Developer",
+    name: "Tom Heaton - Software Engineer",
     short_name: "Tom Heaton",
     start_url: "https://tomheaton.dev",
     display: "standalone",
