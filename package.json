@@ -19,6 +19,7 @@
     "format": "prettier --write ."
   },
   "dependencies": {
+    "@vercel/analytics": "^1.0.2",
     "next": "^13.4.13",
     "number-to-words": "^1.2.4",
     "react": "^18.2.0",

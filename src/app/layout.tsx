@@ -1,5 +1,6 @@
 import Footer from "@/components/Footer";
 import "@/styles/globals.css";
+import { Analytics } from "@vercel/analytics/react";
 import type { Metadata } from "next";
 import type { PropsWithChildren } from "react";
 
@@ -12,7 +13,7 @@ export const metadata: Metadata = {
     url: "https://tomheaton.dev",
   },
   keywords:
-    "tom heaton, tomheaton, stormedpanda, software engineer, software developer, software, engineer, developer, code, coding, programmer, software programmer, webapp developer, web development, programming, technology, apps, software development, programming software, application development, software design, swe, open source, react, typescript, next.js, tailwindcss, react native, expo, git, github, github campus expert, gce, england, united kingdom",
+    "tom heaton, tomheaton, thomas heaton, tom, thomas, stormedpanda, software engineer, software developer, software, engineer, developer, code, coding, programmer, software programmer, webapp developer, web development, programming, technology, apps, software development, programming software, application development, software design, swe, open source, react, typescript, next.js, tailwindcss, react native, expo, git, github, github campus expert, gce, england, united kingdom",
   themeColor: "#66b193",
   openGraph: {
     title: "Tom Heaton",
@@ -50,6 +51,7 @@ export default function RootLayout({ children }: PropsWithChildren) {
   return (
     <html lang="en">
       <head>
+        {/* TODO: remove this */}
         <script
           async
           src={`https://www.googletagmanager.com/gtag/js?id=${process.env.GOOGLE_ANALYTICS_KEY}`}
@@ -70,6 +72,7 @@ export default function RootLayout({ children }: PropsWithChildren) {
       </head>
       <body>
         <div className="flex min-h-screen flex-col justify-between bg-white text-zinc-900 dark:bg-zinc-900 dark:text-white">
+          <Analytics />
           {children}
           <Footer />
         </div>
