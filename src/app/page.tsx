@@ -10,7 +10,7 @@ export default function Page() {
       <div className="min-h-96 mt-20 flex w-4/5 flex-col rounded-md border-2 border-myGreen p-10 md:w-2/5">
         <Header />
         <div className="my-4 border-t-4 border-myGreen" />
-        <p className="text-xl">
+        <p className="text-center text-xl">
           Hey! I am a {toWords(age)} year old software engineer from the United Kingdom.
         </p>
       </div>
