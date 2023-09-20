@@ -20,7 +20,7 @@ export default function Footer() {
   };
 
   return (
-    <footer className="mt-auto pt-10 flex justify-center text-center font-medium">
+    <footer className="mt-auto flex justify-center pt-10 text-center font-medium">
       <Toaster toastOptions={{ position: "top-center" }} />
       <div>
         <div className="flex w-full items-center justify-evenly text-2xl">

@@ -26,7 +26,7 @@ export default async function Page() {
   return (
     <main className="mx-auto flex w-2/3 flex-col lg:w-1/3">
       <h2 className="text-3xl font-bold tracking-tight">Music</h2>
-      <div className="mt-8 flex w-4/5 flex-col rounded-md border-2 border-myGreen p-4 md:w-2/5">
+      <div className="mt-8 flex flex-col rounded-md border-2 border-myGreen p-4">
         <div className="grid grid-cols-1 xl:grid-cols-2">
           {data &&
             data.map((music: Track, index: number) => <TrackCard key={index} track={music} />)}
