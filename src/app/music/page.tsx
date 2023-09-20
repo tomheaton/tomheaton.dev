@@ -17,7 +17,7 @@ const getMusic = async () => {
   return data.data.flatMap((t: unknown) => {
     const track = trackSchema.safeParse(t);
     return track.success ? track.data : [];
-  });
+  }) as Track[];
 };
 
 export default async function Page() {
@@ -25,15 +25,10 @@ export default async function Page() {
 
   return (
     <main className="mx-auto flex w-2/3 flex-col lg:w-1/3">
-      <h2 className="text-3xl font-bold tracking-tight">Music</h2>
-      <div className="mt-8 flex flex-col rounded-md border-2 border-myGreen p-4">
-        <div className="grid grid-cols-1 xl:grid-cols-2">
-          {data &&
-            data.map((music: Track, index: number) => <TrackCard key={index} track={music} />)}
-          {data && data.length === 0 && <p className="col-span-2">no music found</p>}
-          {!data && <p className="col-span-2">loading</p>}
-        </div>
-      </div>
+      <h2 className="text-2xl font-bold tracking-tight">Music</h2>
+      {data && data.map((music, index) => <TrackCard key={index} track={music} />)}
+      {data && data.length === 0 && <p>no music found</p>}
+      {!data && <p>loading</p>}
     </main>
   );
 }

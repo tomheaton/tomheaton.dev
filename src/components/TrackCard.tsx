@@ -5,7 +5,6 @@ type Props = {
   track: Track;
 };
 
-// TODO: fix card grow
 export default function TrackCard({ track }: Props) {
   return (
     <a
@@ -14,7 +13,7 @@ export default function TrackCard({ track }: Props) {
       rel="external noopener noreferrer"
       className="hover:text-inherit"
     >
-      <div className="m-4 flex flex-grow items-center space-x-4 rounded-lg border-2 border-myGreen p-4 transition-all hover:scale-105 active:scale-95">
+      <div className="m-4 flex items-center gap-x-4 rounded-lg border-2 border-myGreen p-4 transition-all hover:scale-105 active:scale-95">
         <Image
           src={track.image}
           height={600}
