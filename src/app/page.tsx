@@ -1,19 +1,35 @@
-import Header from "@/components/Header";
 import { getAge } from "@/utils";
 import { toWords } from "number-to-words";
 
 export default function Page() {
-  const age = getAge(new Date("09/30/2002"));
+  let ageText = toWords(getAge(new Date("09/30/2002")));
+  ageText = ageText.charAt(0).toUpperCase() + ageText.slice(1);
 
   return (
-    <main className="flex h-full w-full flex-col content-center items-center">
-      <div className="min-h-96 mt-20 flex w-4/5 flex-col rounded-md border-2 border-myGreen p-10 md:w-2/5">
-        <Header />
-        <div className="my-4 border-t-4 border-myGreen" />
-        <p className="text-center text-xl">
-          Hey! I am a {toWords(age)} year old software engineer from the United Kingdom.
-        </p>
-      </div>
+    <main className="mx-auto flex w-2/3 flex-col lg:w-1/3">
+      <p className="text-center text-xl">
+        {/* {ageText} year old software engineer from the United Kingdom. */}
+        Software engineer from the United Kingdom.
+      </p>
+      <br />
+      <table>
+        <tbody>
+          <tr>
+            <td>
+              <a
+                target="_blank"
+                rel="external noopener noreferrer"
+                href="https://carrynaloxoneuk.uk"
+                aria-label="Carry Naloxone"
+                className="font-semibold"
+              >
+                Carry Naloxone
+              </a>
+            </td>
+            <td>Find nearby naloxone suppliers and access information on how to use naloxone.</td>
+          </tr>
+        </tbody>
+      </table>
     </main>
   );
 }

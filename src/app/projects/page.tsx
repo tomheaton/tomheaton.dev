@@ -1,4 +1,3 @@
-import Header from "@/components/Header";
 import RepoCard from "@/components/RepoCard";
 import { repoSchema, type Repo } from "@/utils/types";
 import type { Metadata } from "next";
@@ -25,13 +24,9 @@ export default async function Page() {
   const data = await getProjects();
 
   return (
-    <main className="flex h-full w-full flex-col content-center items-center">
-      <div className="min-h-96 mt-20 flex w-4/5 flex-col rounded-md border-2 border-myGreen p-10 md:w-2/5">
-        <Header />
-        <div className="my-4 border-t-4 border-myGreen" />
-        <h2 className="text-3xl font-bold tracking-tight">Projects</h2>
-      </div>
-      <div className="mt-8 flex w-4/5 flex-col rounded-md border-2 border-myGreen p-4 md:w-2/5">
+    <main className="mx-auto flex w-2/3 flex-col lg:w-1/3">
+      <h2 className="text-3xl font-bold tracking-tight">Projects</h2>
+      <div className="mt-8 flex flex-col rounded-md border-2 border-myGreen p-4">
         <div className="grid grid-cols-1 xl:grid-cols-2">
           {data && data.map((repo: Repo, index: number) => <RepoCard key={index} repo={repo} />)}
           {data && data.length === 0 && <p className="col-span-2">no projects found</p>}

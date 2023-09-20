@@ -3,7 +3,8 @@
 import { copyToClipboard } from "@/utils";
 import type { SyntheticEvent } from "react";
 import toast, { Toaster } from "react-hot-toast";
-import { FaCode, FaDiscord, FaEnvelope, FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
+import { FaCode, FaDiscord, FaEnvelope, FaGithub, FaLinkedin } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 
 export default function Footer() {
   const handleCopyDiscord = async (e: SyntheticEvent) => {
@@ -19,7 +20,7 @@ export default function Footer() {
   };
 
   return (
-    <footer className="mt-10 flex justify-center text-center font-medium">
+    <footer className="mt-auto pt-10 flex justify-center text-center font-medium">
       <Toaster toastOptions={{ position: "top-center" }} />
       <div>
         <div className="flex w-full items-center justify-evenly text-2xl">
@@ -44,7 +45,7 @@ export default function Footer() {
             href="https://twitter.com/tomheaton_/"
             aria-label="Twitter"
           >
-            <FaTwitter />
+            <FaXTwitter />
           </a>
           <a
             target="_blank"

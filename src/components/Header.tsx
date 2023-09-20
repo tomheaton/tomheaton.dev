@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function Header() {
   return (
-    <header className="flex w-full flex-col items-center gap-y-4 text-center sm:flex-row">
+    <header className="mx-auto mt-20 flex w-2/3 flex-col items-center gap-y-4 text-center md:flex-row lg:w-1/3">
       <div className="w-1/3">
         <Link href="/" className="group">
           <Image
@@ -24,7 +24,7 @@ export default function Header() {
           />
         </Link>
       </div>
-      <div className="flex flex-col items-center justify-center">
+      <div className="flex flex-col items-center">
         <h1 className="text-4xl font-extrabold tracking-tighter md:text-5xl">Tom Heaton </h1>
         <h2 className="text-2xl font-medium tracking-normal text-myGreen md:text-3xl">
           software engineer

@@ -1,4 +1,5 @@
 import Footer from "@/components/Footer";
+import Header from "@/components/Header";
 import "@/styles/globals.css";
 import { Analytics } from "@vercel/analytics/react";
 import type { Metadata } from "next";
@@ -66,16 +67,15 @@ export default function RootLayout({ children }: PropsWithChildren) {
             `,
           }}
         />
-
         <link rel="icon" href="/favicon.ico" />
         <link rel="canonical" href="https://tomheaton.dev" />
       </head>
-      <body>
-        <div className="flex min-h-screen flex-col justify-between bg-white text-zinc-900 dark:bg-zinc-900 dark:text-white">
-          <Analytics />
-          {children}
-          <Footer />
-        </div>
+      <body className="flex min-h-screen flex-col bg-white text-zinc-900 dark:bg-zinc-900 dark:text-white">
+        <Header />
+        <div className="mx-auto my-4 w-2/3 border-t-4 border-myGreen lg:w-1/3" />
+        {children}
+        <Footer />
+        <Analytics />
       </body>
     </html>
   );
