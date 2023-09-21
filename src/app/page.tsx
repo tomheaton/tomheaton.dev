@@ -1,5 +1,6 @@
 import { getAge } from "@/utils";
 import { toWords } from "number-to-words";
+import { Fragment } from "react";
 
 const PROJECT_DATA: {
   name: string;
@@ -40,7 +41,7 @@ export default async function Page() {
       {/* </p> */}
       {/* <br /> */}
       <h2 className="text-2xl font-bold tracking-tight">Work</h2>
-      <table>
+      {/* <table>
         <tbody>
           {PROJECT_DATA.map((project, index) => (
             <tr key={index}>
@@ -59,7 +60,23 @@ export default async function Page() {
             </tr>
           ))}
         </tbody>
-      </table>
+      </table> */}
+      <div className="grid grid-cols-1 lg:grid-cols-4 mt-2 gap-2">
+        {PROJECT_DATA.map((project, index) => (
+          <Fragment key={index}>
+            <a
+              target="_blank"
+              rel="external noopener noreferrer"
+              href={project.url}
+              aria-label={project.name}
+              className="font-semibold"
+            >
+              {project.name}
+            </a>
+            <p className="lg:col-span-3">{project.description}</p>
+          </Fragment>
+        ))}
+      </div>
       {/* <br /> */}
       {/* <h2 className="text-3xl font-bold tracking-tight">Music</h2> */}
     </main>
