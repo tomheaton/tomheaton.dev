@@ -5,13 +5,13 @@ import { Fragment } from "react";
 const PROJECT_DATA: {
   name: string;
   description: string;
-  url: string;
+  url?: string;
 }[] = [
-    // {
-    //   name: "Kampeign",
-    //   description: "Reshaping digital marketing campaigns.",
-    //   url: "https://kampeign.com",
-    // },
+    {
+      name: "Kampeign",
+      description: "Reshaping digital marketing campaigns.",
+      // url: "https://kampeign.com",
+    },
     {
       name: "Carry Naloxone",
       description: "Find nearby naloxone suppliers and access information on how to use naloxone.",
@@ -64,15 +64,21 @@ export default async function Page() {
       <div className="grid grid-cols-1 lg:grid-cols-4 mt-2 gap-2">
         {PROJECT_DATA.map((project, index) => (
           <Fragment key={index}>
-            <a
-              target="_blank"
-              rel="external noopener noreferrer"
-              href={project.url}
-              aria-label={project.name}
-              className="font-semibold"
-            >
-              {project.name}
-            </a>
+            {project.url ? (
+              <a
+                target="_blank"
+                rel="external noopener noreferrer"
+                href={project.url}
+                aria-label={project.name}
+                className="font-semibold"
+              >
+                {project.name}
+              </a>
+            ) : (
+              <p className="font-semibold">
+                {project.name}
+              </p>
+            )}
             <p className="lg:col-span-3">{project.description}</p>
           </Fragment>
         ))}
