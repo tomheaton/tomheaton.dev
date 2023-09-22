@@ -5,13 +5,13 @@ export default function Header() {
   return (
     <header className="mx-auto mt-20 flex w-2/3 flex-col items-center gap-y-4 text-center md:flex-row lg:w-1/3">
       <div className="w-1/3">
-        <Link href="/" className="group">
+        <Link href="/" className="group transition-all">
           <Image
             src="/avatar.jpg"
             width={100}
             height={100}
             alt="Tom Heaton Avatar"
-            className="m-auto rounded-full transition-transform hover:scale-105 active:scale-95 group-hover:hidden"
+            className="m-auto rounded-full transition-all hover:scale-105 active:scale-95 group-hover:hidden"
             priority
           />
           <Image
@@ -19,7 +19,7 @@ export default function Header() {
             width={100}
             height={100}
             alt="Tom Heaton Avatar"
-            className="m-auto hidden rounded-full transition-transform hover:scale-105 active:scale-95 group-hover:block"
+            className="m-auto hidden rounded-full transition-all hover:scale-105 active:scale-95 group-hover:block"
             priority
           />
         </Link>
