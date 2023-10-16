@@ -7,27 +7,27 @@ const PROJECT_DATA: {
   description: string;
   url?: string;
 }[] = [
-    {
-      name: "Kampeign",
-      description: "Reshaping digital marketing campaigns.",
-      url: "https://kampeign.com",
-    },
-    {
-      name: "Carry Naloxone",
-      description: "Find nearby naloxone suppliers and access information on how to use naloxone.",
-      url: "https://carrynaloxone.uk",
-    },
-    {
-      name: "Simply Jetpacks 2",
-      description: "A Minecraft mod that adds jetpacks.",
-      url: "https://curseforge.com/minecraft/mc-mods/simply-jetpacks-2",
-    },
-    {
-      name: "Clear Cut",
-      description: "A website for Clear Cut, a hairdressers in Malmesbury.",
-      url: "https://clearcutsalon.co.uk",
-    },
-  ];
+  {
+    name: "Kampeign",
+    description: "Reshaping digital marketing campaigns.",
+    url: "https://kampeign.com",
+  },
+  {
+    name: "Carry Naloxone",
+    description: "Find nearby naloxone suppliers and access information on how to use naloxone.",
+    url: "https://carrynaloxone.uk",
+  },
+  {
+    name: "Simply Jetpacks 2",
+    description: "A Minecraft mod that adds jetpacks.",
+    url: "https://curseforge.com/minecraft/mc-mods/simply-jetpacks-2",
+  },
+  {
+    name: "Clear Cut",
+    description: "A website for Clear Cut, a hairdressers in Malmesbury.",
+    url: "https://clearcutsalon.co.uk",
+  },
+];
 
 export default async function Page() {
   let ageText = toWords(getAge(new Date("09/30/2002")));
@@ -80,9 +80,7 @@ export default async function Page() {
                 {project.name}
               </a>
             ) : (
-              <p className="font-semibold">
-                {project.name}
-              </p>
+              <p className="font-semibold">{project.name}</p>
             )}
             <p className="lg:col-span-3">{project.description}</p>
           </Fragment>
