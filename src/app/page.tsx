@@ -29,7 +29,7 @@ const PROJECT_DATA: {
   },
   {
     name: "Clear Cut",
-    description: "A website for Clear Cut, a hairdressers in Malmesbury.",
+    description: "A website for Clear Cut Hair Salon.",
     url: "https://clearcutsalon.co.uk",
   },
 ];
