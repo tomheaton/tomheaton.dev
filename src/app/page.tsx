@@ -18,6 +18,11 @@ const PROJECT_DATA: {
     url: "https://carrynaloxone.uk",
   },
   {
+    name: "QR Calendar",
+    description: "Create calendar events and share them via QR Codes.",
+    url: "https://qr-calendar.com",
+  },
+  {
     name: "Simply Jetpacks 2",
     description: "A Minecraft mod that adds jetpacks.",
     url: "https://curseforge.com/minecraft/mc-mods/simply-jetpacks-2",
