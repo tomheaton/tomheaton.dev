@@ -10,12 +10,17 @@ const PROJECT_DATA: {
     {
       name: "Kampeign",
       description: "Reshaping digital marketing campaigns.",
-      // url: "https://kampeign.com",
+      url: "https://kampeign.com",
     },
     {
       name: "Carry Naloxone",
       description: "Find nearby naloxone suppliers and access information on how to use naloxone.",
       url: "https://carrynaloxone.uk",
+    },
+    {
+      name: "Simply Jetpacks 2",
+      description: "A Minecraft mod that adds jetpacks.",
+      url: "https://curseforge.com/minecraft/mc-mods/simply-jetpacks-2",
     },
     {
       name: "Clear Cut",
@@ -40,7 +45,7 @@ export default async function Page() {
       {/* Software engineer from the United Kingdom. */}
       {/* </p> */}
       {/* <br /> */}
-      <h2 className="text-2xl font-bold tracking-tight">Work</h2>
+      {/* <h2 className="text-2xl font-bold tracking-tight">Work</h2> */}
       {/* <table>
         <tbody>
           {PROJECT_DATA.map((project, index) => (
