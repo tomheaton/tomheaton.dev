@@ -2,7 +2,7 @@ import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import "@/styles/globals.css";
 import { Analytics } from "@vercel/analytics/react";
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import type { PropsWithChildren } from "react";
 
 export const metadata: Metadata = {
@@ -15,7 +15,6 @@ export const metadata: Metadata = {
   },
   keywords:
     "tom heaton, tomheaton, thomas heaton, tom, thomas, stormedpanda, software engineer, software developer, software, engineer, developer, code, coding, programmer, software programmer, webapp developer, web development, programming, technology, apps, software development, programming software, application development, software design, swe, open source, react, typescript, next.js, tailwindcss, react native, expo, git, github, github campus expert, gce, england, united kingdom",
-  themeColor: "#66b193",
   openGraph: {
     title: "Tom Heaton",
     description: "Tom Heaton - Software Engineer",
@@ -38,7 +37,6 @@ export const metadata: Metadata = {
       alt: "Tom Heaton - Software Engineer",
     },
   },
-  viewport: "width=device-width, initial-scale=1",
   manifest: "/manifest.json",
   appleWebApp: {
     title: "Tom Heaton",
@@ -46,6 +44,12 @@ export const metadata: Metadata = {
   icons: {
     apple: "/apple-touch-icon.png",
   },
+};
+
+export const viewport: Viewport = {
+  themeColor: "#66b193",
+  width: "device-width",
+  initialScale: 1,
 };
 
 export default function RootLayout({ children }: PropsWithChildren) {

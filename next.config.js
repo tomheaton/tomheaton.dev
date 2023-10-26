@@ -6,10 +6,14 @@ const nextConfig = {
     // typedRoutes: true,
   },
   images: {
-    domains: [
-      "opengraph.githubassets.com",
-      // TODO: check me
-      "e-cdns-images.dzcdn.net",
+    remotePatterns: [
+      {
+        hostname: "opengraph.githubassets.com",
+      },
+      {
+        // TODO: check me
+        hostname: "e-cdns-images.dzcdn.net",
+      },
     ],
   },
   async redirects() {
