@@ -34,7 +34,6 @@ yarn-error.log*
 # vercel
 .vercel
 
-# webstorm
+# ide
 .idea
-
 .vscode

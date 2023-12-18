@@ -16,7 +16,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "format": "prettier --write ."
+    "format": "prettier --write . --ignore-path .gitignore"
   },
   "dependencies": {
     "@vercel/analytics": "^1.1.1",
