@@ -25,7 +25,9 @@ export default function Header() {
         </Link>
       </div>
       <div className="flex flex-col items-center">
-        <h1 className="text-4xl font-extrabold tracking-tighter md:text-5xl">Tom Heaton </h1>
+        <h1 className="text-4xl font-extrabold tracking-tighter md:text-5xl">
+          Tom Heaton{" "}
+        </h1>
         <h2 className="text-2xl font-medium tracking-normal text-myGreen md:text-3xl">
           software engineer
         </h2>

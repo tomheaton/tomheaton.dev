@@ -7,7 +7,9 @@ export const metadata: Metadata = {
 };
 
 const getProjects = async () => {
-  const response = await fetch("https://gh-pinned-repos.egoist.dev/?username=tomheaton");
+  const response = await fetch(
+    "https://gh-pinned-repos.egoist.dev/?username=tomheaton",
+  );
   const data = await response.json();
 
   if (!data || !data.length) {
@@ -27,7 +29,8 @@ export default async function Page() {
     <main className="mx-auto flex w-2/3 flex-col lg:w-1/3">
       <h2 className="text-2xl font-bold tracking-tight">Projects</h2>
       <div className="grid grid-cols-1 xl:grid-cols-2">
-        {data && data.map((repo, index) => <RepoCard key={index} repo={repo} />)}
+        {data &&
+          data.map((repo, index) => <RepoCard key={index} repo={repo} />)}
         {data && data.length === 0 && <p>no projects found</p>}
         {!data && <p>loading</p>}
       </div>

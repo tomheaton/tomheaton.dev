@@ -1,3 +1,5 @@
+// @ts-check
+
 /** @type {import("next").NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
@@ -27,6 +29,11 @@ const nextConfig = {
       {
         source: "/twitter",
         destination: "https://twitter.com/tomheaton_/",
+        permanent: true,
+      },
+      {
+        source: "/x",
+        destination: "https://x.com/tomheaton_/",
         permanent: true,
       },
       {

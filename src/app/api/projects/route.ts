@@ -6,7 +6,9 @@ type Data = {
 };
 
 export async function GET() {
-  const response = await fetch("https://gh-pinned-repos.egoist.dev/?username=tomheaton");
+  const response = await fetch(
+    "https://gh-pinned-repos.egoist.dev/?username=tomheaton",
+  );
   const data = await response.json();
 
   if (!data.length) {

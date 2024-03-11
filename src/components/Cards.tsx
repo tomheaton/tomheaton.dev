@@ -9,7 +9,8 @@ const CARD_DATA: CardData[] = [
   },
   {
     title: "Clear Cut Salon",
-    description: "A website for a hair salon built with Next.js and TailwindCSS",
+    description:
+      "A website for a hair salon built with Next.js and TailwindCSS",
     link: "https://www.clearcutsalon.co.uk",
   },
 ];
@@ -18,9 +19,21 @@ export default function Cards() {
   return (
     <div className="justify-content-center cards flex flex-wrap pt-20">
       {CARD_DATA.map((element, index) => (
-        <div key={index} className="m-2 w-[18rem] transition duration-[25ms] ease-in-out">
-          <a target="_blank" rel="external noopener noreferrer" href={element.link}>
-            <Image height={100} width={100} src="/avatar.jpg" alt={`${element.title} Logo`} />
+        <div
+          key={index}
+          className="m-2 w-[18rem] transition duration-[25ms] ease-in-out"
+        >
+          <a
+            target="_blank"
+            rel="external noopener noreferrer"
+            href={element.link}
+          >
+            <Image
+              height={100}
+              width={100}
+              src="/avatar.jpg"
+              alt={`${element.title} Logo`}
+            />
             <p>{element.description}</p>
           </a>
         </div>
@@ -28,7 +41,10 @@ export default function Cards() {
       <div className="m-2 w-[18rem] transition duration-[25ms] ease-in-out">
         <div>
           <br />
-          <p>Watch this space to see it fill up with all the projects I am working on!</p>
+          <p>
+            Watch this space to see it fill up with all the projects I am
+            working on!
+          </p>
         </div>
       </div>
     </div>

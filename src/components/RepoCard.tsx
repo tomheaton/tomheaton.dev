@@ -17,7 +17,10 @@ export default function RepoCard({ repo }: Props) {
           <p className="text-xl font-semibold">{repo.repo}</p>
           <p>⭐ {repo.stars.toLocaleString()}</p>
         </div>
-        <div className={`my-4 border-t-4`} style={{ borderColor: repo.languageColor }} />
+        <div
+          className={`my-4 border-t-4`}
+          style={{ borderColor: repo.languageColor }}
+        />
       </div>
     </a>
   );

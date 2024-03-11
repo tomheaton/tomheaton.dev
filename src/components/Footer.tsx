@@ -3,7 +3,13 @@
 import { copyToClipboard } from "@/utils";
 import type { SyntheticEvent } from "react";
 import toast, { Toaster } from "react-hot-toast";
-import { FaCode, FaDiscord, FaEnvelope, FaGithub, FaLinkedin } from "react-icons/fa";
+import {
+  FaCode,
+  FaDiscord,
+  FaEnvelope,
+  FaGithub,
+  FaLinkedin,
+} from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 
 export default function Footer() {

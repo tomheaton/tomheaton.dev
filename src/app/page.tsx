@@ -8,13 +8,20 @@ const PROJECT_DATA: {
   url?: string;
 }[] = [
   {
+    name: "GitHub Field Day",
+    description:
+      "A regional unconference for leaders of technical student communities.",
+    url: "https://githubfieldday.com",
+  },
+  {
     name: "Kampeign",
     description: "Reshaping digital marketing campaigns.",
     url: "https://kampeign.com",
   },
   {
     name: "Carry Naloxone",
-    description: "Find nearby naloxone suppliers and access information on how to use naloxone.",
+    description:
+      "Find nearby naloxone suppliers and access information on how to use naloxone.",
     url: "https://carrynaloxone.uk",
   },
   {

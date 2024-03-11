@@ -26,7 +26,8 @@ export default async function Page() {
   return (
     <main className="mx-auto flex w-2/3 flex-col lg:w-1/3">
       <h2 className="text-2xl font-bold tracking-tight">Music</h2>
-      {data && data.map((music, index) => <TrackCard key={index} track={music} />)}
+      {data &&
+        data.map((music, index) => <TrackCard key={index} track={music} />)}
       {data && data.length === 0 && <p>no music found</p>}
       {!data && <p>loading</p>}
     </main>

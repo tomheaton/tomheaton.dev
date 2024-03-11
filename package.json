@@ -16,7 +16,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "format": "prettier --write . --ignore-path .gitignore",
+    "format": "prettier --write .",
     "clean": "rm -rf node_modules .next"
   },
   "dependencies": {
