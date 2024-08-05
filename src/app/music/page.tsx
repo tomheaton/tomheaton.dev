@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: "Music | Tom Heaton",
 };
 
-const getMusic = async () => {
+async function getMusic() {
   const response = await fetch("https://api.deezer.com/user/844148065/flow");
   const data = await response.json();
 

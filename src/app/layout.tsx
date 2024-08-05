@@ -60,7 +60,7 @@ export default function RootLayout({ children }: PropsWithChildren) {
         {/* TODO: remove this */}
         <script
           async
-          src={`https://www.googletagmanager.com/gtag/js?id=${process.env.GOOGLE_ANALYTICS_KEY}`}
+          src={`https://googletagmanager.com/gtag/js?id=${process.env.GOOGLE_ANALYTICS_KEY}`}
         />
         <script
           dangerouslySetInnerHTML={{

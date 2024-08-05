@@ -1,24 +1,24 @@
 import type { CardData } from "@/utils/types";
 import Image from "next/image";
 
-const CARD_DATA: CardData[] = [
+const cardData: CardData[] = [
   {
     title: "Simply Jetpacks 2",
     description: "A Minecraft mod that adds Jetpacks and Fluxpacks",
-    link: "https://www.curseforge.com/minecraft/mc-mods/simply-jetpacks-2",
+    link: "https://curseforge.com/minecraft/mc-mods/simply-jetpacks-2",
   },
   {
     title: "Clear Cut Salon",
     description:
       "A website for a hair salon built with Next.js and TailwindCSS",
-    link: "https://www.clearcutsalon.co.uk",
+    link: "https://clearcutsalon.co.uk",
   },
 ];
 
 export default function Cards() {
   return (
     <div className="justify-content-center cards flex flex-wrap pt-20">
-      {CARD_DATA.map((element, index) => (
+      {cardData.map((element, index) => (
         <div
           key={index}
           className="m-2 w-[18rem] transition duration-[25ms] ease-in-out"

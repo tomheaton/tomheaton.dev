@@ -2,7 +2,7 @@ import { getAge } from "@/utils";
 import { toWords } from "number-to-words";
 import { Fragment } from "react";
 
-const PROJECT_DATA: {
+const projectData: {
   name: string;
   description: string;
   url?: string;
@@ -60,7 +60,7 @@ export default async function Page() {
       {/* <h2 className="text-2xl font-bold tracking-tight">Work</h2> */}
       {/* <table>
         <tbody>
-          {PROJECT_DATA.map((project, index) => (
+          {projectData.map((project, index) => (
             <tr key={index}>
               <td className="w-32">
                 <a
@@ -79,7 +79,7 @@ export default async function Page() {
         </tbody>
       </table> */}
       <div className="grid grid-cols-1 lg:grid-cols-4 mt-2 gap-2">
-        {PROJECT_DATA.map((project, index) => (
+        {projectData.map((project, index) => (
           <Fragment key={index}>
             {project.url ? (
               <a

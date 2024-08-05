@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: "Projects | Tom Heaton",
 };
 
-const getProjects = async () => {
+async function getProjects() {
   const response = await fetch(
     "https://gh-pinned-repos.egoist.dev/?username=tomheaton",
   );
