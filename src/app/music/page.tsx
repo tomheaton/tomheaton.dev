@@ -18,7 +18,7 @@ async function getMusic() {
     const track = trackSchema.safeParse(t);
     return track.success ? track.data : [];
   }) as Track[];
-};
+}
 
 export default async function Page() {
   const data = await getMusic();

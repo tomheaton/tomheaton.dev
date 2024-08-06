@@ -20,7 +20,7 @@ async function getProjects() {
     const repo = repoSchema.safeParse(r);
     return repo.success ? repo.data : [];
   }) as Repo[];
-};
+}
 
 export default async function Page() {
   const data = await getProjects();
