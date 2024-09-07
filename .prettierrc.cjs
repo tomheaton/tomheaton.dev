@@ -1,5 +1,5 @@
 /** @type {import("prettier").Config & import("prettier-plugin-tailwindcss").PluginOptions} */
-const prettierConfig = {
+module.exports = {
   trailingComma: "all",
   tabWidth: 2,
   useTabs: false,
@@ -14,5 +14,3 @@ const prettierConfig = {
   ],
   tailwindConfig: "./tailwind.config.ts",
 };
-
-module.exports = prettierConfig;

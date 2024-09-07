@@ -1,5 +1,5 @@
 /** @type {import("next").NextConfig} */
-const nextConfig = {
+module.exports = {
   experimental: {
     reactCompiler: true,
   },
@@ -44,5 +44,3 @@ const nextConfig = {
     },
   ],
 };
-
-module.exports = nextConfig;
