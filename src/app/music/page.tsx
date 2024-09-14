@@ -10,7 +10,7 @@ async function getMusic() {
   const response = await fetch("https://api.deezer.com/user/844148065/flow");
   const data = await response.json();
 
-  if (!data || !data.data || !data.data.length) {
+  if (!data?.data?.length) {
     return [];
   }
 

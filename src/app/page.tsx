@@ -1,5 +1,5 @@
-import { getAge } from "@/utils";
-import { toWords } from "number-to-words";
+// import { getAge } from "@/utils";
+// import { toWords } from "number-to-words";
 import { Fragment } from "react";
 
 const projectData: {
@@ -42,8 +42,8 @@ const projectData: {
 ];
 
 export default async function Page() {
-  let ageText = toWords(getAge(new Date("09/30/2002")));
-  ageText = ageText.charAt(0).toUpperCase() + ageText.slice(1);
+  // let ageText = toWords(getAge(new Date("09/30/2002")));
+  // ageText = ageText.charAt(0).toUpperCase() + ageText.slice(1);
 
   return (
     <main className="mx-auto flex w-2/3 flex-col lg:w-1/3">

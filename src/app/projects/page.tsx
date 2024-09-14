@@ -12,7 +12,7 @@ async function getProjects() {
   );
   const data = await response.json();
 
-  if (!data || !data.length) {
+  if (!data?.length) {
     return [];
   }
 

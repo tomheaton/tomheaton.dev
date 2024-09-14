@@ -1,9 +1,5 @@
-import { repoSchema, type Repo } from "@/utils/types";
+import { repoSchema } from "@/utils/types";
 import { NextResponse } from "next/server";
-
-type Data = {
-  data: Repo[];
-};
 
 export async function GET() {
   const response = await fetch(
@@ -11,11 +7,11 @@ export async function GET() {
   );
   const data = await response.json();
 
-  if (!data.length) {
+  if (!data?.length) {
     return NextResponse.json({ data: [] });
   }
 
-  let repoData = data.flatMap((r: any) => {
+  const repoData = data.flatMap((r: unknown) => {
     const repo = repoSchema.safeParse(r);
     return repo.success ? repo.data : [];
   });

@@ -1,19 +1,15 @@
-import { trackSchema, type Track } from "@/utils/types";
+import { trackSchema } from "@/utils/types";
 import { NextResponse } from "next/server";
-
-type Data = {
-  data: Track[];
-};
 
 export async function GET() {
   const response = await fetch("https://api.deezer.com/user/844148065/flow");
   const data = await response.json();
 
-  if (!data.data) {
+  if (!data?.data?.length) {
     return NextResponse.json({ data: [] });
   }
 
-  let trackData = data.data.flatMap((t: any) => {
+  const trackData = data.data.flatMap((t: unknown) => {
     const track = trackSchema.safeParse(t);
     return track.success ? track.data : [];
   });
