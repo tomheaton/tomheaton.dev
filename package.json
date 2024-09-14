@@ -31,21 +31,21 @@
     "zod": "^3.23.8"
   },
   "devDependencies": {
-    "@types/node": "^22.5.4",
+    "@types/node": "^22.5.5",
     "@types/number-to-words": "^1.2.3",
     "@types/react": "^18.3.5",
     "@types/react-dom": "^18.3.0",
     "autoprefixer": "^10.4.20",
-    "babel-plugin-react-compiler": "0.0.0-experimental-7449567-20240905",
+    "babel-plugin-react-compiler": "0.0.0-experimental-de2cfda-20240912",
     "eslint": "^8",
-    "eslint-config-next": "^14.2.8",
+    "eslint-config-next": "^14.2.11",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-prettier": "^5.2.1",
-    "postcss": "^8.4.45",
+    "postcss": "^8.4.47",
     "prettier": "^3.3.3",
     "prettier-plugin-organize-imports": "^4.0.0",
-    "prettier-plugin-tailwindcss": "^0.6.5",
-    "tailwindcss": "^3.4.10",
-    "typescript": "^5.5.4"
+    "prettier-plugin-tailwindcss": "^0.6.6",
+    "tailwindcss": "^3.4.11",
+    "typescript": "^5.6.2"
   }
 }
