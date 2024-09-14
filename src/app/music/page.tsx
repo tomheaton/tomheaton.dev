@@ -1,4 +1,4 @@
-import TrackCard from "@/components/TrackCard";
+import TrackCard from "@/components/track-card";
 import { trackSchema, type Track } from "@/utils/types";
 import type { Metadata } from "next";
 
