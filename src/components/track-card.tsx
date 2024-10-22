@@ -1,7 +1,7 @@
 import type { Track } from "@/utils/types";
 import Image from "next/image";
 
-export default function TrackCard({ track }: { track: Track }) {
+export function TrackCard({ track }: { track: Track }) {
   return (
     <a
       href={track.link}

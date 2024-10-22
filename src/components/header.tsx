@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
-export default function Header() {
+export function Header() {
   return (
     <header className="mx-auto mt-20 flex w-2/3 flex-col items-center gap-y-4 text-center md:flex-row lg:w-1/3">
       <div className="w-1/3">

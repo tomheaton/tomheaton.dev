@@ -13,7 +13,7 @@ const cardData: CardData[] = [
       "A website for a hair salon built with Next.js and TailwindCSS",
     link: "https://clearcutsalon.co.uk",
   },
-];
+] as const;
 
 export default function Cards() {
   return (

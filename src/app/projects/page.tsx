@@ -1,4 +1,4 @@
-import RepoCard from "@/components/repo-card";
+import { RepoCard } from "@/components/repo-card";
 import { repoSchema, type Repo } from "@/utils/types";
 import type { Metadata } from "next";
 

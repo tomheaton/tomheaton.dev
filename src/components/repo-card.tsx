@@ -1,6 +1,6 @@
 import type { Repo } from "@/utils/types";
 
-export default function RepoCard({ repo }: { repo: Repo }) {
+export function RepoCard({ repo }: { repo: Repo }) {
   return (
     <a
       href={repo.link}
