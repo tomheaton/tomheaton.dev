@@ -1,3 +1,4 @@
+import { includeIgnoreFile } from "@eslint/compat";
 import { FlatCompat } from "@eslint/eslintrc";
 import js from "@eslint/js";
 import path from "node:path";
@@ -10,9 +11,11 @@ const compat = new FlatCompat({
   recommendedConfig: js.configs.recommended,
   allConfig: js.configs.all,
 });
+const gitignorePath = path.resolve(__dirname, ".gitignore");
 
 // eslint-disable-next-line import/no-anonymous-default-export
 export default [
+  includeIgnoreFile(gitignorePath),
   ...compat.extends(
     "next/core-web-vitals",
     "next/typescript",
