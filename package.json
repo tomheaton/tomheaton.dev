@@ -10,7 +10,6 @@
     "url": "https://tomheaton.dev"
   },
   "repository": "https://github.com/tomheaton/tomheaton.dev",
-  "keywords": [],
   "scripts": {
     "dev": "next dev --turbo",
     "build": "next build",
