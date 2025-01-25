@@ -28,7 +28,7 @@ export function Header() {
         <h1 className="text-4xl font-extrabold tracking-tighter md:text-5xl">
           Tom Heaton{" "}
         </h1>
-        <h2 className="text-2xl font-medium tracking-normal text-myGreen md:text-3xl">
+        <h2 className="text-2xl font-medium tracking-normal text-my-green md:text-3xl">
           software engineer
         </h2>
       </div>

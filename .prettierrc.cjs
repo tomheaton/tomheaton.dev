@@ -12,5 +12,5 @@ module.exports = {
     require.resolve("prettier-plugin-tailwindcss"),
     require.resolve("prettier-plugin-organize-imports"),
   ],
-  tailwindConfig: "./tailwind.config.ts",
+  tailwindStylesheet: "./src/styles/globals.css",
 };

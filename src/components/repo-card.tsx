@@ -8,7 +8,7 @@ export function RepoCard({ repo }: { repo: Repo }) {
       rel="external noopener noreferrer"
       className="hover:text-inherit"
     >
-      <div className="m-4 rounded-lg border-2 border-myGreen p-4 transition-all hover:scale-105 active:scale-95">
+      <div className="m-4 rounded-lg border-2 border-my-green p-4 transition-all hover:scale-105 active:scale-95">
         <div className="flex items-center justify-between">
           <p className="text-xl font-semibold">{repo.repo}</p>
           <p>⭐ {repo.stars.toLocaleString()}</p>

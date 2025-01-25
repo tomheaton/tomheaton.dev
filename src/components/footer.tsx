@@ -40,7 +40,7 @@ export function Footer() {
           </a>
           <button
             onClick={handleCopyDiscord}
-            className="cursor-pointer transition-colors hover:text-myGreen"
+            className="cursor-pointer transition-colors hover:text-my-green"
             aria-label="Discord"
           >
             <FaDiscord />

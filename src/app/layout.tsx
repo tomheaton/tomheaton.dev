@@ -78,7 +78,7 @@ export default function RootLayout({ children }: PropsWithChildren) {
       </head>
       <body className="flex min-h-screen flex-col bg-white text-zinc-900 dark:bg-zinc-900 dark:text-white">
         <Header />
-        <div className="mx-auto my-4 w-2/3 border-t-4 border-myGreen lg:w-1/3" />
+        <div className="mx-auto my-4 w-2/3 border-t-4 border-my-green lg:w-1/3" />
         {children}
         <Footer />
         <Analytics />

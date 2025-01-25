@@ -9,7 +9,7 @@ export function TrackCard({ track }: { track: Track }) {
       rel="external noopener noreferrer"
       className="hover:text-inherit"
     >
-      <div className="m-4 flex items-center gap-x-4 rounded-lg border-2 border-myGreen p-4 transition-all hover:scale-105 active:scale-95">
+      <div className="m-4 flex items-center gap-x-4 rounded-lg border-2 border-my-green p-4 transition-all hover:scale-105 active:scale-95">
         <Image
           src={track.image}
           height={600}
