@@ -12,6 +12,12 @@ const projectData: {
     url: "https://githubfieldday.com",
   },
   {
+    name: "Team Bath Racing Electric",
+    description:
+      "Formula Student electric racing team based at the University of Bath",
+    url: "https://teambathracingelectric.com",
+  },
+  {
     name: "Carry Naloxone",
     description:
       "Find nearby naloxone suppliers and access information on how to use naloxone.",
