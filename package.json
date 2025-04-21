@@ -21,32 +21,32 @@
   "dependencies": {
     "@vercel/analytics": "^1.5.0",
     "@vercel/speed-insights": "^1.2.0",
-    "next": "15.2.4",
+    "next": "15.3.1",
     "react": "19.1.0",
     "react-dom": "19.1.0",
     "react-hot-toast": "^2.5.2",
     "react-icons": "^5.5.0",
-    "zod": "^3.24.2"
+    "zod": "^3.24.3"
   },
   "devDependencies": {
-    "@eslint/compat": "^1.2.7",
+    "@eslint/compat": "^1.2.8",
     "@eslint/eslintrc": "^3.3.1",
-    "@eslint/js": "^9.23.0",
-    "@tailwindcss/postcss": "^4.0.17",
-    "@types/node": "^22.13.14",
+    "@eslint/js": "^9.25.1",
+    "@tailwindcss/postcss": "^4.1.4",
+    "@types/node": "^22.14.1",
     "@types/number-to-words": "^1.2.3",
-    "@types/react": "19.0.12",
-    "@types/react-dom": "19.0.4",
-    "babel-plugin-react-compiler": "19.0.0-beta-aeaed83-20250323",
-    "eslint": "^9.23.0",
-    "eslint-config-next": "15.2.4",
-    "eslint-config-prettier": "^10.1.1",
-    "eslint-plugin-prettier": "^5.2.5",
+    "@types/react": "19.1.2",
+    "@types/react-dom": "19.1.2",
+    "babel-plugin-react-compiler": "19.1.0-rc.1",
+    "eslint": "^9.25.1",
+    "eslint-config-next": "15.3.1",
+    "eslint-config-prettier": "^10.1.2",
+    "eslint-plugin-prettier": "^5.2.6",
     "postcss": "^8.5.3",
     "prettier": "^3.5.3",
     "prettier-plugin-organize-imports": "^4.1.0",
     "prettier-plugin-tailwindcss": "^0.6.11",
-    "tailwindcss": "^4.0.17",
-    "typescript": "^5.8.2"
+    "tailwindcss": "^4.1.4",
+    "typescript": "^5.8.3"
   }
 }
