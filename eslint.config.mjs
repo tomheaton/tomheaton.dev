@@ -1,3 +1,5 @@
+import nextCoreWebVitals from "eslint-config-next/core-web-vitals";
+import nextTypescript from "eslint-config-next/typescript";
 import { includeIgnoreFile } from "@eslint/compat";
 import { FlatCompat } from "@eslint/eslintrc";
 import js from "@eslint/js";
@@ -16,9 +18,10 @@ const gitignorePath = path.resolve(__dirname, ".gitignore");
 // eslint-disable-next-line import/no-anonymous-default-export
 export default [
   includeIgnoreFile(gitignorePath),
-  ...compat.extends(
-    "next/core-web-vitals",
-    "next/typescript",
-    "plugin:prettier/recommended",
-  ),
+  ...nextCoreWebVitals,
+  ...nextTypescript,
+  ...compat.extends("plugin:prettier/recommended"),
+  {
+    ignores: ["node_modules/**", ".next/**", "out/**", "build/**", "next-env.d.ts"]
+  }
 ];

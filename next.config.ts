@@ -2,9 +2,7 @@ import type { NextConfig } from "next";
 
 export default {
   reactStrictMode: true,
-  experimental: {
-    reactCompiler: true,
-  },
+  reactCompiler: true,
   images: {
     remotePatterns: [
       {
