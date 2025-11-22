@@ -11,7 +11,7 @@ export default {
       },
       {
         protocol: "https",
-        hostname: "e-cdns-images.dzcdn.net",
+        hostname: "*.dzcdn.net",
       },
     ],
   },
