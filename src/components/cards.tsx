@@ -1,5 +1,5 @@
-import type { CardData } from "@/utils/types";
 import Image from "next/image";
+import type { CardData } from "@/utils/types";
 
 const cardData: CardData[] = [
   {

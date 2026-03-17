@@ -1,11 +1,11 @@
 import "@/styles/globals.css";
 
-import { Footer } from "@/components/footer";
-import { Header } from "@/components/header";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import type { Metadata, Viewport } from "next";
 import type { PropsWithChildren } from "react";
+import { Footer } from "@/components/footer";
+import { Header } from "@/components/header";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://tomheaton.dev"),
@@ -64,6 +64,7 @@ export default function RootLayout({ children }: PropsWithChildren) {
           src={`https://googletagmanager.com/gtag/js?id=${process.env.GOOGLE_ANALYTICS_KEY}`}
         />
         <script
+          // biome-ignore lint/security/noDangerouslySetInnerHtml: This is required for Google Analytics to work
           dangerouslySetInnerHTML={{
             __html: `
               window.dataLayer = window.dataLayer || [];
@@ -78,7 +79,7 @@ export default function RootLayout({ children }: PropsWithChildren) {
       </head>
       <body className="flex min-h-screen flex-col bg-white text-zinc-900 dark:bg-zinc-900 dark:text-white">
         <Header />
-        <div className="mx-auto my-4 w-2/3 border-t-4 border-my-green lg:w-1/3" />
+        <div className="mx-auto my-4 w-2/3 border-my-green border-t-4 lg:w-1/3" />
         {children}
         <Footer />
         <Analytics />

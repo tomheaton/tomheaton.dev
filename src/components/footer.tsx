@@ -1,6 +1,5 @@
 "use client";
 
-import { copyToClipboard } from "@/utils";
 import type { SyntheticEvent } from "react";
 import toast, { Toaster } from "react-hot-toast";
 import {
@@ -11,6 +10,7 @@ import {
   FaLinkedin,
 } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
+import { copyToClipboard } from "@/utils";
 
 export function Footer() {
   const handleCopyDiscord = async (e: SyntheticEvent) => {
@@ -39,6 +39,7 @@ export function Footer() {
             <FaGithub />
           </a>
           <button
+            type="button"
             onClick={handleCopyDiscord}
             className="cursor-pointer transition-colors hover:text-my-green"
             aria-label="Discord"

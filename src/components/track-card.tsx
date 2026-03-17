@@ -1,5 +1,5 @@
-import type { Track } from "@/utils/types";
 import Image from "next/image";
+import type { Track } from "@/utils/types";
 
 export function TrackCard({ track }: { track: Track }) {
   return (
@@ -18,7 +18,7 @@ export function TrackCard({ track }: { track: Track }) {
           className="h-16 w-16 rounded-lg"
         />
         <div>
-          <p className="text-xl font-semibold">{track.title}</p>
+          <p className="font-semibold text-xl">{track.title}</p>
           <p className="text-base">{track.artist}</p>
         </div>
       </div>

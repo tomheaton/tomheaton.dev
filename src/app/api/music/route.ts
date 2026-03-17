@@ -1,5 +1,5 @@
-import { trackSchema } from "@/utils/types";
 import { NextResponse } from "next/server";
+import { trackSchema } from "@/utils/types";
 
 export async function GET() {
   const response = await fetch("https://api.deezer.com/user/844148065/flow");

@@ -1,6 +1,6 @@
-import { RepoCard } from "@/components/repo-card";
-import { repoSchema, type Repo } from "@/utils/types";
 import type { Metadata } from "next";
+import { RepoCard } from "@/components/repo-card";
+import { type Repo, repoSchema } from "@/utils/types";
 
 export const metadata: Metadata = {
   title: "Projects | Tom Heaton",
@@ -27,10 +27,11 @@ export default async function Page() {
 
   return (
     <main className="mx-auto flex w-2/3 flex-col lg:w-1/3">
-      <h2 className="text-2xl font-bold tracking-tight">Projects</h2>
+      <h2 className="font-bold text-2xl tracking-tight">Projects</h2>
       <div className="grid grid-cols-1 xl:grid-cols-2">
-        {data &&
-          data.map((repo, index) => <RepoCard key={index} repo={repo} />)}
+        {data?.map((repo, index) => (
+          <RepoCard key={index} repo={repo} />
+        ))}
         {data && data.length === 0 && <p>no projects found</p>}
         {!data && <p>loading</p>}
       </div>

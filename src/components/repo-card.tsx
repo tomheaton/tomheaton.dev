@@ -10,11 +10,11 @@ export function RepoCard({ repo }: { repo: Repo }) {
     >
       <div className="m-4 rounded-lg border-2 border-my-green p-4 transition-all hover:scale-105 active:scale-95">
         <div className="flex items-center justify-between">
-          <p className="text-xl font-semibold">{repo.repo}</p>
+          <p className="font-semibold text-xl">{repo.repo}</p>
           <p>⭐ {repo.stars.toLocaleString()}</p>
         </div>
         <div
-          className={`my-4 border-t-4`}
+          className={"my-4 border-t-4"}
           style={{ borderColor: repo.languageColor }}
         />
       </div>

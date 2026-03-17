@@ -43,7 +43,7 @@ const projectData: {
 export default async function Page() {
   return (
     <main className="mx-auto flex w-2/3 flex-col lg:w-1/3">
-      <div className="grid grid-cols-1 lg:grid-cols-4 mt-2 gap-2">
+      <div className="mt-2 grid grid-cols-1 gap-2 lg:grid-cols-4">
         {projectData.map((project, index) => (
           <Fragment key={index}>
             {project.url ? (

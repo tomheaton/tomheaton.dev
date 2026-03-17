@@ -1,6 +1,6 @@
-import { TrackCard } from "@/components/track-card";
-import { trackSchema, type Track } from "@/utils/types";
 import type { Metadata } from "next";
+import { TrackCard } from "@/components/track-card";
+import { type Track, trackSchema } from "@/utils/types";
 
 export const metadata: Metadata = {
   title: "Music | Tom Heaton",
@@ -25,9 +25,10 @@ export default async function Page() {
 
   return (
     <main className="mx-auto flex w-2/3 flex-col lg:w-1/3">
-      <h2 className="text-2xl font-bold tracking-tight">Music</h2>
-      {data &&
-        data.map((music, index) => <TrackCard key={index} track={music} />)}
+      <h2 className="font-bold text-2xl tracking-tight">Music</h2>
+      {data?.map((music, index) => (
+        <TrackCard key={index} track={music} />
+      ))}
       {data && data.length === 0 && <p>no music found</p>}
       {!data && <p>loading</p>}
     </main>

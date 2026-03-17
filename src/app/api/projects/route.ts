@@ -1,5 +1,5 @@
-import { repoSchema } from "@/utils/types";
 import { NextResponse } from "next/server";
+import { repoSchema } from "@/utils/types";
 
 export async function GET() {
   const response = await fetch(

@@ -25,10 +25,10 @@ export function Header() {
         </Link>
       </div>
       <div className="flex flex-col items-center">
-        <h1 className="text-4xl font-extrabold tracking-tighter md:text-5xl">
+        <h1 className="font-extrabold text-4xl tracking-tighter md:text-5xl">
           Tom Heaton{" "}
         </h1>
-        <h2 className="text-2xl font-medium tracking-normal text-my-green md:text-3xl">
+        <h2 className="font-medium text-2xl text-my-green tracking-normal md:text-3xl">
           software engineer
         </h2>
       </div>
