@@ -4,8 +4,6 @@ import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import type { Metadata, Viewport } from "next";
 import type { PropsWithChildren } from "react";
-import { Footer } from "@/components/footer";
-import { Header } from "@/components/header";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://tomheaton.dev"),
@@ -28,17 +26,6 @@ export const metadata: Metadata = {
     },
     locale: "en_GB",
   },
-  twitter: {
-    card: "summary_large_image",
-    site: "@tomheaton_",
-    creator: "@tomheaton_",
-    title: "Tom Heaton",
-    description: "Tom Heaton - Software Engineer",
-    images: {
-      url: "/tomheaton.png",
-      alt: "Tom Heaton - Software Engineer",
-    },
-  },
   manifest: "/manifest.json",
   appleWebApp: {
     title: "Tom Heaton",
@@ -49,14 +36,14 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#66b193",
+  themeColor: "#ffffff",
   width: "device-width",
   initialScale: 1,
 };
 
 export default function RootLayout({ children }: PropsWithChildren) {
   return (
-    <html lang="en">
+    <html lang="en-GB">
       <head>
         {/* TODO: remove this */}
         <script
@@ -77,11 +64,8 @@ export default function RootLayout({ children }: PropsWithChildren) {
         <link rel="icon" href="/favicon.ico" />
         <link rel="canonical" href="https://tomheaton.dev" />
       </head>
-      <body className="flex min-h-screen flex-col bg-white text-zinc-900 dark:bg-zinc-900 dark:text-white">
-        <Header />
-        <div className="mx-auto my-4 w-2/3 border-my-green border-t-4 lg:w-1/3" />
+      <body className="bg-bg font-sans text-base text-ink leading-[1.55] antialiased">
         {children}
-        <Footer />
         <Analytics />
         <SpeedInsights />
       </body>

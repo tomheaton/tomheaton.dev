@@ -3,8 +3,8 @@ import { trackSchema } from "@/utils/types";
 
 export async function GET() {
   const response = await fetch("https://api.deezer.com/user/844148065/flow");
-  const data = await response.json();
 
+  const data = await response.json();
   if (!data?.data?.length) {
     return NextResponse.json({ data: [] });
   }

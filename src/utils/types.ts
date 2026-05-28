@@ -1,25 +1,15 @@
 import { z } from "zod";
 
-export type CardData = {
-  title: string;
-  description: string;
+export type Repo = {
+  owner: string;
+  repo: string;
   link: string;
+  description?: string;
+  language?: string;
+  languageColor?: string;
+  stars: number;
+  website?: string;
 };
-
-export const repoSchema = z.object({
-  owner: z.string(),
-  repo: z.string(),
-  link: z.string().url(),
-  description: z.string().optional(),
-  // image: z.string().url(),
-  website: z.string().url().optional(),
-  language: z.string(),
-  languageColor: z.string(),
-  stars: z.union([z.string(), z.number()]),
-  // forks: z.union([z.string(), z.number()]),
-});
-
-export type Repo = z.infer<typeof repoSchema>;
 
 export const trackSchema = z
   .object({
@@ -31,7 +21,7 @@ export const trackSchema = z
       name: z.string(),
     }),
     album: z.object({
-      cover_xl: z.string().url(),
+      cover_xl: z.url(),
       // title: z.string(),
     }),
   })

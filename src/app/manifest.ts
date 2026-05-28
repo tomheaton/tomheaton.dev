@@ -7,7 +7,7 @@ export default function Manifest(): MetadataRoute.Manifest {
     start_url: "https://tomheaton.dev",
     display: "standalone",
     theme_color: "#66b193",
-    background_color: "#212529",
+    background_color: "#ffffff",
     icons: [
       {
         src: "/android-chrome-192x192.png",

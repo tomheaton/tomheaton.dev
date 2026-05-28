@@ -19,7 +19,8 @@
     "lint:ci": "biome ci",
     "lint:fix": "biome check --fix --unsafe",
     "start": "next start",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "unused": "knip --cache"
   },
   "dependencies": {
     "@vercel/analytics": "^2.0.1",
@@ -35,12 +36,17 @@
     "@biomejs/biome": "^2.4.7",
     "@tailwindcss/postcss": "^4.2.1",
     "@types/node": "^24.12.0",
-    "@types/number-to-words": "^1.2.3",
     "@types/react": "19.2.15",
     "@types/react-dom": "19.2.3",
     "babel-plugin-react-compiler": "1.0.0",
+    "knip": "^6.14.2",
     "postcss": "^8.5.8",
     "tailwindcss": "^4.2.1",
     "typescript": "^6.0.3"
+  },
+  "packageManager": "pnpm@11.3.0",
+  "engines": {
+    "node": "24.x",
+    "pnpm": "11.x"
   }
 }
