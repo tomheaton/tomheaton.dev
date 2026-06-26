@@ -55,6 +55,36 @@ export const projects: Project[] = [
     links: [{ label: "sparklayer.io", href: "https://sparklayer.io" }],
   },
   {
+    slug: "china-global-environmental-leadership-database",
+    name: "China's Global Environmental Leadership Database",
+    role: "SGAIN project · University of Bath",
+    year: "2026",
+    url: "https://cgel.sgain.org",
+    domain: "cgel.sgain.org",
+    logo: "/logos/sgain.png",
+    tagline: "First comprehensive database of China-led cross-border environmental governance.",
+    hero: { type: "image", src: "/screenshots/sgain-cgel.png" },
+    body: [
+      "A SGAIN project at the University of Bath for exploring China-led cross-border environmental governance initiatives.",
+    ],
+    highlights: [
+      "Comprehensive database of China-led cross-border environmental governance",
+      "Browseable dataset with country, region, governance level, and environmental focus filters",
+      "Interactive visualisations for collaboration patterns and temporal evolution",
+    ],
+    screenshots: [
+      {
+        src: "/screenshots/sgain-cgel-browse.png",
+        alt: "China's Global Environmental Leadership Database - browse view",
+      },
+      {
+        src: "/screenshots/sgain-cgel-methodology.png",
+        alt: "China's Global Environmental Leadership Database - methodology view",
+      },
+    ],
+    links: [{ label: "cgel.sgain.org", href: "https://cgel.sgain.org" }],
+  },
+  {
     slug: "github-field-day",
     name: "GitHub Field Day",
     role: "Organiser · developer",
