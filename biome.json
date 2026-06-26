@@ -25,7 +25,7 @@
       "next": "recommended"
     },
     "rules": {
-      "recommended": true,
+      "preset": "recommended",
       "a11y": {
         "useKeyWithClickEvents": "warn",
         "noLabelWithoutControl": "warn",
