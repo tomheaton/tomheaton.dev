@@ -22,7 +22,8 @@
       "test": "all",
       "project": "recommended",
       "react": "recommended",
-      "next": "recommended"
+      "next": "recommended",
+      "tailwind": "recommended"
     },
     "rules": {
       "preset": "recommended",
