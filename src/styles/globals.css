@@ -59,3 +59,27 @@ body::-webkit-scrollbar {
   background: var(--color-accent);
   color: #ffffff;
 }
+
+/* Homepage project list. These rows repeat for every project, so their utilities live here
+   to keep the server-rendered HTML lean. */
+@layer components {
+  .project-row {
+    @apply flex items-center gap-3.5 rounded-xl px-3 py-3 no-underline transition-colors duration-150 hover:bg-black/2;
+  }
+
+  .project-row-name {
+    @apply font-semibold text-[15px] text-ink tracking-[-0.01em] transition-colors duration-150 group-hover:text-ink-strong;
+  }
+
+  .project-row-role {
+    @apply truncate text-[13px] text-ink-soft;
+  }
+
+  .project-row-year {
+    @apply shrink-0 font-mono text-[12px] text-ink-faint tabular-nums;
+  }
+
+  .project-row-arrow {
+    @apply shrink-0 text-ink-faint transition-all duration-150 group-hover:translate-x-0.5 group-hover:text-accent-dark;
+  }
+}

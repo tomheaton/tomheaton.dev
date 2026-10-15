@@ -6,6 +6,7 @@ import { Logo } from "@/components/logo";
 import { Placeholder } from "@/components/placeholder";
 import { ScreenshotGallery } from "@/components/screenshot-gallery";
 import { getProject, projects } from "@/data/projects";
+import { pageAlternates } from "@/utils/metadata";
 
 type Params = { params: Promise<{ slug: string }> };
 
@@ -24,6 +25,7 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
   return {
     title: `${project.name} · Tom Heaton`,
     description: project.tagline,
+    alternates: pageAlternates(`/work/${project.slug}`),
   };
 }
 
