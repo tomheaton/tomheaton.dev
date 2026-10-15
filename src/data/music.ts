@@ -1,0 +1,15 @@
+import { type Track, trackSchema } from "@/utils/types";
+
+export async function getMusic() {
+  const response = await fetch("https://api.deezer.com/user/844148065/flow");
+
+  const data = await response.json();
+  if (!data?.data?.length) {
+    return [];
+  }
+
+  return data.data.flatMap((t: unknown) => {
+    const track = trackSchema.safeParse(t);
+    return track.success ? track.data : [];
+  }) as Track[];
+}

@@ -19,6 +19,7 @@
     "lint:ci": "biome ci --reporter=github",
     "lint:fix": "biome check --fix --unsafe",
     "start": "next start",
+    "test": "vitest run",
     "typecheck": "tsc --noEmit",
     "unused": "knip --cache"
   },
@@ -42,7 +43,8 @@
     "knip": "^6.32.2",
     "postcss": "^8.5.26",
     "tailwindcss": "^4.3.3",
-    "typescript": "^6.0.3"
+    "typescript": "^6.0.3",
+    "vitest": "^5.0.4"
   },
   "packageManager": "pnpm@11.9.0",
   "engines": {
