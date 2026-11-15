@@ -17,6 +17,11 @@ export default {
   },
   redirects: async () => [
     {
+      source: "/work/clear-cut",
+      destination: "/work/nicolas-heaton",
+      permanent: true,
+    },
+    {
       source: "/linkedin",
       destination: "https://linkedin.com/in/tomheaton7/",
       permanent: true,
