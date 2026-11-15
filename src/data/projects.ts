@@ -218,12 +218,11 @@ export const projects: Project[] = [
     tagline: "The website for Nicolas Heaton, an independent hairdresser in Malmesbury.",
     hero: { type: "image", src: "/screenshots/nicolas-heaton.png" },
     body: [
-      "Nicolas Heaton is an independent hairdresser in Malmesbury, Wiltshire, open since 2002. I've looked after the salon's website since April 2020, when it was still called Clear Cut, and have supported it through the years since.",
-      "When the salon rebranded from Clear Cut to Nicolas Heaton Hairdresser, the website moved to the new name, domain and art deco identity. It gives clients what they need before they call: the price list, reviews, the brands on the shelves, opening hours and directions.",
+      "Nicolas Heaton is an independent hairdresser in Malmesbury, Wiltshire. I've looked after the salon's website since April 2020, back when it was Clear Cut, and have supported it through the years.",
+      "The site gives clients what they need before they call: the price list, reviews, the brands on the shelves, opening hours and directions.",
     ],
     highlights: [
       "Supporting the salon's website since April 2020",
-      "Carried the site through the rebrand from Clear Cut to Nicolas Heaton",
       "Price list, reviews, opening hours and directions on one page, with booking by phone",
     ],
     screenshots: [
