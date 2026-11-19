@@ -1,12 +1,25 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { Dock } from "@/components/dock";
 import { Logo } from "@/components/logo";
 import { ProfileAvatar } from "@/components/profile-avatar";
 import { projects } from "@/data/projects";
+import { aboutPage, contactPage, privacyPage } from "@/data/site";
+import { pageAlternates } from "@/utils/metadata";
+import { homeJsonLd, serializeJsonLd } from "@/utils/structured-data";
+
+export const metadata: Metadata = {
+  alternates: pageAlternates("/"),
+};
 
 export default function Page() {
   return (
     <main className="mx-auto max-w-135 px-6 pt-16 pb-32 sm:pt-24">
+      <script
+        type="application/ld+json"
+        // biome-ignore lint/security/noDangerouslySetInnerHtml: JSON-LD structured data, escaped by serializeJsonLd
+        dangerouslySetInnerHTML={{ __html: serializeJsonLd(homeJsonLd()) }}
+      />
       <header className="flex items-center gap-3.5">
         <ProfileAvatar />
         <div>
@@ -45,30 +58,31 @@ export default function Page() {
 
       <div className="-mx-3 mt-12 flex flex-col">
         {projects.map((project) => (
-          <Link
-            key={project.slug}
-            href={`/work/${project.slug}`}
-            className="group flex items-center gap-3.5 rounded-xl px-3 py-3 no-underline transition-colors duration-150 hover:bg-black/2"
-          >
+          <Link key={project.slug} href={`/work/${project.slug}`} className="project-row group">
             <Logo src={project.logo} name={project.name} size={40} />
             <div className="min-w-0 flex-1">
-              <div className="font-semibold text-[15px] text-ink tracking-[-0.01em] transition-colors duration-150 group-hover:text-ink-strong">
-                {project.name}
-              </div>
-              <div className="truncate text-[13px] text-ink-soft">{project.role}</div>
+              <div className="project-row-name">{project.name}</div>
+              <div className="project-row-role">{project.role}</div>
             </div>
-            <span className="shrink-0 font-mono text-[12px] text-ink-faint tabular-nums">
-              {project.year}
-            </span>
-            <span
-              aria-hidden
-              className="shrink-0 text-ink-faint transition-all duration-150 group-hover:translate-x-0.5 group-hover:text-accent-dark"
-            >
+            <span className="project-row-year">{project.year}</span>
+            <span aria-hidden className="project-row-arrow">
               →
             </span>
           </Link>
         ))}
       </div>
+
+      <nav aria-label="About this site" className="mt-12 flex gap-5">
+        {[aboutPage, contactPage, privacyPage].map((page) => (
+          <Link
+            key={page.path}
+            href={page.path}
+            className="text-[13px] text-ink-soft no-underline transition-colors duration-150 hover:text-ink"
+          >
+            {page.title}
+          </Link>
+        ))}
+      </nav>
 
       <Dock />
     </main>

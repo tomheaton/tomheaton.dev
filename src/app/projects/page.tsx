@@ -3,10 +3,12 @@ import { BackLink } from "@/components/back-link";
 import { Dock } from "@/components/dock";
 import { RepoCard } from "@/components/repo-card";
 import { getPinnedRepos } from "@/data/github";
+import { pageAlternates } from "@/utils/metadata";
 
 export const metadata: Metadata = {
   title: "Projects · Tom Heaton",
   description: "Open source projects and pinned repositories.",
+  alternates: pageAlternates("/projects"),
 };
 
 export default async function Page() {

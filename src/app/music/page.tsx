@@ -2,26 +2,14 @@ import type { Metadata } from "next";
 import { BackLink } from "@/components/back-link";
 import { Dock } from "@/components/dock";
 import { TrackCard } from "@/components/track-card";
-import { type Track, trackSchema } from "@/utils/types";
+import { getMusic } from "@/data/music";
+import { pageAlternates } from "@/utils/metadata";
 
 export const metadata: Metadata = {
   title: "Music · Tom Heaton",
   description: "What I'm currently listening to.",
+  alternates: pageAlternates("/music"),
 };
-
-async function getMusic() {
-  const response = await fetch("https://api.deezer.com/user/844148065/flow");
-
-  const data = await response.json();
-  if (!data?.data?.length) {
-    return [];
-  }
-
-  return data.data.flatMap((t: unknown) => {
-    const track = trackSchema.safeParse(t);
-    return track.success ? track.data : [];
-  }) as Track[];
-}
 
 export default async function Page() {
   const data = await getMusic();
